@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dinámica del Punto - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Dinámica del Punto</h1>
+    <p class="subtitulo">Leyes de Newton y su aplicación al movimiento</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#concepto_fuerza">Concepto de Fuerza</a></li>
+      <li><a href="#leyes_newton">Leyes de Newton</a></li>
+      <li><a href="#fuerzas_comunes">Fuerzas Comunes</a></li>
+      <li><a href="#aplicaciones">Aplicaciones Dinámicas</a></li>
+      <li><a href="#ejemplos">Ejemplos Resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- ===== INTRODUCCIÓN ===== -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>dinámica del punto</strong> es la rama de la mecánica que estudia las <em>causas</em> del movimiento de los cuerpos, principalmente a través del concepto de <strong>fuerza</strong>. 
+        A diferencia de la cinemática, que describe cómo se mueve un cuerpo, la dinámica explica <em>por qué</em> lo hace.
+      </p>
+      <p>
+        Las leyes fundamentales que rigen la dinámica fueron establecidas por <strong>Isaac Newton</strong> en el siglo XVII, y constituyen la base de toda la física clásica. 
+        Estas leyes permiten relacionar las fuerzas externas que actúan sobre un cuerpo con los cambios en su estado de movimiento.
+      </p>
+      <div class="nota">
+        <p><strong>Ejemplo de aplicación:</strong> analizar el movimiento de un vehículo al acelerar, frenar o tomar una curva implica aplicar las leyes de Newton y conceptos de fuerza, masa y aceleración.</p>
+      </div>
+    </section>
+
+    <!-- ===== CONCEPTO DE FUERZA ===== -->
+    <section id="concepto_fuerza" class="card">
+      <h2>2. Concepto de Fuerza</h2>
+      <p>
+        La <strong>fuerza</strong> es una magnitud vectorial que representa la acción capaz de <em>modificar el estado de reposo o movimiento</em> de un cuerpo o de deformarlo. 
+        Su unidad en el Sistema Internacional (SI) es el <strong>newton (N)</strong>, definido como:
+      </p>
+      <p class="formula">
+        $$ 1\,\text{N} = 1\,\text{kg·m/s}^2 $$
+      </p>
+      <p>
+        Una fuerza se caracteriza por:
+      </p>
+      <ul>
+        <li>Su <strong>módulo</strong> (intensidad de la acción).</li>
+        <li>Su <strong>dirección y sentido</strong>.</li>
+        <li>Su <strong>punto de aplicación</strong>.</li>
+      </ul>
+      <p>
+        En forma vectorial, una fuerza que actúa sobre una partícula se expresa como:
+      </p>
+      <p class="formula">
+        $$ \mathbf{F} = F_x \hat{i} + F_y \hat{j} + F_z \hat{k} $$
+      </p>
+    </section>
+
+    <!-- ===== LEYES DE NEWTON ===== -->
+    <section id="leyes_newton" class="card">
+      <h2>3. Leyes de Newton</h2>
+      <h3>Primera Ley (Ley de la Inercia)</h3>
+      <p>
+        “Todo cuerpo persevera en su estado de reposo o de movimiento rectilíneo uniforme, a menos que sea obligado a cambiar dicho estado por fuerzas que actúen sobre él.”
+      </p>
+      <p>
+        Esta ley introduce el concepto de <strong>inercia</strong>, que es la resistencia de un cuerpo a modificar su estado de movimiento.  
+        Si la fuerza neta sobre un cuerpo es cero, su velocidad permanece constante.
+      </p>
+      <p class="formula">
+        $$ \sum \mathbf{F} = 0 \quad \Rightarrow \quad \mathbf{v} = \text{constante} $$
+      </p>
+
+      <h3>Segunda Ley (Ley Fundamental de la Dinámica)</h3>
+      <p>
+        La aceleración de un cuerpo es directamente proporcional a la fuerza neta que actúa sobre él e inversamente proporcional a su masa:
+      </p>
+      <p class="formula">
+        $$ \sum \mathbf{F} = m \mathbf{a} $$
+      </p>
+      <p>
+        Donde:
+      </p>
+      <ul>
+        <li>$\sum \mathbf{F}$ es la fuerza neta resultante.</li>
+        <li>$m$ es la masa del cuerpo (en kilogramos).</li>
+        <li>$\mathbf{a}$ es la aceleración producida (en m/s²).</li>
+      </ul>
+
+      <h3>Tercera Ley (Acción y Reacción)</h3>
+      <p>
+        “A toda acción corresponde una reacción igual y opuesta.”  
+        Si un cuerpo A ejerce una fuerza sobre otro cuerpo B, este ejerce sobre A una fuerza de igual magnitud y dirección, pero en sentido contrario.
+      </p>
+      <p class="formula">
+        $$ \mathbf{F}_{AB} = - \mathbf{F}_{BA} $$
+      </p>
+      <p>
+        Estas fuerzas <strong>no se anulan</strong> entre sí porque actúan sobre cuerpos diferentes.
+      </p>
+    </section>
+
+    <!-- ===== FUERZAS COMUNES ===== -->
+    <section id="fuerzas_comunes" class="card">
+      <h2>4. Fuerzas Comunes en la Dinámica</h2>
+      <ul>
+        <li><strong>Peso ($\mathbf{P}$):</strong> fuerza con que la Tierra atrae a los cuerpos hacia su centro.  
+          $$ \mathbf{P} = m \mathbf{g} $$
+        </li>
+        <li><strong>Normal ($\mathbf{N}$):</strong> fuerza que ejerce una superficie sobre un cuerpo en contacto, perpendicular a la superficie.</li>
+        <li><strong>Tensión ($\mathbf{T}$):</strong> fuerza transmitida por una cuerda, cable o resorte estirado.</li>
+        <li><strong>Rozamiento ($\mathbf{f}$):</strong> fuerza que se opone al movimiento relativo entre dos superficies en contacto.  
+          - Estático: $f_s \leq \mu_s N$  
+          - Cinético: $f_k = \mu_k N$
+        </li>
+        <li><strong>Elástica ($\mathbf{F}_e$):</strong> fuerza restauradora de un resorte según la ley de Hooke.  
+          $$ \mathbf{F}_e = -k \mathbf{x} $$
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== APLICACIONES ===== -->
+    <section id="aplicaciones" class="card">
+      <h2>5. Aplicaciones Dinámicas</h2>
+      <ul>
+        <li><strong>Plano Inclinado:</strong> análisis de fuerzas peso, normal y fricción en superficies inclinadas.</li>
+        <li><strong>Movimiento con Cuerdas:</strong> sistemas conectados mediante poleas o tensiones.</li>
+        <li><strong>Caída Libre:</strong> aplicación directa de $\sum F = m a$ bajo la aceleración de la gravedad.</li>
+        <li><strong>Movimiento Circular:</strong> equilibrio entre fuerza centrípeta y otras fuerzas (peso, tensión, fricción).</li>
+      </ul>
+    </section>
+
+    <!-- ===== EJEMPLOS RESUELTOS ===== -->
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos Resueltos</h2>
+
+      <h3>Ejemplo 1: Aplicación de la Segunda Ley</h3>
+      <p>
+        Una caja de masa $4\,\text{kg}$ es empujada sobre una superficie horizontal con una fuerza constante de $10\,\text{N}$ y sin fricción.  
+        Determina su aceleración.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p class="formula">
+        $$ \sum F = m a \Rightarrow a = \frac{F}{m} = \frac{10}{4} = 2.5\,\text{m/s}^2 $$
+      </p>
+      <p>
+        La caja acelera con <strong>2.5 m/s²</strong> en la dirección de la fuerza aplicada.
+      </p>
+
+      <h3>Ejemplo 2: Fuerzas en un Plano Inclinado</h3>
+      <p>
+        Un bloque de $2\,\text{kg}$ se desliza por un plano inclinado de $30^\circ$ sin fricción. Determina su aceleración.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p>
+        La componente del peso paralela al plano es:
+      </p>
+      <p class="formula">
+        $$ P_\parallel = m g \sin(30°) = (2)(9.8)(0.5) = 9.8\,\text{N} $$
+      </p>
+      <p>
+        Aplicando la segunda ley:
+      </p>
+      <p class="formula">
+        $$ a = \frac{P_\parallel}{m} = \frac{9.8}{2} = 4.9\,\text{m/s}^2 $$
+      </p>
+      <p>El bloque desciende con aceleración de <strong>4.9 m/s²</strong>.</p>
+
+      <h3>Ejemplo 3: Ley de Hooke</h3>
+      <p>
+        Un resorte tiene una constante elástica $k = 200\,\text{N/m}$ y se estira $5\,\text{cm}$.  
+        Determina la fuerza ejercida por el resorte.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p class="formula">
+        $$ F = k x = 200(0.05) = 10\,\text{N} $$
+      </p>
+      <p>El resorte ejerce una fuerza restauradora de <strong>10 N</strong> en sentido opuesto al estiramiento.</p>
+    </section>
+
+    <!-- ===== REFERENCIAS ===== -->
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Tipler, P. A., & Mosca, G. (2008). <em>Física para la ciencia y la tecnología</em> (6ª ed.). Reverté.</li>
+        <li>Young, H. D., & Freedman, R. A. (2021). <em>Física Universitaria</em> (15

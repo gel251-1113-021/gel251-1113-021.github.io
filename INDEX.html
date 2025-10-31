@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física Universitaria - Universidad Nacional de Barranca</title>
+
+    <!-- Estilos y Fuentes -->
+    <link rel="stylesheet" href="GEN/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="header-container">
+
+            <!-- Logo e Información -->
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="GEN/logo.png" alt="Logo Universidad Nacional de Barranca">
+                </div>
+                <div class="info">
+                    <h1>Universidad Nacional de Barranca</h1>
+                    <p>Ingeniería de Sistemas e Informática</p>
+                </div>
+            </div>
+
+            <!-- Menú de Navegación -->
+            <nav class="menu">
+                <a href="#inicio" class="nav-item">Inicio</a>
+                <a href="#cursos" class="nav-item">Cursos</a>
+                <a href="#ejercicios" class="nav-item">Herramientas</a>
+                <a href="#formulas" class="nav-item">Fórmulas</a>
+                <a href="#constantes" class="nav-item">Constantes</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== SECCIÓN INICIO ===== -->
+    <section class="inicioo" id="inicio">
+        <div class="titulo">
+            <h1>Física Universitaria</h1>
+            <p>Explora los fundamentos de la física con recursos interactivos</p>
+            <div class="cta-buttons">
+                <a href="#cursos" class="cta-btn cta-primary pulse">Ver Cursos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN CURSOS ===== -->
+    <div class="container">
+        <section id="cursos">
+            <h2 class="section-title">📚 Cursos de Física</h2>
+
+            <div class="courses-grid">
+
+                <!-- MECÁNICA -->
+                <div class="course-card fade-in">
+                    <span class="course-icon">⚛️</span>
+                    <h3>Mecánica</h3>
+                    <p class="course-description">
+                        La mecánica estudia el movimiento de los cuerpos y las fuerzas que lo producen o modifican.
+                    </p>
+                    <ul class="topics-list">
+    <li>Cinemática del Punto</li>
+    <li>Dinámica del Punto</li>
+    <li>Trabajo y Energía</li>
+    <li>Cantidad de Movimiento</li>
+    <li>Movimiento Circular</li>
+    <li>Movimiento Oscilatorio</li>
+    <li>Sistemas de Partículas</li>
+    <li>Dinámica de la Rotación</li>
+    <li>Gravitación Universal</li>
+    <li>Fluidos en Movimiento</li>
+    <li>Equilibrio y Estática</li>
+    <li>Leyes de Conservación</li>
+                    </ul>
+                    <a href="SUBPAGINA-MECANICA/index.html" target="_blank">
+                        <button class="course-button" onclick="openCourseModal('mecanica')">Explorar Curso</button>
+                    </a>
+                </div>
+
+                <!-- ONDAS Y ACÚSTICA -->
+                <div class="course-card fade-in">
+                    <span class="course-icon">🌊</span>
+                    <h3>Ondas / Acústica</h3>
+                    <p class="course-description">
+                        Estudia la propagación de perturbaciones en un medio (ondas mecánicas y sonoras) y los fenómenos asociados.
+                    </p>
+                    <ul class="topics-list">
+    <li>Ondas / Acústica</li>
+    <li>Ondas Mecánicas</li>
+    <li>Sonido y el Oído</li>
+                    </ul>
+                    <a href="SUBPAGINA_ONDAS-Y-ACUSTICA/index.html" target="_blank">
+                        <button class="course-button" onclick="openCourseModal('ondas')">Explorar Curso</button>
+                    </a>
+                </div>
+
+                <!-- TERMODINÁMICA -->
+                <div class="course-card fade-in">
+                    <span class="course-icon">⚡</span>
+                    <h3>Termodinámica</h3>
+                    <p class="course-description">
+                        Estudia el calor, la energía, el trabajo y las leyes que rigen sus transformaciones.
+                    </p>
+                    <ul class="topics-list">
+    <li>Introducción e Historia</li>
+    <li>Conceptos Fundamentales</li>
+    <li>Primera Ley de la Termodinámica</li>
+    <li>Segunda Ley y Entropía</li>
+    <li>Tercera Ley y Equilibrio Termodinámico</li>
+    <li>Relaciones y Ecuaciones Fundamentales</li>
+    <li>Aplicaciones Energéticas</li>
+                    </ul>
+                    <a href="SUBPAGINA_TERMODINAMICA/index.html" target="_blank">
+                        <button class="course-button">Explorar Curso</button>
+                    </a>
+                </div>
+
+                <!-- ELECTROMAGNETISMO -->
+                <div class="course-card fade-in">
+                    <span class="course-icon">🌡️</span>
+                    <h3>Electromagnetismo</h3>
+                    <p class="course-description">
+                        Estudia fenómenos eléctricos y magnéticos, así como su relación mediante los campos y ondas electromagnéticas.
+                    </p>
+                    <ul class="topics-list">
+<li>Ley de Gauss</li>
+<li>Campo eléctrico</li>
+<li>Potencial eléctrico</li>
+<li>Capacitancia</li>
+<li>Corriente y resistencia</li>
+<li>Circuitos de corriente directa</li>
+<li>Campo magnético</li>
+<li>Fuentes magnéticas</li>
+<li>Inducción electromagnética</li>
+<li>Inductancia</li>
+<li>Corriente alterna</li>
+<li>Ondas electromagnéticas</li>
+                    </ul>
+                    <a href="SUBPAGINA_ELECTROMAGNETISMO/index.html" target="_blank">
+                        <button class="course-button" onclick="openCourseModal('electromagnetismo')">Explorar Curso</button>
+                    </a>
+                </div>
+
+                <!-- ÓPTICA -->
+                <div class="course-card fade-in">
+                    <span class="course-icon">🔬</span>
+                    <h3>Óptica</h3>
+                    <p class="course-description">
+                        Estudia la luz, su propagación, interacción con la materia y fenómenos como reflexión y refracción.
+                    </p>
+                    <ul class="topics-list">
+    <li>Naturaleza de la Luz</li>
+    <li>Óptica Geométrica</li>
+    <li>Interferencia</li>
+    <li>Difracción</li>
+
+                    </ul>
+                    <a href="SUBPAGINA_OPTICA/index.html" target="_blank">
+                        <button class="course-button" onclick="openCourseModal('optica')">Explorar Curso</button>
+                    </a>
+                </div>
+
+                <!-- FÍSICA MODERNA -->
+                <div class="course-card fade-in">
+                    <span class="course-icon">🚀</span>
+                    <h3>Física Moderna</h3>
+                    <p class="course-description">
+                        Estudia los fenómenos que no puede explicar la física clásica, principalmente la relatividad y la mecánica cuántica.
+                    </p>
+                    <ul class="topics-list">
+    <li>Relatividad</li>
+    <li>Fotones y Electrones</li>
+    <li>Naturaleza Ondulatoria</li>
+    <li>Mecánica Cuántica</li>
+    <li>Estructura Atómica</li>
+    <li>Moléculas y Materia Condensada</li>
+    <li>Física Nuclear</li>
+    <li>Partículas y Cosmología</li>
+                    </ul>
+                    <a href="SUBPAGINA_FISICA-MODERNA/index.html" target="_blank">
+                        <button class="course-button" onclick="openCourseModal('moderna')">Explorar Curso</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<!-- ===== SECCIÓN EJERCICIOS ===== -->
+<div class="container">
+  <section id="ejercicios">
+    <h2 class="section-title">📘 Ejercicios de Física</h2>
+
+    <div class="courses-grid">
+      <!-- MECÁNICA -->
+      <div class="course-card fade-in" id="ejercicio-mecanica">
+        <h3>Mecánica</h3>
+        <p class="course-description">
+          Ejercicios sobre movimiento, fuerzas y energía.
+        </p>
+        <ul class="topics-list">
+          <li>Cinemática</li>
+          <li>Dinámica</li>
+          <li>Trabajo y energía</li>
+        </ul>
+        <a href="MECANICA_EJ/mecanica_ej.html" target="_blank">
+          <button class="course-button" onclick="openCourseModal('mecanica')">Explorar Curso</button>
+        </a>
+      </div>
+
+      <!-- ONDAS Y ACÚSTICA -->
+      <div class="course-card fade-in" id="ejercicio-ondas">
+        <h3>Ondas y Acústica</h3>
+        <p class="course-description">
+          Ejercicios sobre vibraciones y propagación de ondas.
+        </p>
+        <ul class="topics-list">
+          <li>Ondas mecánicas</li>
+          <li>Sonido</li>
+          <li>Resonancia</li>
+        </ul>
+        <a href="ONDAS_EJ/ondas_ej.html" target="_blank">
+          <button class="course-button" onclick="openCourseModal('ondas')">Explorar Curso</button>
+        </a>
+      </div>
+
+      <!-- TERMODINÁMICA -->
+      <div class="course-card fade-in" id="ejercicio-termodinamica">
+        <h3>Termodinámica</h3>
+        <p class="course-description">
+          Ejercicios sobre calor y energía térmica.
+        </p>
+        <ul class="topics-list">
+          <li>Primera ley</li>
+          <li>Segunda ley</li>
+          <li>Máquinas térmicas</li>
+        </ul>
+        <a href="TERMODINAMICA_EJ/termodinamica_ej.html" target="_blank">
+          <button class="course-button" onclick="openCourseModal('termodinamica')">Explorar Curso</button>
+        </a>
+      </div>
+
+      <!-- ELECTROMAGNETISMO -->
+      <div class="course-card fade-in" id="ejercicio-electromagnetismo">
+        <h3>Electromagnetismo</h3>
+        <p class="course-description">
+          Ejercicios sobre fenómenos eléctricos y magnéticos.
+        </p>
+        <ul class="topics-list">
+          <li>Campo eléctrico</li>
+          <li>Campo magnético</li>
+          <li>Inducción</li>
+        </ul>
+        <a href="ELECTROMAGNETISMO_EJ/electromagnetismo_ej.html" target="_blank">
+          <button class="course-button" onclick="openCourseModal('electromagnetismo')">Explorar Curso</button>
+        </a>
+      </div>
+
+      <!-- ÓPTICA -->
+      <div class="course-card fade-in" id="ejercicio-optica">
+        <h3>Óptica</h3>
+        <p class="course-description">
+          Ejercicios sobre luz y fenómenos ópticos.
+        </p>
+        <ul class="topics-list">
+          <li>Óptica geométrica</li>
+          <li>Interferencia y difracción</li>
+        </ul>
+        <a href="OPTICA_EJ/optica_ej.html" target="_blank">
+          <button class="course-button" onclick="openCourseModal('optica')">Explorar Curso</button>
+        </a>
+      </div>
+
+      <!-- FÍSICA MODERNA -->
+      <div class="course-card fade-in" id="ejercicio-moderna">
+        <h3>Física Moderna</h3>
+        <p class="course-description">
+          Ejercicios sobre relatividad y cuántica.
+        </p>
+        <ul class="topics-list">
+          <li>Relatividad especial</li>
+          <li>Mecánica cuántica</li>
+          <li>Física nuclear</li>
+        </ul>
+        <a href="FISICA_MODERNA_EJ/moderna_ej.html" target="_blank">
+          <button class="course-button" onclick="openCourseModal('moderna')">Explorar Curso</button>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== SECCIÓN FÓRMULAS ===== -->
+<section class="formulas-section" id="formulas">
+  <h2 class="section-title">📘 Fórmulas Fundamentales</h2>
+  <div class="formulas-grid">
+    
+    <!-- Relatividad Especial -->
+    <div class="formula-card">
+      <h3 class="formula-title">Relatividad Especial</h3>
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Energía de Einstein</p>
+      <p class="formula-equation">E = mc²</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Relación energía-momento</p>
+      <p class="formula-equation">E² = (pc)² + (m₀c²)²</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Factor de Lorentz</p>
+      <p class="formula-equation">γ = 1 / √(1 - v² / c²)</p>
+    </div>
+
+    <!-- Mecánica Cuántica -->
+    <div class="formula-card">
+      <h3 class="formula-title">Mecánica Cuántica</h3>
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Energía del fotón</p>
+      <p class="formula-equation">E = hf = ℏω</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Longitud de onda de de Broglie</p>
+      <p class="formula-equation">λ = h / p</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Principio de incertidumbre de Heisenberg</p>
+      <p class="formula-equation">ΔxΔp ≥ ℏ / 2</p>
+    </div>
+
+    <!-- Electromagnetismo -->
+    <div class="formula-card">
+      <h3 class="formula-title">Electromagnetismo</h3>
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Fuerza de Lorentz</p>
+      <p class="formula-equation">F = qE = q(v × B)</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Ley de Gauss para el campo eléctrico</p>
+      <p class="formula-equation">∇ · E = ρ / ε₀</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Ley de Ampère-Maxwell</p>
+      <p class="formula-equation">∇ × B = μ₀J + μ₀ε₀ ∂E / ∂t</p>
+    </div>
+
+    <!-- Ondas -->
+    <div class="formula-card">
+      <h3 class="formula-title">Ondas</h3>
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Velocidad de propagación de una onda</p>
+      <p class="formula-equation">v = fλ</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Ecuación de una onda armónica</p>
+      <p class="formula-equation">y = A sin(kx - ωt + φ)</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Efecto Doppler</p>
+      <p class="formula-equation">f' = f(v ± v₀) / (v ± vₛ)</p>
+    </div>
+
+    <!-- Termodinámica -->
+    <div class="formula-card">
+      <h3 class="formula-title">Termodinámica</h3>
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Primera ley de la termodinámica</p>
+      <p class="formula-equation">dU = δQ - δW</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Segunda ley de la termodinámica</p>
+      <p class="formula-equation">dS ≥ δQ / T</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Eficiencia del ciclo de Carnot</p>
+      <p class="formula-equation">η = 1 - Tₓ / Tₕ</p>
+    </div>
+
+    <!-- Óptica -->
+    <div class="formula-card">
+      <h3 class="formula-title">Óptica</h3>
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Ley de Snell (refracción)</p>
+      <p class="formula-equation">n₁ sin θ₁ = n₂ sin θ₂</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Ecuación de lentes delgadas</p>
+      <p class="formula-equation">1/f = 1/d₀ + 1/dᵢ</p>
+
+      <p class="formula-name" style="font-family: 'Times New Roman', serif;">Condición de interferencia destructiva</p>
+      <p class="formula-equation">δ = (m + ½)λ</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== SECCIÓN CONSTANTES ===== -->
+<section class="constants-section" id="constantes">
+  <h2 class="section-title">🔢 Constantes Físicas Fundamentales</h2>
+  
+  <div class="constants-container">
+    <table class="constants-table">
+      <thead>
+        <tr>
+          <th>Constante</th>
+          <th>Símbolo</th>
+          <th>Valor</th>
+          <th>Unidades</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Velocidad de la luz</td><td><em>c</em></td><td>2.998 × 10⁸</td><td>m/s</td></tr>
+        <tr><td>Constante de Planck</td><td><em>h</em></td><td>6.626 × 10⁻³⁴</td><td>J·s</td></tr>
+        <tr><td>Carga del electrón</td><td><em>e</em></td><td>1.602 × 10⁻¹⁹</td><td>C</td></tr>
+        <tr><td>Masa del electrón</td><td><em>mₑ</em></td><td>9.109 × 10⁻³¹</td><td>kg</td></tr>
+        <tr><td>Número de Avogadro</td><td><em>Nₐ</em></td><td>6.022 × 10²³</td><td>mol⁻¹</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+        <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+    </footer>
+
+    <!-- ===== MODAL ===== -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Script principal -->
+    <script src="GEN/script.js"></script>
+</body>
+</html>

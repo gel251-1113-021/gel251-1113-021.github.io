@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Primera Ley de la Termodinámica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Primera Ley de la Termodinámica</h1>
+    <p class="subtitulo">Conservación de la energía, trabajo, calor y energía interna en sistemas cerrados y abiertos</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#principio_energia">Principio de conservación de la energía</a></li>
+      <li><a href="#sistemas_cerrados">Sistemas cerrados</a></li>
+      <li><a href="#sistemas_abiertos">Sistemas abiertos</a></li>
+      <li><a href="#trabajo_calor">Trabajo y calor</a></li>
+      <li><a href="#ejemplos">Ejemplos y aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>Primera Ley de la Termodinámica</strong> establece el principio fundamental de la <em>conservación de la energía</em> aplicado a los sistemas termodinámicos.
+      </p>
+      <p>
+        Esta ley afirma que la energía no se crea ni se destruye, solo se transforma o se transfiere entre un sistema y su entorno en forma de <strong>trabajo</strong> o <strong>calor</strong>.
+      </p>
+      <p>
+        La energía total de un sistema, que incluye la <em>energía interna</em>, la <em>energía cinética</em> y la <em>energía potencial</em>, se mantiene constante si se consideran todos los intercambios con el entorno.
+      </p>
+    </section>
+
+    <section id="principio_energia" class="card">
+      <h2>2. Principio de conservación de la energía</h2>
+      <p>
+        La energía total de un sistema aislado permanece constante. En forma diferencial, la Primera Ley se expresa como:
+      </p>
+      <p class="formula">
+        $$ \Delta E = Q - W $$
+      </p>
+      <p>
+        donde:
+      </p>
+      <ul>
+        <li>\( \Delta E \): cambio total de energía del sistema</li>
+        <li>\( Q \): calor transferido al sistema</li>
+        <li>\( W \): trabajo realizado por el sistema</li>
+      </ul>
+      <p>
+        Si el sistema realiza trabajo positivo, pierde energía interna; si recibe calor, su energía interna aumenta.
+      </p>
+    </section>
+
+    <section id="sistemas_cerrados" class="card">
+      <h2>3. Sistemas cerrados</h2>
+      <p>
+        En un <strong>sistema cerrado</strong> no hay intercambio de masa con el entorno, pero sí puede haber transferencia de energía en forma de calor o trabajo.
+      </p>
+      <p>
+        La forma general de la Primera Ley para sistemas cerrados es:
+      </p>
+      <p class="formula">
+        $$ \Delta U = Q - W $$
+      </p>
+      <p>
+        donde \( \Delta U \) representa el cambio en la <strong>energía interna</strong> del sistema.
+      </p>
+      <p>
+        Este principio permite analizar procesos como la expansión o compresión de gases, donde el trabajo realizado modifica la energía interna.
+      </p>
+      <p>
+        Para un proceso cíclico:
+      </p>
+      <p class="formula">
+        $$ \oint \delta Q = \oint \delta W $$
+      </p>
+      <p>
+        lo que significa que en un ciclo completo, el calor total absorbido es igual al trabajo neto realizado.
+      </p>
+    </section>
+
+    <section id="sistemas_abiertos" class="card">
+      <h2>4. Sistemas abiertos</h2>
+      <p>
+        En un <strong>sistema abierto</strong> (o de flujo), hay intercambio tanto de energía como de masa con el entorno. La forma general de la Primera Ley es:
+      </p>
+      <p class="formula">
+        $$ \dot{Q} - \dot{W} = \dot{m}(h_2 - h_1 + \frac{v_2^2 - v_1^2}{2} + g(z_2 - z_1)) $$
+      </p>
+      <p>
+        donde:
+      </p>
+      <ul>
+        <li>\( \dot{Q} \): calor por unidad de tiempo (tasa de transferencia de calor)</li>
+        <li>\( \dot{W} \): potencia (trabajo por unidad de tiempo)</li>
+        <li>\( \dot{m} \): flujo másico</li>
+        <li>\( h \): entalpía específica</li>
+        <li>\( v \): velocidad</li>
+        <li>\( z \): altura (energía potencial gravitatoria)</li>
+      </ul>
+      <p>
+        Este enfoque es fundamental en el estudio de turbinas, compresores, bombas e intercambiadores de calor.
+      </p>
+    </section>
+
+    <section id="trabajo_calor" class="card">
+      <h2>5. Trabajo y calor</h2>
+      <p>
+        El <strong>trabajo</strong> (\( W \)) y el <strong>calor</strong> (\( Q \)) son formas de transferencia de energía que cruzan la frontera del sistema.
+      </p>
+      <ul>
+        <li>El trabajo está asociado con una fuerza que actúa a lo largo de un desplazamiento.</li>
+        <li>El calor está asociado con una diferencia de temperatura entre el sistema y el entorno.</li>
+      </ul>
+      <p>
+        Para un proceso cuasiestático (reversible) en un gas ideal:
+      </p>
+      <p class="formula">
+        $$ W = \int_{V_1}^{V_2} P \, dV $$
+      </p>
+      <p>
+        El calor transferido se puede obtener a partir del cambio de energía interna y el trabajo realizado:
+      </p>
+      <p class="formula">
+        $$ Q = \Delta U + W $$
+      </p>
+    </section>
+
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos y aplicaciones</h2>
+      <p><strong>Ejemplo 1:</strong> Un gas ideal se expande isotérmicamente desde un volumen \( V_1 = 1 \, L \) a \( V_2 = 2 \, L \) a una temperatura constante de \( 300 \, K \).  
+      El trabajo realizado es:
+      </p>
+      <p class="formula">
+        $$ W = nRT \ln \left( \frac{V_2}{V_1} \right) $$
+      </p>
+      <p>
+        Como la temperatura es constante, \( \Delta U = 0 \), por lo que \( Q = W \).
+      </p>
+      <p><strong>Ejemplo 2:</strong> En un sistema adiabático (\( Q = 0 \)), toda la energía interna se transforma en trabajo, cumpliendo:
+      </p>
+      <p class="formula">
+        $$ \Delta U = -W $$
+      </p>
+      <p><strong>Aplicaciones:</strong> motores térmicos, refrigeradores, compresores, turbinas, calderas y procesos de expansión y compresión de gases.</p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Cengel, Y. A., & Boles, M. A. <em>Termodinámica</em>. McGraw-Hill Education.</li>
+        <li>Van Wylen, G. J., & Sonntag, R. E. <em>Fundamentos de Termodinámica Clásica</em>.</li>
+        <li>Serway, R. A., & Jewett, J. W. <em>Física para Ciencias e Ingeniería</em>.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Física General — Primera Ley de la Termodinámica</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Difracción</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Difracción</h1>
+    <p class="subtitulo">Desviación y patrones de luz en rendijas y redes</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#principio">Principio de difracción</a></li>
+      <li><a href="#tipos">Tipos de difracción</a></li>
+      <li><a href="#patrones">Patrones de difracción</a></li>
+      <li><a href="#experimentos">Experimentos clásicos</a></li>
+      <li><a href="#aplicaciones">Aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>difracción</strong> es el fenómeno de desviación de la luz al pasar por rendijas, bordes u obstáculos cuyo tamaño es comparable a la longitud de onda. 
+        Este efecto demuestra la naturaleza ondulatoria de la luz y produce patrones de interferencia característicos.
+      </p>
+    </section>
+
+    <section id="principio" class="card">
+      <h2>2. Principio de difracción</h2>
+      <p>
+        Cuando un frente de onda encuentra un obstáculo o una rendija, cada punto de la abertura actúa como una fuente secundaria según el <strong>principio de Huygens</strong>. 
+        La superposición de estas ondas secundarias produce el patrón de difracción observado.
+      </p>
+    </section>
+
+    <section id="tipos" class="card">
+      <h2>3. Tipos de difracción</h2>
+      <ul>
+        <li><strong>Difracción por rendija única:</strong> produce un patrón central brillante con máximos y mínimos laterales.</li>
+        <li><strong>Difracción por múltiples rendijas:</strong> también llamada red de difracción, genera franjas más finas y numerosas debido a la interferencia constructiva y destructiva.</li>
+        <li><strong>Difracción de borde:</strong> la luz se curva alrededor de obstáculos opacos, importante en óptica aplicada.</li>
+      </ul>
+    </section>
+
+    <section id="patrones" class="card">
+      <h2>4. Patrones de difracción</h2>
+      <p>
+        Para una rendija simple de ancho \( a \), los mínimos de intensidad se encuentran en:
+      </p>
+      <p class="formula">
+        $$ a \sin \theta = m \lambda \quad (m = \pm 1, \pm 2, \dots) $$
+      </p>
+      <p>
+        Para una red de difracción con \( N \) rendijas separadas por distancia \( d \), los máximos principales se encuentran en:
+      </p>
+      <p class="formula">
+        $$ d \sin \theta = m \lambda \quad (m = 0, \pm 1, \pm 2, \dots) $$
+      </p>
+      <p>
+        Donde \( \lambda \) es la longitud de onda y \( \theta \) el ángulo de desviación.
+      </p>
+    </section>
+
+    <section id="experimentos" class="card">
+      <h2>5. Experimentos clásicos</h2>
+      <ul>
+        <li><strong>Rendija simple:</strong> observación del patrón central brillante y franjas laterales de menor intensidad.</li>
+        <li><strong>Red de difracción:</strong> separación de la luz blanca en colores según la longitud de onda, usada en espectroscopía.</li>
+        <li><strong>Experimentos de Young:</strong> combinación de interferencia y difracción para estudiar la coherencia de la luz.</li>
+      </ul>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>6. Aplicaciones</h2>
+      <ul>
+        <li>Medición precisa de longitudes de onda mediante redes de difracción.</li>
+        <li>Espectroscopía para análisis químico y astronómico.</li>
+        <li>Instrumentación óptica, como monocromadores y espectrógrafos.</li>
+        <li>Telecomunicaciones ópticas usando guías de onda y rejillas difractivas.</li>
+        <li>Holografía y tecnologías láser avanzadas.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Hecht, E. (2017). <em>Optics</em>. Pearson.</li>
+        <li>Tipler, P. A., & Mosca, G. (2014). <em>Física para la ciencia y la tecnología</em>. Reverté.</li>
+        <li>Born, M., & Wolf, E. (1999). <em>Principles of Optics</em>. Cambridge University Press.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fuentes Magnéticas</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Fuentes Magnéticas</h1>
+    <p class="subtitulo">Campos magnéticos producidos por corrientes eléctricas.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#ley_biot_savart">Ley de Biot–Savart</a></li>
+      <li><a href="#campo_conductor">Campo de un conductor recto</a></li>
+      <li><a href="#campo_espira">Campo en el centro de una espira</a></li>
+      <li><a href="#campo_solenoide">Campo de un solenoide</a></li>
+      <li><a href="#ejemplo">Ejemplo resuelto</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        Las <strong>fuentes magnéticas</strong> son aquellas que generan campos magnéticos en el espacio. 
+        A diferencia de las cargas eléctricas, que producen campos eléctricos estáticos, los campos magnéticos son generados por 
+        <strong>cargas en movimiento</strong>, es decir, por <em>corrientes eléctricas</em>.
+      </p>
+      <p>
+        El estudio de los campos producidos por corrientes permite entender el funcionamiento de dispositivos electromagnéticos como 
+        solenoides, motores, transformadores y electroimanes.
+      </p>
+      <blockquote>
+        “Toda corriente eléctrica crea un campo magnético alrededor de sí misma.” — Principio fundamental del electromagnetismo.
+      </blockquote>
+    </section>
+
+    <section id="ley_biot_savart" class="card">
+      <h2>2. Ley de Biot–Savart</h2>
+      <p>
+        La <strong>Ley de Biot–Savart</strong> describe el campo magnético generado por un elemento de corriente. 
+        Es la base teórica que permite calcular \( \vec{B} \) en cualquier punto del espacio debido a una distribución de corriente.
+      </p>
+      <p class="formula">
+        $$ d\vec{B} = \frac{\mu_0}{4\pi} \frac{I \, d\vec{l} \times \hat{r}}{r^2} $$
+      </p>
+      <p>
+        donde:
+      </p>
+      <ul>
+        <li>\( d\vec{l} \): elemento diferencial del conductor</li>
+        <li>\( I \): corriente eléctrica (A)</li>
+        <li>\( \hat{r} \): vector unitario desde el elemento hasta el punto de observación</li>
+        <li>\( r \): distancia entre el elemento y el punto (m)</li>
+        <li>\( \mu_0 = 4\pi \times 10^{-7}\ \mathrm{T·m/A} \): permeabilidad del vacío</li>
+      </ul>
+      <p>
+        La dirección de \( d\vec{B} \) se obtiene mediante la regla de la mano derecha: 
+        los dedos indican la dirección de la corriente y el pulgar el sentido del campo magnético.
+      </p>
+    </section>
+
+    <section id="campo_conductor" class="card">
+      <h2>3. Campo de un conductor recto largo</h2>
+      <p>
+        Para un conductor largo y recto por el que circula una corriente \( I \), el campo magnético en un punto a distancia \( r \) es:
+      </p>
+      <p class="formula">
+        $$ B = \frac{\mu_0 I}{2\pi r} $$
+      </p>
+      <p>
+        El campo es tangencial y forma círculos concéntricos alrededor del conductor. 
+        Su dirección sigue la regla de la mano derecha.
+      </p>
+      <p>
+        Este resultado es una consecuencia directa de la Ley de Biot–Savart aplicada a un conductor infinitamente largo.
+      </p>
+    </section>
+
+    <section id="campo_espira" class="card">
+      <h2>4. Campo en el centro de una espira circular</h2>
+      <p>
+        Para una espira circular de radio \( R \) que transporta una corriente \( I \), 
+        el campo magnético en el centro de la espira se obtiene integrando la Ley de Biot–Savart:
+      </p>
+      <p class="formula">
+        $$ B = \frac{\mu_0 I}{2R} $$
+      </p>
+      <p>
+        Este campo es perpendicular al plano de la espira. 
+        Si la corriente circula en sentido antihorario, el campo apunta hacia fuera del plano según la regla de la mano derecha.
+      </p>
+      <p>
+        Cuando hay \( N \) espiras, el campo total es:
+      </p>
+      <p class="formula">
+        $$ B = \frac{\mu_0 N I}{2R} $$
+      </p>
+    </section>
+
+    <section id="campo_solenoide" class="card">
+      <h2>5. Campo de un solenoide</h2>
+      <p>
+        Un <strong>solenoide</strong> es una bobina larga formada por muchas espiras de alambre. 
+        En su interior, el campo magnético es aproximadamente uniforme y se expresa como:
+      </p>
+      <p class="formula">
+        $$ B = \mu_0 n I $$
+      </p>
+      <p>
+        donde \( n = \frac{N}{L} \) es el número de espiras por unidad de longitud.
+      </p>
+      <p>
+        El campo dentro del solenoide es prácticamente constante, mientras que fuera de él disminuye rápidamente. 
+        Este principio se utiliza en electroimanes y dispositivos de inducción.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>6. Ejemplo resuelto</h2>
+      <p>
+        <strong>Problema:</strong> Calcular el campo magnético en el centro de una espira circular de radio \( R = 0.05\ \mathrm{m} \)
+        que transporta una corriente de \( I = 2\ \mathrm{A} \).
+      </p>
+      <p class="formula">
+        $$ B = \frac{\mu_0 I}{2R} = \frac{(4\pi \times 10^{-7})(2)}{2(0.05)} = 2.51 \times 10^{-5}\ \mathrm{T} $$
+      </p>
+      <p>
+        Por tanto, el campo magnético en el centro de la espira es de \( 25.1\ \mathrm{\mu T} \), orientado perpendicularmente al plano de la espira.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Halliday, D., Resnick, R. & Walker, J. <em>Fundamentos de Física</em>. Wiley, 2018.</li>
+        <li>Tipler, P. A. & Mosca, G. <em>Física para la Ciencia y la Tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

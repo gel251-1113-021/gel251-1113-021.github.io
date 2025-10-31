@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Carga y Campo Eléctrico</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+  
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Carga y Campo Eléctrico</h1>
+    <p class="subtitulo">Fundamentos, leyes, ejemplos y extensión a distribuciones continuas.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#historia">Historia</a></li>
+      <li><a href="#coulomb">Ley de Coulomb</a></li>
+      <li><a href="#campo">Campo Eléctrico</a></li>
+      <li><a href="#distribuciones">Distribuciones Continuas</a></li>
+      <li><a href="#superposicion">Principio de Superposición</a></li>
+      <li><a href="#ejemplo">Ejemplo</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>carga eléctrica</strong> es una propiedad intrínseca de la materia responsable de las interacciones electromagnéticas. 
+        Toda sustancia está compuesta por átomos que contienen protones y electrones, portadores de carga positiva y negativa, respectivamente.
+      </p>
+      <p>
+        La unidad fundamental de carga es el <em>coulomb (C)</em>, y toda carga eléctrica es múltiplo entero de la carga del electrón:
+      </p>
+      <p class="formula">
+        $$ q = n e \quad \text{donde} \quad e = 1.602\times10^{-19}\ \mathrm{C} $$
+      </p>
+      <p>
+        Las interacciones eléctricas son extremadamente fuertes comparadas con la gravitación a nivel microscópico, lo que las convierte en la base de la estructura de la materia.
+      </p>
+    </section>
+
+    <section id="historia" class="card">
+      <h2>2. Desarrollo histórico</h2>
+      <p>
+        El fenómeno eléctrico se conoce desde la antigüedad, pero fue <strong>Charles-Augustin de Coulomb</strong> quien cuantificó la fuerza eléctrica en 1785. 
+        Posteriormente, <strong>Michael Faraday</strong> introdujo el concepto de <em>campo</em> y <strong>James Clerk Maxwell</strong> lo integró en un marco teórico unificado junto con el magnetismo.
+      </p>
+      <blockquote>
+        “El espacio no es vacío, sino que posee propiedades físicas que transmiten la interacción eléctrica.” — <em>J.C. Maxwell</em>
+      </blockquote>
+    </section>
+
+    <section id="coulomb" class="card">
+      <h2>3. Ley de Coulomb</h2>
+      <p>
+        La <strong>Ley de Coulomb</strong> establece que la fuerza entre dos cargas puntuales es directamente proporcional al producto de sus magnitudes e inversamente proporcional al cuadrado de la distancia entre ellas:
+      </p>
+      <p class="formula">
+        $$ \mathbf{F}_{12} = k \frac{q_1 q_2}{r^2} \hat{\mathbf{r}}_{12} $$
+      </p>
+      <p>
+        Donde \( k = \frac{1}{4\pi \varepsilon_0} \approx 8.99\times10^9\ \mathrm{N\cdot m^2/C^2} \).  
+        Esta fuerza es repulsiva si las cargas tienen el mismo signo y atractiva si son de signos opuestos.
+      </p>
+    </section>
+
+    <section id="campo" class="card">
+      <h2>4. Campo Eléctrico</h2>
+      <p>
+        El <strong>campo eléctrico</strong> se define como la fuerza por unidad de carga que actúa sobre una carga de prueba \( q_0 \):
+      </p>
+      <p class="formula">
+        $$ \mathbf{E} = \frac{\mathbf{F}}{q_0} $$
+      </p>
+      <p>
+        Para una carga puntual \( q \), el campo en un punto a distancia \( r \) es:
+      </p>
+      <p class="formula">
+        $$ \mathbf{E} = k \frac{q}{r^2} \hat{\mathbf{r}} $$
+      </p>
+      <p>
+        Su dirección es radial, apuntando hacia afuera si la carga es positiva y hacia el centro si es negativa.
+      </p>
+    </section>
+
+    <section id="distribuciones" class="card">
+      <h2>5. Distribuciones continuas de carga</h2>
+      <p>
+        Cuando la carga no puede considerarse concentrada en puntos, se habla de una <strong>distribución continua de carga</strong>. 
+        En tales casos, la carga total se obtiene integrando la densidad de carga sobre la región correspondiente.
+      </p>
+
+      <h3>a) Distribución lineal</h3>
+      <p>
+        En un hilo cargado, la densidad lineal de carga es:
+      </p>
+      <p class="formula">
+        $$ \lambda = \frac{dq}{dl} $$
+      </p>
+      <p>
+        El campo eléctrico en un punto \( P \) se obtiene mediante:
+      </p>
+      <p class="formula">
+        $$ \mathbf{E} = \frac{1}{4\pi\varepsilon_0} \int \frac{\lambda\, dl\, \hat{\mathbf{r}}}{r^2} $$
+      </p>
+
+      <h3>b) Distribución superficial</h3>
+      <p>
+        Para una superficie cargada, la densidad superficial de carga se define como:
+      </p>
+      <p class="formula">
+        $$ \sigma = \frac{dq}{dA} $$
+      </p>
+      <p>
+        Y el campo se calcula integrando sobre toda la superficie:
+      </p>
+      <p class="formula">
+        $$ \mathbf{E} = \frac{1}{4\pi\varepsilon_0} \int \frac{\sigma\, dA\, \hat{\mathbf{r}}}{r^2} $$
+      </p>
+
+      <h3>c) Distribución volumétrica</h3>
+      <p>
+        En un volumen cargado, la densidad volumétrica de carga es:
+      </p>
+      <p class="formula">
+        $$ \rho = \frac{dq}{dV} $$
+      </p>
+      <p>
+        El campo eléctrico total se determina integrando sobre el volumen:
+      </p>
+      <p class="formula">
+        $$ \mathbf{E} = \frac{1}{4\pi\varepsilon_0} \int \frac{\rho\, dV\, \hat{\mathbf{r}}}{r^2} $$
+      </p>
+      <p>
+        Estos cálculos suelen requerir el uso de coordenadas esféricas, cilíndricas o cartesianas, dependiendo de la simetría del problema.
+      </p>
+    </section>
+
+    <!-- NUEVA SECCIÓN: Principio de Superposición -->
+    <section id="superposicion" class="card">
+      <h2>6. Principio de Superposición</h2>
+      <p>
+        El <strong>Principio de Superposición</strong> establece que el efecto combinado de varias cargas eléctricas es igual a la suma vectorial de los efectos producidos por cada carga individualmente.
+      </p>
+      <p>
+        Si existen varias cargas \( q_1, q_2, q_3, \ldots, q_n \), el campo eléctrico total en un punto se obtiene como:
+      </p>
+      <p class="formula">
+        $$ \mathbf{E}_{\text{total}} = \sum_{i=1}^{n} \mathbf{E}_i = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{n} \frac{q_i\, \hat{\mathbf{r}}_i}{r_i^2} $$
+      </p>
+      <p>
+        Este principio implica que los campos eléctricos se <em>superponen linealmente</em> sin interferir entre sí, ya que el campo eléctrico es una magnitud vectorial.
+      </p>
+      <p>
+        Un ejemplo clásico es el cálculo del campo eléctrico en el eje de un dipolo, donde el campo total resulta de la suma vectorial de los campos generados por las cargas positiva y negativa.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>7. Ejemplo numérico</h2>
+      <p>
+        <strong>Problema:</strong> Calcular el campo eléctrico en un punto a \( 0.3\ \mathrm{m} \) de una carga puntual \( 2.0\times10^{-6}\ \mathrm{C} \).
+      </p>
+      <p class="formula">
+        $$ E = k \frac{|q|}{r^2} = (8.99\times10^9)\frac{2.0\times10^{-6}}{(0.3)^2} = 1.99\times10^5\ \mathrm{N/C} $$
+      </p>
+      <p>El campo apunta radialmente hacia afuera, ya que la carga es positiva.</p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>8. Referencias recomendadas</h2>
+      <ul>
+        <li>Resnick, R. & Halliday, D. <em>Física</em>. Vol. II. Wiley, 2015.</li>
+        <li>Tipler, P. A., & Mosca, G. <em>Física para la ciencia y la tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+        <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+    </footer>
+</body>
+</html>

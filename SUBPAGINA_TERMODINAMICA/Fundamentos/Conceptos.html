@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Conceptos Fundamentales</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Conceptos Fundamentales</h1>
+    <p class="subtitulo">Sistemas termodinámicos, propiedades, estados, equilibrio y procesos</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#sistema">Sistemas termodinámicos</a></li>
+      <li><a href="#propiedades">Propiedades y estado</a></li>
+      <li><a href="#equilibrio">Equilibrio termodinámico</a></li>
+      <li><a href="#procesos">Procesos termodinámicos</a></li>
+      <li><a href="#ejemplos">Ejemplos y aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>termodinámica</strong> es la rama de la física que estudia la energía, el calor y el trabajo, así como las transformaciones que ocurren en los sistemas físicos.  
+        Sus <em>conceptos fundamentales</em> permiten describir cómo la materia intercambia energía con su entorno y cómo se establecen los estados de equilibrio.
+      </p>
+      <p>
+        Para analizar un fenómeno termodinámico, se requiere definir el sistema que se estudia, las propiedades que lo describen y las condiciones bajo las cuales ocurre el proceso.
+      </p>
+    </section>
+
+    <section id="sistema" class="card">
+      <h2>2. Sistemas termodinámicos</h2>
+      <p>
+        Un <strong>sistema termodinámico</strong> es una porción del universo que se elige para estudiar. Todo lo que no pertenece a él se llama <em>entorno</em>.
+      </p>
+      <ul>
+        <li><strong>Sistema abierto:</strong> Intercambia materia y energía con el entorno (por ejemplo, una caldera).</li>
+        <li><strong>Sistema cerrado:</strong> Intercambia energía, pero no materia (por ejemplo, un cilindro con pistón).</li>
+        <li><strong>Sistema aislado:</strong> No intercambia ni materia ni energía (por ejemplo, un termo ideal).</li>
+      </ul>
+      <p>
+        La frontera del sistema define el límite entre el sistema y su entorno; puede ser fija o móvil.
+      </p>
+    </section>
+
+    <section id="propiedades" class="card">
+      <h2>3. Propiedades y estado</h2>
+      <p>
+        Las <strong>propiedades termodinámicas</strong> son magnitudes que describen el estado del sistema. Pueden clasificarse en:
+      </p>
+      <ul>
+        <li><strong>Extensivas:</strong> Dependen de la cantidad de materia (masa, volumen, energía interna).</li>
+        <li><strong>Intensivas:</strong> No dependen de la cantidad de materia (presión, temperatura, densidad).</li>
+      </ul>
+      <p>
+        El <strong>estado termodinámico</strong> de un sistema queda definido cuando se conocen un conjunto mínimo de propiedades independientes, suficientes para describirlo completamente.
+      </p>
+      <p>
+        Por ejemplo, para un gas ideal:
+      </p>
+      <p class="formula">
+        $$ PV = nRT $$
+      </p>
+      <p>
+        donde \( P \) es la presión, \( V \) el volumen, \( n \) la cantidad de sustancia, \( R \) la constante del gas ideal y \( T \) la temperatura absoluta.
+      </p>
+    </section>
+
+    <section id="equilibrio" class="card">
+      <h2>4. Equilibrio termodinámico</h2>
+      <p>
+        Un sistema se encuentra en <strong>equilibrio termodinámico</strong> cuando sus propiedades no cambian con el tiempo y no hay flujos de energía o materia dentro del sistema.
+      </p>
+      <ul>
+        <li><strong>Equilibrio térmico:</strong> La temperatura es uniforme en todo el sistema.</li>
+        <li><strong>Equilibrio mecánico:</strong> No existen diferencias de presión internas.</li>
+        <li><strong>Equilibrio químico:</strong> No hay reacciones químicas netas en curso.</li>
+      </ul>
+      <p>
+        Cuando se alcanza el equilibrio completo, el sistema puede describirse mediante un único conjunto de variables de estado.
+      </p>
+    </section>
+
+    <section id="procesos" class="card">
+      <h2>5. Procesos termodinámicos</h2>
+      <p>
+        Un <strong>proceso termodinámico</strong> es la transformación que lleva a un sistema de un estado inicial a uno final. Puede implicar intercambio de calor, trabajo o ambos.
+      </p>
+      <ul>
+        <li><strong>Isotérmico:</strong> Temperatura constante (\( \Delta T = 0 \)).</li>
+        <li><strong>Isobárico:</strong> Presión constante (\( \Delta P = 0 \)).</li>
+        <li><strong>Isocórico:</strong> Volumen constante (\( \Delta V = 0 \)).</li>
+        <li><strong>Adiabático:</strong> No hay transferencia de calor (\( Q = 0 \)).</li>
+      </ul>
+      <p>
+        En cada proceso, las variables del sistema cambian de forma controlada, permitiendo estudiar el comportamiento energético y mecánico del sistema.
+      </p>
+    </section>
+
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos y aplicaciones</h2>
+      <p><strong>Ejemplo 1:</strong> En un gas ideal que se expande isotérmicamente, se cumple que \( PV = \text{cte} \).  
+        Si la presión inicial es de 2 atm y el volumen se duplica, la presión final será de 1 atm.</p>
+      <p><strong>Ejemplo 2:</strong> En un sistema adiabático, el calor no se transfiere (\( Q = 0 \)), por lo que toda variación de energía interna se asocia con el trabajo realizado por el sistema.</p>
+      <p><strong>Aplicaciones:</strong> motores térmicos, refrigeradores, y análisis de gases ideales y reales en ingeniería.</p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Cengel, Y. A., & Boles, M. A. <em>Termodinámica</em>. McGraw-Hill Education.</li>
+        <li>Van Wylen, G. J., & Sonntag, R. E. <em>Fundamentos de Termodinámica Clásica</em>.</li>
+        <li>Serway, R. A., & Jewett, J. W. <em>Física para Ciencias e Ingeniería</em>.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Física General — Conceptos Fundamentales de Termodinámica</p>
+  </footer>
+</body>
+</html>

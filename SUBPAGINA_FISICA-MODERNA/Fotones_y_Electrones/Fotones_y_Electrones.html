@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fotones y Electrones</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Fotones y Electrones</h1>
+    <p class="subtitulo">Comportamiento cuántico de la luz y la materia</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#dualidad">Dualidad onda-partícula</a></li>
+      <li><a href="#efotoelectrico">Efecto fotoeléctrico</a></li>
+      <li><a href="#ondas_materia">Ondas de materia</a></li>
+      <li><a href="#incertidumbre">Principio de incertidumbre</a></li>
+      <li><a href="#modelos">Modelos atómicos cuánticos</a></li>
+      <li><a href="#ejemplo">Ejemplo ilustrativo</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        A comienzos del siglo XX, la física clásica no podía explicar ciertos fenómenos observados en la radiación electromagnética y en el comportamiento de las partículas subatómicas. 
+        Nació así la <strong>mecánica cuántica</strong>, teoría que describe la naturaleza dual y probabilística de la luz y la materia.
+      </p>
+      <p>
+        Dos de sus protagonistas fundamentales son los <strong>fotones</strong> (cuantos de luz) y los <strong>electrones</strong> (partículas subatómicas con carga negativa), 
+        cuyas interacciones revelan la naturaleza discreta de la energía.
+      </p>
+    </section>
+
+    <section id="dualidad" class="card">
+      <h2>2. Dualidad onda-partícula</h2>
+      <p>
+        Tanto la luz como la materia presentan un comportamiento dual: pueden actuar como partículas o como ondas, dependiendo del experimento.
+      </p>
+      <p>
+        <strong>Ejemplo:</strong> En el experimento de la doble rendija, los fotones y electrones producen un patrón de interferencia típico de ondas, 
+        pero también pueden detectarse individualmente como partículas.
+      </p>
+      <p class="formula">
+        $$ E = hf \quad \text{y} \quad p = \frac{h}{\lambda} $$
+      </p>
+      <p>
+        donde $E$ es la energía, $p$ el momento lineal, $h$ la constante de Planck y $\lambda$ la longitud de onda asociada.
+      </p>
+    </section>
+
+    <section id="efotoelectrico" class="card">
+      <h2>3. Efecto fotoeléctrico</h2>
+      <p>
+        Descubierto por <strong>Heinrich Hertz</strong> y explicado por <strong>Einstein</strong> en 1905, este efecto ocurre cuando la luz incide sobre una superficie metálica 
+        y libera electrones. 
+      </p>
+      <p>
+        La energía de los fotones incidentes se relaciona con la frecuencia de la luz:
+      </p>
+      <p class="formula">
+        $$ E_f = hf - W $$
+      </p>
+      <p>
+        donde $E_f$ es la energía cinética del electrón emitido, $f$ la frecuencia de la luz y $W$ el trabajo de extracción del material.
+      </p>
+      <p>
+        Este fenómeno demuestra que la energía de la luz está cuantizada y depende de su frecuencia, no de su intensidad.
+      </p>
+    </section>
+
+    <section id="ondas_materia" class="card">
+      <h2>4. Ondas de materia</h2>
+      <p>
+        <strong>Louis de Broglie</strong> propuso que las partículas materiales también poseen un carácter ondulatorio. 
+        Su longitud de onda asociada es:
+      </p>
+      <p class="formula">
+        $$ \lambda = \frac{h}{p} $$
+      </p>
+      <p>
+        Este concepto fue verificado experimentalmente con la difracción de electrones, 
+        consolidando la idea de que toda partícula tiene una naturaleza dual.
+      </p>
+    </section>
+
+    <section id="incertidumbre" class="card">
+      <h2>5. Principio de incertidumbre de Heisenberg</h2>
+      <p>
+        <strong>Werner Heisenberg</strong> formuló en 1927 un principio fundamental: 
+        es imposible conocer simultáneamente y con precisión absoluta la posición y el momento de una partícula.
+      </p>
+      <p class="formula">
+        $$ \Delta x \, \Delta p \geq \frac{\hbar}{2} $$
+      </p>
+      <p>
+        donde $\hbar = \frac{h}{2\pi}$.  
+        Esta relación no es una limitación experimental, sino una propiedad intrínseca de la naturaleza.
+      </p>
+    </section>
+
+    <section id="modelos" class="card">
+      <h2>6. Modelos atómicos cuánticos</h2>
+      <p>
+        El modelo de Bohr (1913) fue un paso importante, pero la descripción más completa proviene de la ecuación de onda de Schrödinger:
+      </p>
+      <p class="formula">
+        $$ \hat{H}\Psi = E\Psi $$
+      </p>
+      <p>
+        donde $\Psi$ es la función de onda y $E$ la energía del sistema.  
+        Esta ecuación permite predecir los niveles de energía de los electrones y las probabilidades de encontrar una partícula en una región del espacio.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>7. Ejemplo ilustrativo</h2>
+      <p>
+        <strong>Ejemplo:</strong> Calcula la longitud de onda de de Broglie de un electrón con velocidad $v = 2.0 \times 10^6\ \text{m/s}$.
+      </p>
+      <p class="formula">
+        $$ \lambda = \frac{h}{mv} = \frac{6.63\times10^{-34}}{9.11\times10^{-31} \times 2.0\times10^6} = 3.64\times10^{-10}\ \text{m} $$
+      </p>
+      <p>
+        Esta longitud de onda es del orden de los radios atómicos, lo que explica por qué los electrones muestran difracción.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>8. Referencias recomendadas</h2>
+      <ul>
+        <li>Einstein, A. (1905). <em>Sobre un punto de vista heurístico acerca de la producción y transformación de la luz</em>.</li>
+        <li>De Broglie, L. (1924). <em>Recherches sur la théorie des quanta</em>.</li>
+        <li>Tipler, P. & Mosca, G. <em>Física Moderna</em>. Reverté, 2018.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

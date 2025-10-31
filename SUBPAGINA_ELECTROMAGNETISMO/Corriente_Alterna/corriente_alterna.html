@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Corriente Alterna</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Corriente Alterna</h1>
+    <p class="subtitulo">Comportamiento senoidal de voltaje y corriente</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#concepto">Concepto de corriente alterna</a></li>
+      <li><a href="#ondas">Forma de onda senoidal</a></li>
+      <li><a href="#parametros">Parámetros característicos</a></li>
+      <li><a href="#fase">Desfase y representación fasorial</a></li>
+      <li><a href="#ejemplo">Ejemplo práctico</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>corriente alterna (CA)</strong> es aquella cuya magnitud y dirección varían periódicamente con el tiempo. 
+        Es la forma más común de transmisión y distribución de energía eléctrica debido a su eficiencia en el transporte y transformación.
+      </p>
+      <p>
+        A diferencia de la corriente continua, en la corriente alterna el flujo de electrones cambia de sentido de manera cíclica.
+      </p>
+    </section>
+
+    <section id="concepto" class="card">
+      <h2>2. Concepto de corriente alterna</h2>
+      <p>
+        La corriente alterna puede describirse matemáticamente como una función senoidal del tiempo:
+      </p>
+      <p class="formula">
+        $$ i(t) = I_m \sin(\omega t + \phi) $$
+      </p>
+      <p>
+        donde:
+        <ul>
+          <li>$I_m$ es la <em>amplitud máxima</em> de la corriente.</li>
+          <li>$\omega$ es la <em>frecuencia angular</em> ($\omega = 2\pi f$).</li>
+          <li>$\phi$ es el <em>ángulo de fase</em> inicial.</li>
+        </ul>
+      </p>
+    </section>
+
+    <section id="ondas" class="card">
+      <h2>3. Forma de onda senoidal</h2>
+      <p>
+        Tanto el voltaje como la corriente alterna se representan mediante <strong>ondas senoidales</strong>. 
+        Estas oscilan alrededor de un valor medio cero, repitiéndose con un período $T$.
+      </p>
+      <p class="formula">
+        $$ v(t) = V_m \sin(\omega t) $$
+      </p>
+      <p>
+        donde $V_m$ es el valor máximo del voltaje.  
+        La frecuencia $f = \frac{1}{T}$ indica cuántos ciclos completos ocurren por segundo (en la red doméstica, $f = 60$ Hz).
+      </p>
+    </section>
+
+    <section id="parametros" class="card">
+      <h2>4. Parámetros característicos</h2>
+      <ul>
+        <li><strong>Valor máximo ($V_m$, $I_m$):</strong> amplitud pico de la señal.</li>
+        <li><strong>Valor medio:</strong> promedio de la magnitud de la señal durante un ciclo.</li>
+        <li><strong>Valor eficaz (RMS):</strong> equivalente en corriente continua que produce el mismo efecto térmico:
+          $$ I_{ef} = \frac{I_m}{\sqrt{2}}, \quad V_{ef} = \frac{V_m}{\sqrt{2}} $$
+        </li>
+        <li><strong>Frecuencia ($f$):</strong> número de oscilaciones por segundo.</li>
+      </ul>
+    </section>
+
+    <section id="fase" class="card">
+      <h2>5. Desfase y representación fasorial</h2>
+      <p>
+        Cuando varias señales alternas de la misma frecuencia se comparan, pueden estar <strong>desfasadas</strong>.  
+        El <em>desfase</em> $\phi$ representa la diferencia angular entre ellas:
+      </p>
+      <p class="formula">
+        $$ \Delta \phi = \omega t_2 - \omega t_1 $$
+      </p>
+      <p>
+        En el análisis fasorial, las magnitudes senoidales se representan mediante vectores rotatorios (fasores), lo que facilita el estudio de circuitos en régimen alterno.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>6. Ejemplo práctico</h2>
+      <p>
+        <strong>Ejemplo:</strong> Una corriente alterna se define como $i(t) = 5 \sin(100\pi t)$ A.  
+        Calcular su valor eficaz y su frecuencia.
+      </p>
+      <p class="formula">
+        $$ I_{ef} = \frac{5}{\sqrt{2}} = 3.54\ \mathrm{A} $$
+      </p>
+      <p class="formula">
+        $$ f = \frac{\omega}{2\pi} = \frac{100\pi}{2\pi} = 50\ \mathrm{Hz} $$
+      </p>
+      <p>
+        Por tanto, la señal tiene una frecuencia de 50 Hz y un valor eficaz de 3.54 A.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+        <li>Boylestad, R. L. <em>Introducción al Análisis de Circuitos</em>. Pearson, 2016.</li>
+        <li>Hayt, W. H., Kemmerly, J. E. & Durbin, S. M. <em>Ingeniería Eléctrica</em>. McGraw-Hill, 2018.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

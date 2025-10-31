@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistemas de Partículas - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Sistemas de Partículas</h1>
+    <p class="subtitulo">Centro de masa, colisiones y sistemas no inerciales</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#centro_masa">Centro de masa</a></li>
+      <li><a href="#movimiento_cm">Movimiento del centro de masa</a></li>
+      <li><a href="#colisiones">Colisiones</a></li>
+      <li><a href="#sistemas_no_inerciales">Sistemas no inerciales</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- ===== 1. INTRODUCCIÓN ===== -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        En la <strong>Mecánica Clásica</strong>, un <strong>sistema de partículas</strong> está formado por un conjunto de cuerpos que interactúan entre sí mediante fuerzas internas (como la gravedad o fuerzas de contacto) y externas (como el rozamiento o campos externos).
+      </p>
+      <p>
+        El análisis de estos sistemas permite entender el comportamiento colectivo de múltiples cuerpos, como en colisiones, movimiento de cohetes o sistemas planetarios.
+      </p>
+    </section>
+
+    <!-- ===== 2. CENTRO DE MASA ===== -->
+    <section id="centro_masa" class="card">
+      <h2>2. Centro de masa</h2>
+      <p>
+        El <strong>centro de masa</strong> de un sistema de partículas es el punto donde se puede considerar concentrada toda la masa del sistema para analizar su movimiento global.
+      </p>
+      <p class="formula">
+        $$ \mathbf{R}_{CM} = \frac{1}{M} \sum_{i=1}^{n} m_i \mathbf{r}_i $$
+      </p>
+      <ul>
+        <li>$m_i$ → masa de la partícula $i$</li>
+        <li>$\mathbf{r}_i$ → vector de posición de la partícula $i$</li>
+        <li>$M = \sum m_i$ → masa total del sistema</li>
+      </ul>
+      <p>
+        Para una distribución continua de masa, se reemplaza la suma por una integral:
+      </p>
+      <p class="formula">
+        $$ \mathbf{R}_{CM} = \frac{1}{M} \int \mathbf{r} \, dm $$
+      </p>
+    </section>
+
+    <!-- ===== 3. MOVIMIENTO DEL CENTRO DE MASA ===== -->
+    <section id="movimiento_cm" class="card">
+      <h2>3. Movimiento del centro de masa</h2>
+      <p>
+        El movimiento del centro de masa está determinado únicamente por las fuerzas externas que actúan sobre el sistema:
+      </p>
+      <p class="formula">
+        $$ M \frac{d^2 \mathbf{R}_{CM}}{dt^2} = \sum \mathbf{F}_{ext} $$
+      </p>
+      <p>
+        Esto significa que, aunque existan fuerzas internas entre las partículas, estas se anulan por pares (tercera ley de Newton), por lo que no afectan al movimiento global del sistema.
+      </p>
+      <div class="nota">
+        <p>
+          El centro de masa de un sistema aislado (sin fuerzas externas) se mueve con <strong>velocidad constante</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 4. COLISIONES ===== -->
+    <section id="colisiones" class="card">
+      <h2>4. Colisiones</h2>
+      <p>
+        Una <strong>colisión</strong> ocurre cuando dos o más cuerpos interactúan durante un intervalo de tiempo muy corto, ejerciéndose fuerzas internas muy intensas.
+      </p>
+      <p>
+        En toda colisión, la <strong>cantidad de movimiento total</strong> del sistema se conserva si no hay fuerzas externas:
+      </p>
+      <p class="formula">
+        $$ \sum \mathbf{p}_{inicial} = \sum \mathbf{p}_{final} $$
+      </p>
+
+      <h3>4.1 Tipos de colisiones</h3>
+      <ul>
+        <li><strong>Elástica:</strong> se conserva tanto la cantidad de movimiento como la energía cinética total.</li>
+        <li><strong>Inelástica:</strong> se conserva la cantidad de movimiento, pero no la energía cinética.</li>
+        <li><strong>Totalmente inelástica:</strong> los cuerpos quedan unidos tras el impacto.</li>
+      </ul>
+
+      <p>
+        Ejemplo general de conservación del momento en una colisión de dos cuerpos:
+      </p>
+      <p class="formula">
+        $$ m_1 v_{1i} + m_2 v_{2i} = m_1 v_{1f} + m_2 v_{2f} $$
+      </p>
+    </section>
+
+    <!-- ===== 5. SISTEMAS NO INERCIALES ===== -->
+    <section id="sistemas_no_inerciales" class="card">
+      <h2>5. Sistemas no inerciales</h2>
+      <p>
+        Un <strong>sistema no inercial</strong> es aquel que se encuentra acelerado respecto a un sistema de referencia inercial.
+        En estos sistemas aparecen <strong>fuerzas ficticias</strong> o aparentes, que no provienen de ninguna interacción real,
+        pero deben considerarse para aplicar correctamente las leyes de Newton.
+      </p>
+
+      <h3>5.1 Fuerza de inercia</h3>
+      <p class="formula">
+        $$ \mathbf{F}_{inercia} = -m \mathbf{a}_0 $$
+      </p>
+      <p>
+        donde $\mathbf{a}_0$ es la aceleración del sistema de referencia no inercial.
+      </p>
+
+      <h3>5.2 Ejemplos de fuerzas ficticias</h3>
+      <ul>
+        <li><strong>Fuerza centrífuga:</strong> aparece en sistemas en rotación.</li>
+        <li><strong>Fuerza de Coriolis:</strong> afecta el movimiento de partículas en sistemas giratorios (como la Tierra).</li>
+        <li><strong>Fuerza lineal de inercia:</strong> aparece cuando el sistema se acelera o desacelera en línea recta.</li>
+      </ul>
+      <div class="nota">
+        <p>Estas fuerzas explican fenómenos como el desvío de los vientos o el movimiento de proyectiles en la Tierra.</p>
+      </div>
+    </section>
+
+    <!-- ===== 6. EJEMPLOS RESUELTOS ===== -->
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Centro de masa de dos cuerpos</h3>
+      <p>
+        Dos masas, $m_1 = 2\,\text{kg}$ y $m_2 = 4\,\text{kg}$, están situadas en $x_1 = 0\,\text{m}$ y $x_2 = 3\,\text{m}$.  
+        Calcula la posición del centro de masa.
+      </p>
+      <p class="formula">
+        $$ x_{CM} = \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2} = \frac{(2)(0) + (4)(3)}{6} = 2\,\text{m} $$
+      </p>
+      <p>El centro de masa se encuentra en <strong>x = 2 m</strong>.</p>
+
+      <h3>Ejemplo 2: Colisión elástica unidimensional</h3>
+      <p>
+        Una bola de $1\,\text{kg}$ se mueve a $2\,\text{m/s}$ y choca con otra bola de $1\,\text{kg}$ en reposo.  
+        Si la colisión es perfectamente elástica, determina las velocidades finales.
+      </p>
+      <p class="formula">
+        $$ v_{1f} = 0\,\text{m/s}, \quad v_{2f} = 2\,\text{m/s} $$
+      </p>
+      <p>Después del choque, la primera se detiene y la segunda adquiere la velocidad inicial de la primera.</p>
+
+      <h3>Ejemplo 3: Fuerza ficticia en un ascensor acelerado</h3>
+      <p>
+        Una persona de $70\,\text{kg}$ está en un ascensor que acelera hacia arriba con $2\,\text{m/s}^2$.  
+        Calcula la fuerza normal aparente.
+      </p>
+      <p class="formula">
+        $$ N = m(g + a) = 70(9.8 + 2) = 826\,\text{N} $$
+      </p>
+      <p>El peso aparente es <strong>mayor</strong> debido a la aceleración hacia arriba.</p>
+    </section>
+
+    <!-- ===== 7. REFERENCIAS ===== -->
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Tipler, P. A., & Mosca, G. (2008). <em>Física para la ciencia y la tecnología</em> (6ª ed.). Reverté.</li>
+        <li>Young, H. D., & Freedman, R. A. (2021). <em>Física Universitaria</em> (15ª ed.). Pearson.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

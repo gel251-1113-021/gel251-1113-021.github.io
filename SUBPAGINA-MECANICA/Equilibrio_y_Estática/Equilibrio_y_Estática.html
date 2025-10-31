@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Equilibrio y Estática - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Equilibrio y Estática</h1>
+    <p class="subtitulo">Condiciones de equilibrio y análisis de estructuras</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#condiciones_equilibrio">Condiciones de equilibrio</a></li>
+      <li><a href="#momento_fuerzas">Momento de una fuerza</a></li>
+      <li><a href="#equilibrio_rigidos">Equilibrio de cuerpos rígidos</a></li>
+      <li><a href="#estructuras">Análisis de estructuras</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- 1. INTRODUCCIÓN -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>estática</strong> es la rama de la mecánica que estudia las condiciones bajo las cuales un cuerpo o sistema de cuerpos se mantiene en <strong>equilibrio</strong>, es decir, sin movimiento o con velocidad constante.
+      </p>
+      <p>
+        En ingeniería y física, el análisis estático es esencial para diseñar estructuras, máquinas y sistemas que deben resistir fuerzas sin colapsar ni desplazarse.
+      </p>
+      <p>
+        Existen dos tipos principales de equilibrio:
+      </p>
+      <ul>
+        <li><strong>Equilibrio traslacional:</strong> cuando la suma de fuerzas sobre el cuerpo es cero.</li>
+        <li><strong>Equilibrio rotacional:</strong> cuando la suma de momentos (torques) sobre el cuerpo es cero.</li>
+      </ul>
+    </section>
+
+    <!-- 2. CONDICIONES DE EQUILIBRIO -->
+    <section id="condiciones_equilibrio" class="card">
+      <h2>2. Condiciones de equilibrio</h2>
+      <p>
+        Para que un cuerpo se mantenga en equilibrio estático, debe cumplirse simultáneamente:
+      </p>
+      <p class="formula">
+        $$ \sum \mathbf{F} = 0 \quad \text{y} \quad \sum \mathbf{M} = 0 $$
+      </p>
+      <ul>
+        <li>$\sum \mathbf{F} = 0$ &rarr; el cuerpo no tiene aceleración traslacional.</li>
+        <li>$\sum \mathbf{M} = 0$ &rarr; el cuerpo no tiene aceleración angular.</li>
+      </ul>
+      <p>
+        En el plano (2D), estas ecuaciones se descomponen como:
+      </p>
+      <p class="formula">
+        $$ \sum F_x = 0, \quad \sum F_y = 0, \quad \sum M_z = 0 $$
+      </p>
+      <p>
+        En el espacio (3D):
+      </p>
+      <p class="formula">
+        $$ \sum F_x = 0, \quad \sum F_y = 0, \quad \sum F_z = 0, \quad \sum M_x = 0, \quad \sum M_y = 0, \quad \sum M_z = 0 $$
+      </p>
+    </section>
+
+    <!-- 3. MOMENTO DE UNA FUERZA -->
+    <section id="momento_fuerzas" class="card">
+      <h2>3. Momento de una fuerza</h2>
+      <p>
+        El <strong>momento</strong> (o torque) de una fuerza con respecto a un punto mide su tendencia a provocar rotación.
+      </p>
+      <p class="formula">
+        $$ \mathbf{M} = \mathbf{r} \times \mathbf{F} $$
+      </p>
+      <ul>
+        <li>$\mathbf{r}$: vector de posición desde el punto de rotación hasta el punto de aplicación de la fuerza.</li>
+        <li>$\mathbf{F}$: fuerza aplicada.</li>
+      </ul>
+      <p>
+        Su magnitud viene dada por:
+      </p>
+      <p class="formula">
+        $$ M = r F \sin(\theta) $$
+      </p>
+      <p>
+        donde $\theta$ es el ángulo entre $\mathbf{r}$ y $\mathbf{F}$.
+      </p>
+      <div class="nota">
+        <p>El momento es positivo si la rotación es antihoraria y negativo si es horaria (según la convención del eje z positivo).</p>
+      </div>
+    </section>
+
+    <!-- 4. EQUILIBRIO DE CUERPOS RÍGIDOS -->
+    <section id="equilibrio_rigidos" class="card">
+      <h2>4. Equilibrio de cuerpos rígidos</h2>
+      <p>
+        Un cuerpo rígido se encuentra en equilibrio cuando tanto las fuerzas externas como los momentos resultantes son nulos.
+      </p>
+      <p>
+        Para resolver problemas de equilibrio:
+      </p>
+      <ol>
+        <li>Dibujar el <strong>diagrama de cuerpo libre</strong> (DCL) del sistema.</li>
+        <li>Identificar todas las fuerzas aplicadas (peso, tensiones, reacciones, etc.).</li>
+        <li>Aplicar las ecuaciones de equilibrio: $\sum F_x = 0$, $\sum F_y = 0$, $\sum M = 0$.</li>
+        <li>Resolver el sistema de ecuaciones para encontrar las fuerzas desconocidas.</li>
+      </ol>
+      <p>
+        Las <strong>reacciones</strong> dependen del tipo de apoyo:
+      </p>
+      <ul>
+        <li><strong>Apoyo simple:</strong> una reacción vertical.</li>
+        <li><strong>Empotramiento:</strong> reacciones en $x$, $y$ y un momento.</li>
+        <li><strong>Apoyo móvil:</strong> una sola reacción perpendicular a la superficie.</li>
+      </ul>
+    </section>
+
+    <!-- 5. ANÁLISIS DE ESTRUCTURAS -->
+    <section id="estructuras" class="card">
+      <h2>5. Análisis de estructuras</h2>
+      <p>
+        En ingeniería, las estructuras se analizan para garantizar su estabilidad y resistencia bajo cargas externas. 
+        Las más comunes son <strong>vigas</strong>, <strong>marcos</strong> y <strong>armaduras</strong>.
+      </p>
+      <ul>
+        <li><strong>Vigas:</strong> elementos que soportan cargas transversales. Se analiza el momento flector y cortante.</li>
+        <li><strong>Armaduras:</strong> estructuras formadas por barras unidas en nodos, analizadas mediante el <em>método de los nodos</em> o <em>método de las secciones</em>.</li>
+        <li><strong>Marcos:</strong> combinaciones de vigas y columnas sometidas a cargas complejas.</li>
+      </ul>
+      <p>
+        En armaduras planas, cada nodo debe cumplir:
+      </p>
+      <p class="formula">
+        $$ \sum F_x = 0, \quad \sum F_y = 0 $$
+      </p>
+      <p>
+        Una estructura es <strong>isostática</strong> si el número de ecuaciones disponibles iguala al número de incógnitas; de lo contrario, es <strong>hiperestática</strong>.
+      </p>
+    </section>
+
+    <!-- 6. EJEMPLOS RESUELTOS -->
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Equilibrio traslacional</h3>
+      <p>
+        Un cuerpo está suspendido por dos cuerdas que forman ángulos de $40°$ y $50°$ con la horizontal. 
+        Si el peso del cuerpo es $W = 200\,\text{N}$, hallar las tensiones $T_1$ y $T_2$.
+      </p>
+      <p class="formula">
+        $$ \sum F_x = 0 \Rightarrow T_1 \cos(40°) = T_2 \cos(50°) $$
+        $$ \sum F_y = 0 \Rightarrow T_1 \sin(40°) + T_2 \sin(50°) = 200 $$
+      </p>
+      <p>Resolviendo el sistema: $T_1 = 128\,\text{N}$, $T_2 = 150\,\text{N}$.</p>
+
+      <h3>Ejemplo 2: Momento de una fuerza</h3>
+      <p>
+        Una fuerza de $F = 50\,\text{N}$ actúa a $r = 0.3\,\text{m}$ del eje de rotación con un ángulo de $90°$. 
+        Calcular el momento resultante.
+      </p>
+      <p class="formula">
+        $$ M = r F \sin(90°) = 0.3(50) = 15\,\text{N·m} $$
+      </p>
+      <p>Resultado: $M = 15\,\text{N·m}$ (rotación antihoraria).</p>
+
+      <h3>Ejemplo 3: Equilibrio de una viga</h3>
+      <p>
+        Una viga de $6\,\text{m}$ está apoyada en sus extremos y soporta una carga puntual de $600\,\text{N}$ en el centro. 
+        Determinar las reacciones en los apoyos.
+      </p>
+      <p class="formula">
+        $$ \sum F_y = 0 \Rightarrow R_A + R_B = 600 $$
+        $$ \sum M_A = 0 \Rightarrow R_B(6) - 600(3) = 0 \Rightarrow R_B = 300 $$
+        $$ R_A = 300 $$
+      </p>
+      <p>Resultado: $R_A = R_B = 300\,\text{N}$.</p>
+    </section>
+
+    <!-- 7. REFERENCIAS -->
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Beer, F. P., & Johnston, E. R. (2017). <em>Mecánica vectorial para ingenieros: Estática</em>. McGraw-Hill.</li>
+        <li>Hibbeler, R. C. (2016). <em>Ingeniería Mecánica: Estática</em> (14ª ed.). Pearson.</li>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em>. Cengage Learning.</li>
+        <li>Young, H. D., & Freedman, R. A. (2016). <em>Física Universitaria</em>. Pearson.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

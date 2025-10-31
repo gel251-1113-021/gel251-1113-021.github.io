@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Óptica Geométrica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Óptica Geométrica</h1>
+    <p class="subtitulo">Leyes de reflexión, refracción y formación de imágenes</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#reflexion">Ley de reflexión</a></li>
+      <li><a href="#refraccion">Ley de refracción</a></li>
+      <li><a href="#lentes_espejos">Lentes y espejos</a></li>
+      <li><a href="#formacion_imagen">Formación de imágenes</a></li>
+      <li><a href="#aplicaciones">Aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>óptica geométrica</strong> estudia la propagación de la luz en términos de rayos rectilíneos, sin considerar su naturaleza ondulatoria. 
+        Permite analizar fenómenos como reflexión, refracción y formación de imágenes mediante lentes y espejos.
+      </p>
+    </section>
+
+    <section id="reflexion" class="card">
+      <h2>2. Ley de reflexión</h2>
+      <p>
+        La reflexión ocurre cuando un rayo de luz incide sobre una superficie y cambia de dirección dentro del mismo medio. Se cumplen dos principios:
+      </p>
+      <ul>
+        <li>El rayo incidente, la normal y el rayo reflejado están en el mismo plano.</li>
+        <li>El ángulo de incidencia es igual al ángulo de reflexión:
+          <p class="formula">$$ \theta_i = \theta_r $$</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="refraccion" class="card">
+      <h2>3. Ley de refracción (Ley de Snell)</h2>
+      <p>
+        La refracción ocurre cuando la luz pasa de un medio a otro con diferente índice de refracción \( n \). La ley de Snell establece:
+      </p>
+      <p class="formula">
+        $$ n_1 \sin \theta_1 = n_2 \sin \theta_2 $$
+      </p>
+      <p>
+        donde \( \theta_1 \) es el ángulo de incidencia, \( \theta_2 \) el ángulo de refracción, y \( n_1, n_2 \) los índices de refracción de los medios.
+      </p>
+    </section>
+
+    <section id="lentes_espejos" class="card">
+      <h2>4. Lentes y espejos</h2>
+      <p>
+        Los espejos y lentes forman imágenes mediante la convergencia o divergencia de rayos:
+      </p>
+      <ul>
+        <li><strong>Espejos planos:</strong> la imagen es virtual, derecha y de igual tamaño.</li>
+        <li><strong>Espejos esféricos:</strong> concavos o convexos, con imágenes reales o virtuales según la posición del objeto.</li>
+        <li><strong>Lentes delgadas:</strong> convergentes o divergentes, siguen la ecuación del fabricante:
+          <p class="formula">$$ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i} $$</p>
+          donde \( f \) es la distancia focal, \( d_o \) la distancia del objeto y \( d_i \) la distancia de la imagen.
+        </li>
+      </ul>
+    </section>
+
+    <section id="formacion_imagen" class="card">
+      <h2>5. Formación de imágenes</h2>
+      <p>
+        La posición y naturaleza de las imágenes se determinan mediante trazado de rayos:
+      </p>
+      <ul>
+        <li><strong>Imagen real:</strong> se forma donde convergen los rayos reflejados o refractados; puede proyectarse en una pantalla.</li>
+        <li><strong>Imagen virtual:</strong> se forma donde parecen divergir los rayos; no puede proyectarse, solo verse mediante lentes o espejos.</li>
+      </ul>
+      <p>
+        La magnificación se calcula como:
+      </p>
+      <p class="formula">
+        $$ M = \frac{h_i}{h_o} = -\frac{d_i}{d_o} $$
+      </p>
+      <p>
+        donde \( h_i, h_o \) son las alturas de la imagen y el objeto, respectivamente.
+      </p>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>6. Aplicaciones</h2>
+      <ul>
+        <li>Telescopios y microscopios para observación científica.</li>
+        <li>Cámaras fotográficas y sistemas de lentes ópticas.</li>
+        <li>Espejos retrovisores y sistemas de seguridad visual.</li>
+        <li>Gafas correctivas y lentes de contacto para visión.</li>
+        <li>Instrumentos de medición óptica y holografía.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Hecht, E. (2017). <em>Optics</em>. Pearson.</li>
+        <li>Tipler, P. A., & Mosca, G. (2014). <em>Física para la ciencia y la tecnología</em>. Reverté.</li>
+        <li>Young, H. D., & Freedman, R. A. (2019). <em>University Physics</em>. Pearson.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movimiento Oscilatorio - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Movimiento Oscilatorio</h1>
+    <p class="subtitulo">Movimiento Armónico Simple y Energía Potencial Elástica</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#definicion">Definición y características</a></li>
+      <li><a href="#mas">Movimiento Armónico Simple (MAS)</a></li>
+      <li><a href="#ecuaciones">Ecuaciones del MAS</a></li>
+      <li><a href="#energia">Energía potencial elástica y total</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- ===== 1. INTRODUCCIÓN ===== -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        El <strong>movimiento oscilatorio</strong> es aquel en el que un cuerpo se mueve hacia adelante y hacia atrás 
+        respecto a una posición de equilibrio. Este tipo de movimiento es fundamental en la descripción 
+        de sistemas físicos como resortes, péndulos, moléculas vibratorias y circuitos eléctricos oscilantes.
+      </p>
+      <p>
+        Su estudio permite comprender cómo la energía se intercambia entre formas potencial y cinética a lo largo del tiempo.
+      </p>
+    </section>
+
+    <!-- ===== 2. DEFINICIÓN Y CARACTERÍSTICAS ===== -->
+    <section id="definicion" class="card">
+      <h2>2. Definición y características del movimiento oscilatorio</h2>
+      <p>
+        Un sistema oscilatorio se caracteriza por moverse bajo la acción de una fuerza restauradora 
+        que tiende a devolver al cuerpo a su posición de equilibrio.  
+      </p>
+      <p class="formula">
+        $$ \mathbf{F} = -k x $$
+      </p>
+      <p>
+        donde $k$ es la <strong>constante elástica</strong> (propia del resorte o sistema), y $x$ es la deformación respecto a la posición de equilibrio.
+      </p>
+      <p>
+        Este tipo de fuerza sigue la <strong>Ley de Hooke</strong> y es la base del <em>Movimiento Armónico Simple</em> (MAS).
+      </p>
+    </section>
+
+    <!-- ===== 3. MOVIMIENTO ARMÓNICO SIMPLE ===== -->
+    <section id="mas" class="card">
+      <h2>3. Movimiento Armónico Simple (MAS)</h2>
+      <p>
+        El <strong>Movimiento Armónico Simple</strong> es el caso más fundamental de movimiento oscilatorio.
+        En él, la fuerza restauradora es directamente proporcional al desplazamiento, pero en dirección opuesta:
+      </p>
+      <p class="formula">
+        $$ F = -kx $$
+      </p>
+      <p>
+        Aplicando la <strong>Segunda Ley de Newton</strong>:
+      </p>
+      <p class="formula">
+        $$ m\frac{d^2x}{dt^2} = -kx $$
+      </p>
+      <p>
+        Lo que da lugar a la ecuación diferencial característica del MAS:
+      </p>
+      <p class="formula">
+        $$ \frac{d^2x}{dt^2} + \omega^2 x = 0 $$
+      </p>
+      <p>
+        donde $\omega = \sqrt{\frac{k}{m}}$ es la <strong>frecuencia angular</strong> del movimiento.
+      </p>
+    </section>
+
+    <!-- ===== 4. ECUACIONES DEL MAS ===== -->
+    <section id="ecuaciones" class="card">
+      <h2>4. Ecuaciones del Movimiento Armónico Simple</h2>
+      <p>
+        La solución general de la ecuación del MAS es:
+      </p>
+      <p class="formula">
+        $$ x(t) = A \cos(\omega t + \varphi) $$
+      </p>
+      <ul>
+        <li>$A$ → Amplitud (máximo desplazamiento respecto al equilibrio)</li>
+        <li>$\omega$ → Frecuencia angular ($\omega = 2\pi f$)</li>
+        <li>$\varphi$ → Fase inicial</li>
+      </ul>
+      <p>
+        Derivando, se obtiene la velocidad y la aceleración:
+      </p>
+      <p class="formula">
+        $$ v(t) = -A\omega \sin(\omega t + \varphi) $$
+        $$ a(t) = -A\omega^2 \cos(\omega t + \varphi) $$
+      </p>
+      <div class="nota">
+        <p>La aceleración siempre apunta hacia el equilibrio y es proporcional al desplazamiento.</p>
+      </div>
+    </section>
+
+    <!-- ===== 5. ENERGÍA POTENCIAL Y TOTAL ===== -->
+    <section id="energia" class="card">
+      <h2>5. Energía potencial elástica y energía total</h2>
+      <p>
+        En el MAS, la energía se conserva, transformándose entre <strong>energía potencial elástica</strong> 
+        y <strong>energía cinética</strong>.
+      </p>
+      <p>
+        La <strong>energía potencial elástica</strong> se expresa como:
+      </p>
+      <p class="formula">
+        $$ U = \frac{1}{2} k x^2 $$
+      </p>
+      <p>
+        y la <strong>energía cinética</strong>:
+      </p>
+      <p class="formula">
+        $$ K = \frac{1}{2} m v^2 = \frac{1}{2} m \omega^2 (A^2 - x^2) $$
+      </p>
+      <p>
+        Por lo tanto, la <strong>energía mecánica total</strong> del sistema permanece constante:
+      </p>
+      <p class="formula">
+        $$ E = K + U = \frac{1}{2} k A^2 $$
+      </p>
+      <div class="nota">
+        <p>
+          En cada oscilación, la energía cinética es máxima en el equilibrio ($x = 0$) 
+          y la energía potencial elástica es máxima en los extremos ($x = ±A$).
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 6. EJEMPLOS RESUELTOS ===== -->
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Frecuencia angular de un resorte</h3>
+      <p>
+        Una masa de $0.5\,\text{kg}$ está unida a un resorte con constante $k = 200\,\text{N/m}$.  
+        Determina la frecuencia angular del movimiento.
+      </p>
+      <p class="formula">
+        $$ \omega = \sqrt{\frac{k}{m}} = \sqrt{\frac{200}{0.5}} = 20\,\text{rad/s} $$
+      </p>
+      <p>La frecuencia angular es <strong>20 rad/s</strong>.</p>
+
+      <h3>Ejemplo 2: Energía total del sistema</h3>
+      <p>
+        Si la amplitud del movimiento es $A = 0.1\,\text{m}$, calcula la energía total.
+      </p>
+      <p class="formula">
+        $$ E = \frac{1}{2}kA^2 = \frac{1}{2}(200)(0.1)^2 = 1\,\text{J} $$
+      </p>
+      <p>La energía total almacenada en la oscilación es de <strong>1 J</strong>.</p>
+
+      <h3>Ejemplo 3: Energía en un punto intermedio</h3>
+      <p>
+        Para el mismo sistema, encuentra la energía cinética cuando $x = 0.05\,\text{m}$.
+      </p>
+      <p class="formula">
+        $$ K = \frac{1}{2}k(A^2 - x^2) = \frac{1}{2}(200)((0.1)^2 - (0.05)^2) = 0.75\,\text{J} $$
+      </p>
+      <p>La energía cinética en ese instante es <strong>0.75 J</strong>.</p>
+    </section>
+
+    <!-- ===== 7. REFERENCIAS ===== -->
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Tipler, P. A., & Mosca, G. (2008). <em>Física para la ciencia y la tecnología</em> (6ª ed.). Reverté.</li>
+        <li>Young, H. D., & Freedman, R. A. (2021). <em>Física Universitaria</em> (15ª ed.). Pearson.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

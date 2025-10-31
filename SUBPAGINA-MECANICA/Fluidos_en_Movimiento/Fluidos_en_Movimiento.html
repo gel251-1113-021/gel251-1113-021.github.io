@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fluidos en Movimiento - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/Estilos_Temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Fluidos en Movimiento</h1>
+    <p class="subtitulo">Principios de Bernoulli y conservación de la masa en fluidos</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#flujo_continuo">Flujo continuo y ecuación de continuidad</a></li>
+      <li><a href="#principio_bernoulli">Principio de Bernoulli</a></li>
+      <li><a href="#aplicaciones">Aplicaciones del principio de Bernoulli</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- 1. INTRODUCCIÓN -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        El estudio de los <strong>fluidos en movimiento</strong> (hidrodinámica) analiza el comportamiento de líquidos y gases cuando están en flujo. 
+        A diferencia de la estática de fluidos, aquí se considera la velocidad, la presión y la energía que intervienen en el movimiento.
+      </p>
+      <p>
+        En el caso de un <strong>flujo ideal</strong>, se asume que el fluido es incompresible, no viscoso y su movimiento es estacionario. 
+        Bajo estas condiciones se aplican las leyes de conservación de la <em>masa</em> y de la <em>energía</em>, que se expresan mediante la 
+        <strong>ecuación de continuidad</strong> y la <strong>ecuación de Bernoulli</strong>.
+      </p>
+    </section>
+
+    <!-- 2. FLUJO CONTINUO Y ECUACIÓN DE CONTINUIDAD -->
+    <section id="flujo_continuo" class="card">
+      <h2>2. Flujo continuo y ecuación de continuidad</h2>
+      <p>
+        En un flujo estacionario, la cantidad de fluido que entra en una sección de un conducto debe ser igual a la que sale en otra sección. 
+        Esta propiedad se expresa mediante la <strong>ecuación de continuidad</strong>:
+      </p>
+      <p class="formula">
+        $$ A_1 v_1 = A_2 v_2 $$
+      </p>
+      <ul>
+        <li>$A_1$, $A_2$: áreas de las secciones transversales del conducto (m²)</li>
+        <li>$v_1$, $v_2$: velocidades medias del fluido en cada sección (m/s)</li>
+      </ul>
+      <p>
+        El producto $A v$ representa el <strong>caudal volumétrico</strong> $Q$, definido como el volumen de fluido que pasa por una sección por unidad de tiempo:
+      </p>
+      <p class="formula">
+        $$ Q = A v = \text{constante} $$
+      </p>
+      <div class="nota">
+        <p>Esta ley expresa la <strong>conservación de la masa</strong> para un fluido incompresible: lo que entra debe ser igual a lo que sale.</p>
+      </div>
+    </section>
+
+    <!-- 3. PRINCIPIO DE BERNOULLI -->
+    <section id="principio_bernoulli" class="card">
+      <h2>3. Principio de Bernoulli</h2>
+      <p>
+        El <strong>principio de Bernoulli</strong> es una consecuencia del principio de conservación de la energía aplicado al movimiento de un fluido ideal.
+      </p>
+      <p>
+        Establece que <strong>en un flujo estacionario, la suma de la presión, la energía cinética y la energía potencial por unidad de volumen permanece constante</strong> a lo largo de una línea de corriente:
+      </p>
+      <p class="formula">
+        $$ P + \frac{1}{2} \rho v^2 + \rho g h = \text{constante} $$
+      </p>
+      <ul>
+        <li>$P$: presión del fluido (Pa)</li>
+        <li>$\rho$: densidad del fluido (kg/m³)</li>
+        <li>$v$: velocidad del flujo (m/s)</li>
+        <li>$h$: altura sobre un nivel de referencia (m)</li>
+      </ul>
+      <p>
+        Esta ecuación indica que si el fluido acelera ($v$ aumenta), su presión disminuye, y viceversa, siempre que la energía total se conserve.
+      </p>
+      <div class="nota">
+        <p>El principio de Bernoulli se aplica únicamente a fluidos ideales, sin fricción ni pérdidas de energía.</p>
+      </div>
+    </section>
+
+    <!-- 4. APLICACIONES DEL PRINCIPIO DE BERNOULLI -->
+    <section id="aplicaciones" class="card">
+      <h2>4. Aplicaciones del principio de Bernoulli</h2>
+      <ul>
+        <li><strong>Venturi:</strong> en un tubo con estrechamiento, la velocidad del fluido aumenta y la presión disminuye. Se usa en medidores de flujo.</li>
+        <li><strong>Avión:</strong> las alas tienen forma aerodinámica; el aire fluye más rápido por encima, creando menor presión y generando sustentación.</li>
+        <li><strong>Tuberías:</strong> al variar la altura o el diámetro, se modifican la presión y la velocidad del fluido.</li>
+        <li><strong>Atomizadores:</strong> el flujo rápido de aire reduce la presión, succionando el líquido (principio de pulverización).</li>
+      </ul>
+      <div class="formula">
+        <p><em>Ejemplo:</em> en una sección más estrecha de un tubo, si $A_2 &lt; A_1$, entonces $v_2 &gt; v_1$ y $P_2 &lt; P_1$.</p>
+      </div>
+    </section>
+
+    <!-- 5. EJEMPLOS RESUELTOS -->
+    <section id="ejemplos" class="card">
+      <h2>5. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Aplicación de la ecuación de continuidad</h3>
+      <p>
+        En una tubería el área de entrada es $A_1 = 0.02\,\text{m}^2$ y la velocidad $v_1 = 3\,\text{m/s}$. 
+        Si el área de salida es $A_2 = 0.01\,\text{m}^2$, determinar la velocidad de salida $v_2$.
+      </p>
+      <p class="formula">
+        $$ A_1 v_1 = A_2 v_2 \Rightarrow v_2 = \frac{A_1 v_1}{A_2} = \frac{0.02(3)}{0.01} = 6\,\text{m/s} $$
+      </p>
+      <p>Resultado: $v_2 = 6\,\text{m/s}$.</p>
+
+      <h3>Ejemplo 2: Diferencia de presión en un tubo Venturi</h3>
+      <p>
+        Un fluido de densidad $\rho = 1000\,\text{kg/m}^3$ fluye en un tubo horizontal con $A_1 = 0.02\,\text{m}^2$, $A_2 = 0.01\,\text{m}^2$ y $v_1 = 2\,\text{m/s}$.  
+        Calcular la diferencia de presión entre ambas secciones.
+      </p>
+      <p class="formula">
+        $$ A_1 v_1 = A_2 v_2 \Rightarrow v_2 = 4\,\text{m/s} $$
+        $$ P_1 + \frac{1}{2}\rho v_1^2 = P_2 + \frac{1}{2}\rho v_2^2 $$
+        $$ P_1 - P_2 = \frac{1}{2}\rho(v_2^2 - v_1^2) = \frac{1}{2}(1000)(16 - 4) = 6000\,\text{Pa} $$
+      </p>
+      <p>Resultado: $P_1 - P_2 = 6.0 \times 10^3\,\text{Pa}$.</p>
+
+      <h3>Ejemplo 3: Altura del chorro de agua</h3>
+      <p>
+        El agua sale de un orificio a velocidad $v = 5\,\text{m/s}$. 
+        ¿A qué altura máxima llega el chorro suponiendo que no hay pérdidas de energía?
+      </p>
+      <p class="formula">
+        $$ \frac{1}{2}v^2 = g h_{\text{max}} \Rightarrow h_{\text{max}} = \frac{v^2}{2g} = \frac{25}{19.6} = 1.28\,\text{m} $$
+      </p>
+      <p>Resultado: $h_{\text{max}} = 1.28\,\text{m}$.</p>
+    </section>
+
+    <!-- 6. REFERENCIAS -->
+    <section id="referencias" class="card">
+      <h2>6. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Young, H. D., & Freedman, R. A. (2016). <em>Sears y Zemansky: Física Universitaria</em> (14ª ed.). Pearson.</li>
+        <li>White, F. M. (2016). <em>Fluid Mechanics</em> (8th ed.). McGraw-Hill.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

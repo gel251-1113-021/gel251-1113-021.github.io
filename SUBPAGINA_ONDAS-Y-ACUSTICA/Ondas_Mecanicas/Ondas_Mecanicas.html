@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ondas Mecánicas</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Ondas Mecánicas</h1>
+    <p class="subtitulo">Propagación en medios materiales y ecuación de onda</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#conceptos">Conceptos fundamentales</a></li>
+      <li><a href="#tipos_ondas">Tipos de ondas mecánicas</a></li>
+      <li><a href="#propagacion">Propagación en medios materiales</a></li>
+      <li><a href="#ecuacion">Ecuación de onda</a></li>
+      <li><a href="#propiedades">Propiedades de las ondas mecánicas</a></li>
+      <li><a href="#aplicaciones">Aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        Las <strong>ondas mecánicas</strong> son perturbaciones que se propagan a través de un medio material (sólido, líquido o gas) transportando energía sin que haya un desplazamiento neto de materia.
+        Ejemplos comunes incluyen ondas en cuerdas, ondas sonoras en aire y ondas sísmicas en la Tierra.
+      </p>
+      <p>
+        El estudio de estas ondas es fundamental para la acústica, sismología, ingeniería y física general.
+      </p>
+    </section>
+
+    <section id="conceptos" class="card">
+      <h2>2. Conceptos fundamentales</h2>
+      <ul>
+        <li><strong>Partícula del medio:</strong> elemento que oscila alrededor de su posición de equilibrio.</li>
+        <li><strong>Longitud de onda (λ):</strong> distancia entre dos puntos equivalentes de la onda.</li>
+        <li><strong>Frecuencia (f):</strong> número de oscilaciones por segundo, \( f = \frac{1}{T} \).</li>
+        <li><strong>Velocidad de propagación (v):</strong> depende de las propiedades del medio.</li>
+        <li><strong>Amplitud (A):</strong> desplazamiento máximo de la partícula del medio.</li>
+      </ul>
+    </section>
+
+    <section id="tipos_ondas" class="card">
+      <h2>3. Tipos de ondas mecánicas</h2>
+      <p>
+        Las ondas mecánicas se clasifican según el movimiento de las partículas del medio:
+      </p>
+      <ul>
+        <li><strong>Onda longitudinal:</strong> las partículas vibran en la misma dirección de propagación (ej. ondas sonoras en aire).</li>
+        <li><strong>Onda transversal:</strong> las partículas vibran perpendicularmente a la dirección de propagación (ej. ondas en cuerdas o membranas).</li>
+        <li><strong>Onda mixta:</strong> combina componentes longitudinales y transversales (ej. ondas superficiales en líquidos).</li>
+      </ul>
+      <p>
+        La naturaleza del medio determina el tipo de onda que se puede propagar:
+        sólidos: longitudinales y transversales, líquidos y gases: principalmente longitudinales.
+      </p>
+    </section>
+
+    <section id="propagacion" class="card">
+      <h2>4. Propagación en medios materiales</h2>
+      <p>
+        La velocidad de propagación de ondas mecánicas depende de las propiedades del medio:
+      </p>
+      <ul>
+        <li><strong>Sólidos:</strong> densidad (\( \rho \)) y módulo de elasticidad (\( E \) o \( G \)), velocidad longitudinal:
+          <p class="formula">$$ v_L = \sqrt{\frac{E}{\rho}} $$</p>
+          velocidad transversal:
+          <p class="formula">$$ v_T = \sqrt{\frac{G}{\rho}} $$</p>
+        </li>
+        <li><strong>Líquidos:</strong> densidad (\( \rho \)) y compresibilidad (\( K \)):
+          <p class="formula">$$ v = \sqrt{\frac{K}{\rho}} $$</p>
+        </li>
+        <li><strong>Gases:</strong> densidad (\( \rho \)) y presión (\( P \)):
+          <p class="formula">$$ v = \sqrt{\frac{\gamma P}{\rho}} $$</p>
+          donde \( \gamma \) es el coeficiente adiabático.
+        </li>
+      </ul>
+      <p>
+        Factores como temperatura, presión y composición del medio afectan la velocidad de propagación.
+      </p>
+    </section>
+
+    <section id="ecuacion" class="card">
+      <h2>5. Ecuación de onda</h2>
+      <p>
+        La <strong>ecuación de onda</strong> describe matemáticamente la propagación de ondas mecánicas en medios continuos:
+      </p>
+      <p class="formula">
+        $$ \frac{\partial^2 u}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 u}{\partial t^2} $$
+      </p>
+      <p>
+        donde \( u(x,t) \) representa el desplazamiento de la partícula en la posición \( x \) y tiempo \( t \), y \( v \) es la velocidad de propagación de la onda.
+      </p>
+      <p>
+        Para ondas armónicas planas:
+      </p>
+      <p class="formula">
+        $$ u(x,t) = A \sin(kx - \omega t + \phi) $$
+      </p>
+      <p>
+        con \( k = \frac{2\pi}{\lambda} \) número de onda, \( \omega = 2 \pi f \) frecuencia angular, \( A \) amplitud y \( \phi \) fase inicial.
+      </p>
+    </section>
+
+    <section id="propiedades" class="card">
+      <h2>6. Propiedades de las ondas mecánicas</h2>
+      <ul>
+        <li><strong>Reflexión:</strong> cambio de dirección al encontrarse con un límite.</li>
+        <li><strong>Refracción:</strong> cambio de velocidad y dirección al pasar a otro medio.</li>
+        <li><strong>Difracción:</strong> desviación alrededor de obstáculos.</li>
+        <li><strong>Interferencia:</strong> superposición de ondas para formar patrones de amplitud variable.</li>
+        <li><strong>Absorción:</strong> transformación de energía de la onda en calor u otra forma de energía.</li>
+      </ul>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>7. Aplicaciones</h2>
+      <ul>
+        <li><strong>Acústica y sonido:</strong> propagación de ondas sonoras en aire y estructuras.</li>
+        <li><strong>Sismología:</strong> ondas sísmicas para estudiar el interior terrestre.</li>
+        <li><strong>Ingeniería mecánica:</strong> vibraciones en estructuras y máquinas.</li>
+        <li><strong>Ultrasonido:</strong> diagnóstico médico, inspección industrial y limpieza ultrasónica.</li>
+        <li><strong>Telecomunicaciones:</strong> ondas mecánicas en medios guiados como fibras acústicas o sensores piezoeléctricos.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>8. Referencias recomendadas</h2>
+      <ul>
+        <li>Kinsler, L. et al. (2000). <em>Fundamentals of Acoustics</em>. Wiley.</li>
+        <li>Tipler, P. A., & Mosca, G. (2014). <em>Física para la ciencia y la tecnología</em>. Reverté.</li>
+        <li>Riley, K. F. et al. (2012). <em>Mathematical Methods for Physics and Engineering</em>. Cambridge University Press.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

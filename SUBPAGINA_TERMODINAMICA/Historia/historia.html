@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Introducción e Historia - Termodinámica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Introducción e Historia</h1>
+    <p class="subtitulo">Desarrollo histórico del estudio del calor, la energía y la evolución de la termodinámica</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#antecedentes">Antecedentes y máquinas de vapor</a></li>
+      <li><a href="#caloric">Teoría del calórico y primeras ideas</a></li>
+      <li><a href="#siglo_xix">Siglo XIX: consolidación (Carnot, Joule, Clausius)</a></li>
+      <li><a href="#entropia">Concepto de entropía y segunda ley</a></li>
+      <li><a href="#mecanica_estadistica">Mecánica estadística y Boltzmann</a></li>
+      <li><a href="#termodinamica_mod">Termodinámica moderna y aplicaciones</a></li>
+      <li><a href="#linea_tiempo">Línea de tiempo resumida</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- 1. INTRODUCCIÓN -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>termodinámica</strong> es la rama de la física que estudia las relaciones entre <em>calor</em>, <em>trabajo</em>, <em>energía</em> y propiedades macroscópicas de la materia (temperatura, presión, volumen). 
+        Su desarrollo histórico conecta observaciones prácticas (máquinas de vapor, procesos industriales) con profunda teoría física y estadística.
+      </p>
+      <p>
+        Esta página recorre los hitos principales desde las primeras máquinas térmicas hasta la formulación moderna de las leyes de la termodinámica y su extensión a la mecánica estadística.
+      </p>
+    </section>
+
+    <!-- 2. ANTECEDENTES -->
+    <section id="antecedentes" class="card">
+      <h2>2. Antecedentes: máquinas de vapor y la revolución industrial</h2>
+      <p>
+        El interés por el calor y su conversión en trabajo se aceleró con la <strong>Revolución Industrial</strong>. Las necesidades prácticas (bombas, locomotoras, fábricas) impulsaron el estudio experimental y teórico.
+      </p>
+      <ul>
+        <li><strong>Thomas Newcomen (1712):</strong> primera máquina de vapor práctica para bombear agua de minas.</li>
+        <li><strong>James Watt (1760–1790):</strong> mejoras que aumentaron la eficiencia y el interés por entender procesos térmicos.</li>
+      </ul>
+      <p>
+        Estas máquinas motivaron preguntas fundamentales: ¿cómo se transforma el calor en trabajo? ¿cuál es el límite teórico de eficiencia de un motor térmico?
+      </p>
+    </section>
+
+    <!-- 3. TEORÍA DEL CALÓRICO -->
+    <section id="caloric" class="card">
+      <h2>3. Teoría del calórico y primeras ideas</h2>
+      <p>
+        Antes de la comprensión actual del calor como energía, predominó la <strong>teoría del calórico</strong>, que consideraba el calor como un fluido conservado que fluye entre cuerpos. 
+        Esta idea explicó fenómenos sencillos pero fue refutada por experimentos posteriores.
+      </p>
+      <p>
+        En el siglo XVIII y principios del XIX muchos científicos aún hablaban de <em>calórico</em> (un fluido invisible). La experiencia de fricción generando calor (por ejemplo, pistones que se calientan) lanzó dudas sobre la conservación del calórico.
+      </p>
+    </section>
+
+    <!-- 4. SIGLO XIX: CARNOT, JOULE, CLAUSIUS -->
+    <section id="siglo_xix" class="card">
+      <h2>4. Siglo XIX: Carnot, Joule y Clausius — consolidación de la teoría</h2>
+      <h3>Nicolás Léonard Sadi Carnot (1824)</h3>
+      <p>
+        En su obra <em>Réflexions sur la puissance motrice du feu</em>, Carnot introdujo el concepto de un ciclo ideal reversible (ahora llamado <strong>ciclo de Carnot</strong>) y mostró que existe un límite de eficiencia para cualquier motor térmico que opera entre dos temperaturas.
+      </p>
+      <p class="formula">
+        Eficiencia máxima de Carnot:
+        $$ \eta_\text{Carnot} = 1 - \frac{T_C}{T_H} $$
+      </p>
+
+      <h3>James Prescott Joule (1840s)</h3>
+      <p>
+        Joule realizó experimentos cuantitativos que mostraron la equivalencia entre trabajo mecánico y calor — estableciendo el principio de conservación de la energía para procesos térmicos. Esto condujo a la idea de la <strong>primera ley de la termodinámica</strong>.
+      </p>
+      <p class="formula">
+        Primera ley (forma diferencial):
+        $$ dU = \delta Q - \delta W $$
+      </p>
+
+      <h3>Rudolf Clausius (1850s)</h3>
+      <p>
+        Clausius formuló la <strong>segunda ley de la termodinámica</strong> en términos de irreversibilidad y definió la <strong>entropía</strong> como cantidad central para cuantificar la irreversibilidad.
+      </p>
+      <p class="formula">
+        Una formulación de la segunda ley:
+        $$ \Delta S \ge 0 $$
+        (para procesos aislados)
+      </p>
+    </section>
+
+    <!-- 5. ENTROPÍA -->
+    <section id="entropia" class="card">
+      <h2>5. Entropía: significado y formulación</h2>
+      <p>
+        La entropía, introducida por Clausius, es una medida del desorden (concepto físico más preciso en la mecánica estadística). Clausius la relacionó con calor reversible:
+      </p>
+      <p class="formula">
+        $$ dS = \frac{\delta Q_\text{rev}}{T} $$
+      </p>
+      <p>
+        Más tarde, Ludwig Boltzmann conectó la entropía con el número de microestados accesibles a un sistema macroscópico:
+      </p>
+      <p class="formula">
+        $$ S = k_B \ln \Omega $$
+      </p>
+      <p>
+        donde $k_B$ es la constante de Boltzmann y $\Omega$ el número de microestados compatibles con la macroconfiguración.
+      </p>
+    </section>
+
+    <!-- 6. MECÁNICA ESTADÍSTICA -->
+    <section id="mecanica_estadistica" class="card">
+      <h2>6. Mecánica estadística: Boltzmann y Gibbs</h2>
+      <p>
+        A finales del siglo XIX y principios del XX, la termodinámica se fundamentó en la <strong>mecánica estadística</strong>, que explica las magnitudes termodinámicas en términos del comportamiento colectivo de muchas partículas.
+      </p>
+      <ul>
+        <li><strong>Ludwig Boltzmann:</strong> distribuciones estadísticas, $S = k_B \ln \Omega$ y la ecuación de Boltzmann.</li>
+        <li><strong>J. Willard Gibbs:</strong> formalizó la teoría estadística de ensembles (microcanónico, canónico, gran canónico) y el potencial termodinámico moderno.</li>
+      </ul>
+      <p>
+        La conexión entre micro y macro hizo posible derivar propiedades termodinámicas (presión, temperatura, entropía) desde principios microscópicos.
+      </p>
+    </section>
+
+    <!-- 7. TERMODINÁMICA MODERNA -->
+    <section id="termodinamica_mod" class="card">
+      <h2>7. Termodinámica moderna y aplicaciones</h2>
+      <p>
+        Desde el siglo XX la termodinámica se consolidó como disciplina central en física, química, ingeniería y ciencias ambientales. Sus aplicaciones incluyen:
+      </p>
+      <ul>
+        <li>Diseño de motores, turbinas y refrigeradores.</li>
+        <li>Termodinámica química: equilibrio de reacciones y energía libre ($\Delta G$).</li>
+        <li>Física de materiales y transiciones de fase.</li>
+        <li>Termodinámica de no equilibrio y transporte (difusión, conductividad térmica, etc.).</li>
+        <li>Termodinámica estadística y teoría de la información (entropía de Shannon análoga a la de Boltzmann).</li>
+      </ul>
+      <p class="formula">
+        Energía libre de Helmholtz (Sistemas a T y V constantes):
+        $$ F = U - T S $$
+      </p>
+      <p class="formula">
+        Energía libre de Gibbs (Sistemas a T y P constantes):
+        $$ G = H - T S $$
+      </p>
+    </section>
+
+    <!-- 8. LÍNEA DE TIEMPO -->
+    <section id="linea_tiempo" class="card">
+      <h2>8. Línea de tiempo resumida</h2>
+      <ul>
+        <li><strong>Siglos XVII–XVIII:</strong> observaciones empíricas, máquinas de vapor (Newcomen, Watt).</li>
+        <li><strong>1824:</strong> Carnot — ciclo de Carnot y límite de eficiencia.</li>
+        <li><strong>1840s:</strong> Joule — equivalencia trabajo-calor.</li>
+        <li><strong>1850s:</strong> Clausius — formulaciones de la segunda ley y entropía.</li>
+        <li><strong>1870s–1900:</strong> Boltzmann, Gibbs — fundación de la mecánica estadística.</li>
+        <li><strong>Siglo XX:</strong> termodinámica química, física del estado sólido, termodinámica de no equilibrio.</li>
+      </ul>
+    </section>
+
+    <!-- 9. EJEMPLOS RESUELTOS -->
+    <section id="ejemplos" class="card">
+      <h2>9. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Eficiencia de un motor de Carnot</h3>
+      <p>
+        Un motor opera entre $T_H = 600\ \text{K}$ y $T_C = 300\ \text{K}$. Calcular su eficiencia máxima teórica.
+      </p>
+      <p class="formula">
+        $$ \eta_\text{Carnot} = 1 - \frac{T_C}{T_H} = 1 - \frac{300}{600} = 0.5 = 50\% $$
+      </p>
+      <p>La eficiencia máxima ideal es del <strong>50%</strong>.</p>
+
+      <h3>Ejemplo 2: Trabajo y primera ley</h3>
+      <p>
+        Un gas cerrado recibe $Q = 500\ \text{J}$ de calor y realiza trabajo $W = 200\ \text{J}$. Calcular el cambio de energía interna $\Delta U$.
+      </p>
+      <p class="formula">
+        $$ \Delta U = Q - W = 500 - 200 = 300\ \text{J} $$
+      </p>
+
+      <h3>Ejemplo 3: Entropía en un proceso reversible</h3>
+      <p>
+        Se agrega calor reversible $\delta Q_\text{rev} = 200\ \text{J}$ a un sistema a temperatura constante $T = 400\ \text{K}$. Calcular ΔS.
+      </p>
+      <p class="formula">
+        $$ \Delta S = \frac{\delta Q_\text{rev}}{T} = \frac{200}{400} = 0.5\ \text{J/K} $$
+      </p>
+    </section>
+
+    <!-- 10. REFERENCIAS -->
+    <section id="referencias" class="card">
+      <h2>10. Referencias</h2>
+      <ul>
+        <li>Carnot, S. (1824). <em>Réflexions sur la puissance motrice du feu</em>.</li>
+        <li>Joule, J. P. (1843–1845). Series of experiments on the mechanical equivalent of heat.</li>
+        <li>Clausius, R. (1850–1865). Works on the formulation of the second law and entropy.</li>
+        <li>Boltzmann, L. (1870–1890). Contributions to statistical mechanics.</li>
+        <li>Gibbs, J. W. (1902). <em>Elementary Principles in Statistical Mechanics</em>.</li>
+        <li>Callen, H. B. (1985). <em>Thermodynamics and an Introduction to Thermostatistics</em>.</li>
+        <li>Fermi, E. (1956). <em>Thermodynamics</em>.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Termodinámica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

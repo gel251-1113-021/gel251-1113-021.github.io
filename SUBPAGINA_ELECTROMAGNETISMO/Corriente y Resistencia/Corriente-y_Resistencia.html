@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Corriente y Resistencia</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+  
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Corriente y Resistencia</h1>
+    <p class="subtitulo">Conceptos fundamentales, leyes experimentales y aplicaciones prácticas</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#corriente">Corriente eléctrica</a></li>
+      <li><a href="#densidad">Densidad de corriente</a></li>
+      <li><a href="#leyohm">Ley de Ohm</a></li>
+      <li><a href="#resistencia">Resistencia eléctrica</a></li>
+      <li><a href="#potencia">Potencia eléctrica</a></li>
+      <li><a href="#ejemplo">Ejemplo</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>corriente eléctrica</strong> es el flujo ordenado de cargas eléctricas a través de un conductor. 
+        Este fenómeno constituye la base de la electricidad y tiene innumerables aplicaciones tecnológicas.
+      </p>
+      <p>
+        Desde los experimentos de <em>Alessandro Volta</em> y <em>Georg Ohm</em>, la comprensión del movimiento de cargas permitió el desarrollo de los primeros circuitos eléctricos.
+      </p>
+    </section>
+
+    <section id="corriente" class="card">
+      <h2>2. Corriente eléctrica</h2>
+      <p>
+        Se define como la cantidad de carga que pasa por una sección transversal del conductor por unidad de tiempo:
+      </p>
+      <p class="formula">
+        $$ I = \frac{dQ}{dt} $$
+      </p>
+      <p>
+        Donde \(I\) es la corriente (en amperios, A), \(Q\) la carga (en coulombs, C) y \(t\) el tiempo (en segundos, s).
+      </p>
+      <p>
+        En los metales, las cargas que se mueven son los electrones, aunque por convención se toma la dirección de la corriente como el sentido del movimiento de las cargas positivas.
+      </p>
+    </section>
+
+    <section id="densidad" class="card">
+      <h2>3. Densidad de corriente</h2>
+      <p>
+        La <strong>densidad de corriente</strong> mide cuánta corriente atraviesa una unidad de área de la sección del conductor:
+      </p>
+      <p class="formula">
+        $$ \vec{J} = n q \vec{v}_d $$
+      </p>
+      <p>
+        donde \(n\) es la densidad de portadores de carga, \(q\) su carga y \(\vec{v}_d\) la velocidad de deriva.
+      </p>
+      <p>
+        La corriente total se obtiene integrando:
+      </p>
+      <p class="formula">
+        $$ I = \int_S \vec{J} \cdot d\vec{A} $$
+      </p>
+    </section>
+
+    <section id="leyohm" class="card">
+      <h2>4. Ley de Ohm</h2>
+      <p>
+        La <strong>Ley de Ohm</strong> relaciona la diferencia de potencial \(V\), la corriente \(I\) y la resistencia \(R\):
+      </p>
+      <p class="formula">
+        $$ V = IR $$
+      </p>
+      <p>
+        Esta ley se cumple en materiales <em>óhmicos</em>, donde la resistencia se mantiene constante sin importar la tensión aplicada.
+      </p>
+    </section>
+
+    <section id="resistencia" class="card">
+      <h2>5. Resistencia eléctrica</h2>
+      <p>
+        La resistencia representa la oposición al flujo de corriente y depende de la naturaleza del material, su longitud y área transversal:
+      </p>
+      <p class="formula">
+        $$ R = \rho \frac{L}{A} $$
+      </p>
+      <p>
+        donde \( \rho \) es la <strong>resistividad</strong> (propiedad del material), \(L\) la longitud y \(A\) el área de la sección transversal.
+      </p>
+      <p>
+        La inversa de la resistividad se denomina <strong>conductividad</strong>:
+      </p>
+      <p class="formula">
+        $$ \sigma = \frac{1}{\rho} $$
+      </p>
+      <p>
+        Materiales como el cobre y la plata presentan alta conductividad, mientras que el vidrio y la cerámica son malos conductores.
+      </p>
+    </section>
+
+    <section id="potencia" class="card">
+      <h2>6. Potencia eléctrica y efecto Joule</h2>
+      <p>
+        La energía eléctrica que atraviesa un resistor se convierte en calor según:
+      </p>
+      <p class="formula">
+        $$ P = VI = I^2 R = \frac{V^2}{R} $$
+      </p>
+      <p>
+        Este fenómeno se conoce como <em>efecto Joule</em> y constituye el principio de funcionamiento de resistencias calefactoras y fusibles.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>7. Ejemplo</h2>
+      <p>
+        <strong>Problema:</strong> Una lámpara de 60 W funciona a 120 V. Determinar la corriente y la resistencia del filamento.
+      </p>
+      <p class="formula">
+        $$ I = \frac{P}{V} = \frac{60}{120} = 0.5\ \mathrm{A} $$
+      </p>
+      <p class="formula">
+        $$ R = \frac{V}{I} = \frac{120}{0.5} = 240\ \Omega $$
+      </p>
+      <p>
+        Por tanto, el filamento presenta una resistencia de \(240\,\Omega\) y consume medio amperio.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>8. Referencias</h2>
+      <ul>
+        <li>Serway, R. & Jewett, J. <em>Principios de Física</em>. Cengage, 2019.</li>
+        <li>Tipler, P. & Mosca, G. <em>Física para la Ciencia y la Tecnología</em>. Reverté, 2014.</li>
+        <li>Halliday, D. & Resnick, R. <em>Física</em>, Vol. II. Wiley, 2015.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

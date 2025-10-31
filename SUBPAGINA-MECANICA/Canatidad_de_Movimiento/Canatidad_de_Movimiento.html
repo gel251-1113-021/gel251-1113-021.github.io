@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cantidad de Movimiento - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Cantidad de Movimiento</h1>
+    <p class="subtitulo">Impulso, colisiones y conservación del momento lineal</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#cantidad_movimiento">Concepto de cantidad de movimiento</a></li>
+      <li><a href="#impulso">Impulso y cambio de momento</a></li>
+      <li><a href="#colisiones">Colisiones</a></li>
+      <li><a href="#conservacion">Ley de conservación del momento lineal</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- ===== INTRODUCCIÓN ===== -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        El estudio de la <strong>cantidad de movimiento</strong> o <em>momento lineal</em> permite comprender cómo las fuerzas producen cambios en el movimiento de los cuerpos.
+        Este concepto es clave en la descripción de interacciones entre objetos, especialmente durante <strong>colisiones</strong> o <strong>impactos</strong>.
+      </p>
+      <p>
+        La relación entre fuerza, tiempo y cambio en la cantidad de movimiento se resume en el concepto de <strong>impulso</strong>.
+      </p>
+      <div class="nota">
+        <p><strong>Ejemplo:</strong> Cuando un bate golpea una pelota, aplica una gran fuerza durante un intervalo muy corto de tiempo, cambiando drásticamente su velocidad.</p>
+      </div>
+    </section>
+
+    <!-- ===== CANTIDAD DE MOVIMIENTO ===== -->
+    <section id="cantidad_movimiento" class="card">
+      <h2>2. Concepto de cantidad de movimiento</h2>
+      <p>
+        La <strong>cantidad de movimiento</strong> (también llamada <em>momento lineal</em>) de un cuerpo se define como el producto de su masa por su velocidad:
+      </p>
+      <p class="formula">
+        $$ \mathbf{p} = m \mathbf{v} $$
+      </p>
+      <p>
+        Donde:
+      </p>
+      <ul>
+        <li>$\mathbf{p}$: vector cantidad de movimiento (kg·m/s)</li>
+        <li>$m$: masa del cuerpo (kg)</li>
+        <li>$\mathbf{v}$: velocidad del cuerpo (m/s)</li>
+      </ul>
+      <p>
+        La cantidad de movimiento es una <strong>magnitud vectorial</strong>, es decir, tiene dirección y sentido.  
+        Un cuerpo con mayor masa o mayor velocidad tendrá más cantidad de movimiento.
+      </p>
+    </section>
+
+    <!-- ===== IMPULSO ===== -->
+    <section id="impulso" class="card">
+      <h2>3. Impulso y cambio de momento</h2>
+      <p>
+        El <strong>impulso</strong> ($\mathbf{J}$) mide el efecto de una fuerza aplicada durante un cierto intervalo de tiempo.  
+        Se define como:
+      </p>
+      <p class="formula">
+        $$ \mathbf{J} = \int_{t_1}^{t_2} \mathbf{F}\,dt $$
+      </p>
+      <p>
+        Si la fuerza es constante:
+      </p>
+      <p class="formula">
+        $$ \mathbf{J} = \mathbf{F} \Delta t $$
+      </p>
+      <p>
+        El impulso está directamente relacionado con el cambio en la cantidad de movimiento:
+      </p>
+      <p class="formula">
+        $$ \mathbf{J} = \Delta \mathbf{p} = m \mathbf{v}_f - m \mathbf{v}_i $$
+      </p>
+      <p>
+        Esta relación se conoce como el <strong>teorema del impulso y la cantidad de movimiento</strong>.
+      </p>
+      <div class="nota">
+        <p>Un mismo impulso puede lograrse aplicando una fuerza grande en poco tiempo o una fuerza pequeña en un tiempo largo.</p>
+      </div>
+    </section>
+
+    <!-- ===== COLISIONES ===== -->
+    <section id="colisiones" class="card">
+      <h2>4. Colisiones</h2>
+      <p>
+        Una <strong>colisión</strong> es un evento de corta duración en el que dos cuerpos interactúan mediante fuerzas intensas.  
+        Durante la colisión, el impulso recibido por cada cuerpo cambia su cantidad de movimiento.
+      </p>
+      <p>
+        Las colisiones se clasifican según la conservación o pérdida de energía cinética:
+      </p>
+      <ul>
+        <li><strong>Colisión elástica:</strong> se conserva tanto la cantidad de movimiento como la energía cinética.</li>
+        <li><strong>Colisión inelástica:</strong> se conserva la cantidad de movimiento, pero no la energía cinética.</li>
+        <li><strong>Colisión perfectamente inelástica:</strong> los cuerpos se mueven juntos después del impacto.</li>
+      </ul>
+      <p>
+        Para un sistema aislado de dos cuerpos:
+      </p>
+      <p class="formula">
+        $$ m_1 v_{1i} + m_2 v_{2i} = m_1 v_{1f} + m_2 v_{2f} $$
+      </p>
+      <p>
+        En colisiones elásticas unidimensionales, también se cumple:
+      </p>
+      <p class="formula">
+        $$ v_{1i} - v_{2i} = -(v_{1f} - v_{2f}) $$
+      </p>
+    </section>
+
+    <!-- ===== LEY DE CONSERVACIÓN ===== -->
+    <section id="conservacion" class="card">
+      <h2>5. Ley de conservación del momento lineal</h2>
+      <p>
+        La <strong>ley de conservación del momento lineal</strong> establece que:
+      </p>
+      <blockquote>
+        <p>“En un sistema aislado (sin fuerzas externas netas), la cantidad total de movimiento permanece constante.”</p>
+      </blockquote>
+      <p class="formula">
+        $$ \sum \mathbf{p}_i = \sum \mathbf{p}_f $$
+      </p>
+      <p>
+        Si actúan fuerzas externas, el cambio total de momento es igual al impulso total aplicado:
+      </p>
+      <p class="formula">
+        $$ \mathbf{F}_{\text{ext}} \Delta t = \Delta \mathbf{p}_{\text{total}} $$
+      </p>
+      <div class="nota">
+        <p>Este principio es válido en todas las dimensiones y constituye uno de los fundamentos más importantes de la mecánica.</p>
+      </div>
+    </section>
+
+    <!-- ===== EJEMPLOS RESUELTOS ===== -->
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Impulso y cambio de velocidad</h3>
+      <p>
+        Una pelota de $0.15\,\text{kg}$ se lanza horizontalmente a $10\,\text{m/s}$ y rebota en sentido opuesto con $8\,\text{m/s}$ tras ser golpeada por una raqueta.  
+        Calcular el impulso recibido.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p class="formula">
+        $$ \Delta \mathbf{p} = m(v_f - v_i) = 0.15(-8 - 10) = -2.7\,\text{kg·m/s} $$
+      </p>
+      <p>
+        El impulso es de <strong>2.7 N·s</strong> en dirección opuesta al movimiento inicial.
+      </p>
+
+      <h3>Ejemplo 2: Colisión perfectamente inelástica</h3>
+      <p>
+        Un cuerpo de $4\,\text{kg}$ que se mueve a $3\,\text{m/s}$ choca frontalmente con otro de $2\,\text{kg}$ en reposo.  
+        Después del impacto, se mueven juntos. Calcular la velocidad final.
+      </p>
+      <p class="formula">
+        $$ m_1 v_{1i} + m_2 v_{2i} = (m_1 + m_2)v_f $$
+        $$ (4)(3) + (2)(0) = 6v_f \Rightarrow v_f = 2\,\text{m/s} $$
+      </p>
+      <p>
+        La velocidad final conjunta es de <strong>2 m/s</strong>.
+      </p>
+
+      <h3>Ejemplo 3: Colisión elástica unidimensional</h3>
+      <p>
+        Dos bolas idénticas ($m_1 = m_2$) colisionan elásticamente. La primera tiene $v_{1i} = 4\,\text{m/s}$ y la segunda está en reposo.  
+        Determinar sus velocidades finales.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p class="formula">
+        $$ v_{1f} = v_{2i} = 0, \quad v_{2f} = v_{1i} = 4\,\text{m/s} $$
+      </p>
+      <p>
+        La primera bola se detiene y la segunda adquiere la velocidad inicial de la primera.  
+        Se conserva tanto el momento como la energía cinética.
+      </p>
+    </section>
+
+    <!-- ===== REFERENCIAS ===== -->
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Tipler, P. A., & Mosca, G. (2008). <em>Física para la ciencia y la tecnología</em> (6ª ed.). Reverté.</li>
+        <li>Young, H. D., & Freedman, R. A. (2021). <em>Física Universitaria</em> (15ª ed.). Pearson.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

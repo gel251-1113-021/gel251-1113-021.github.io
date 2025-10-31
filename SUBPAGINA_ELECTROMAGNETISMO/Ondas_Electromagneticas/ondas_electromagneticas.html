@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ondas Electromagnéticas</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Ondas Electromagnéticas</h1>
+    <p class="subtitulo">Propagación de campos eléctricos y magnéticos</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#maxwell">Ecuaciones de Maxwell</a></li>
+      <li><a href="#propagacion">Propagación de la onda</a></li>
+      <li><a href="#caracteristicas">Características principales</a></li>
+      <li><a href="#energia">Energía y vector de Poynting</a></li>
+      <li><a href="#espectro">Espectro electromagnético</a></li>
+      <li><a href="#ejemplo">Ejemplo numérico</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        Las <strong>ondas electromagnéticas</strong> son perturbaciones que resultan de la variación conjunta y perpendicular de los campos eléctrico ($\mathbf{E}$) y magnético ($\mathbf{B}$), 
+        propagándose a través del espacio sin necesidad de un medio material.
+      </p>
+      <p>
+        Estas ondas transportan energía, momento y pueden propagarse incluso en el vacío a la velocidad de la luz.
+      </p>
+    </section>
+
+    <section id="maxwell" class="card">
+      <h2>2. Ecuaciones de Maxwell</h2>
+      <p>
+        Las ecuaciones de <strong>James Clerk Maxwell</strong> unifican los fenómenos eléctricos y magnéticos, y predicen la existencia de las ondas electromagnéticas. En forma diferencial:
+      </p>
+      <p class="formula">
+        $$ 
+        \begin{aligned}
+        &\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} && \text{(Ley de Gauss)} \\
+        &\nabla \cdot \mathbf{B} = 0 && \text{(No existen monopolos magnéticos)} \\
+        &\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} && \text{(Ley de Faraday)} \\
+        &\nabla \times \mathbf{B} = \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} && \text{(Ley de Ampère-Maxwell)}
+        \end{aligned}
+        $$
+      </p>
+      <p>
+        De estas ecuaciones se deduce que los campos eléctricos y magnéticos pueden auto-sostenerse y propagarse en el espacio.
+      </p>
+    </section>
+
+    <section id="propagacion" class="card">
+      <h2>3. Propagación de la onda</h2>
+      <p>
+        En el vacío, una onda electromagnética puede describirse por:
+      </p>
+      <p class="formula">
+        $$ 
+        \mathbf{E}(z,t) = E_m \sin(kz - \omega t)\, \hat{x}, \quad 
+        \mathbf{B}(z,t) = B_m \sin(kz - \omega t)\, \hat{y}
+        $$
+      </p>
+      <p>
+        Ambas son perpendiculares entre sí y a la dirección de propagación ($\hat{z}$), cumpliendo:
+      </p>
+      <p class="formula">
+        $$ \frac{E_m}{B_m} = c $$
+      </p>
+      <p>
+        donde $c = 3 \times 10^8\ \mathrm{m/s}$ es la velocidad de la luz en el vacío.
+      </p>
+    </section>
+
+    <section id="caracteristicas" class="card">
+      <h2>4. Características principales</h2>
+      <ul>
+        <li><strong>Transversales:</strong> los campos $\mathbf{E}$ y $\mathbf{B}$ son perpendiculares a la dirección de propagación.</li>
+        <li><strong>Auto-propagación:</strong> la variación de $\mathbf{E}$ genera $\mathbf{B}$ y viceversa.</li>
+        <li><strong>Velocidad constante en el vacío:</strong> $c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}$.</li>
+        <li><strong>Transportan energía:</strong> a través del campo electromagnético.</li>
+      </ul>
+    </section>
+
+    <section id="energia" class="card">
+      <h2>5. Energía y vector de Poynting</h2>
+      <p>
+        La densidad de energía electromagnética se expresa como:
+      </p>
+      <p class="formula">
+        $$ u = \frac{1}{2}\left( \varepsilon_0 E^2 + \frac{B^2}{\mu_0} \right) $$
+      </p>
+      <p>
+        La energía fluye en la dirección de propagación de la onda, y su flujo está determinado por el <strong>vector de Poynting</strong>:
+      </p>
+      <p class="formula">
+        $$ \mathbf{S} = \frac{1}{\mu_0} (\mathbf{E} \times \mathbf{B}) $$
+      </p>
+    </section>
+
+    <section id="espectro" class="card">
+      <h2>6. Espectro electromagnético</h2>
+      <p>
+        Las ondas electromagnéticas abarcan un amplio rango de frecuencias y longitudes de onda, conocido como el <strong>espectro electromagnético</strong>:
+      </p>
+      <ul>
+        <li>Ondas de radio</li>
+        <li>Microondas</li>
+        <li>Infrarrojo</li>
+        <li>Luz visible</li>
+        <li>Ultravioleta</li>
+        <li>Rayos X</li>
+        <li>Rayos gamma</li>
+      </ul>
+      <p>
+        Todas se propagan a la misma velocidad en el vacío, pero difieren en su energía y capacidad de interacción con la materia.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>7. Ejemplo numérico</h2>
+      <p>
+        <strong>Ejemplo:</strong> Si el campo eléctrico de una onda en el vacío tiene una amplitud de $E_m = 100\ \mathrm{V/m}$, determine la amplitud del campo magnético asociado.
+      </p>
+      <p class="formula">
+        $$ B_m = \frac{E_m}{c} = \frac{100}{3\times10^8} = 3.33\times10^{-7}\ \mathrm{T} $$
+      </p>
+      <p>
+        Por tanto, la amplitud del campo magnético es $3.33\times10^{-7}$ teslas.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>8. Referencias recomendadas</h2>
+      <ul>
+        <li>Tipler, P. A. & Mosca, G. <em>Física para la Ciencia y la Tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+        <li>Griffiths, D. J. <em>Introducción a la Electrodinámica</em>. Pearson, 2017.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

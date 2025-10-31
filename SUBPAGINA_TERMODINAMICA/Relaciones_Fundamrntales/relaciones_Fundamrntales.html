@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Relaciones y Ecuaciones Fundamentales</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Relaciones y Ecuaciones Fundamentales</h1>
+    <p class="subtitulo">Ecuaciones de estado, relaciones de Maxwell, potenciales termodinámicos y transformaciones reversibles</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#ecuaciones_estado">Ecuaciones de estado</a></li>
+      <li><a href="#relaciones_maxwell">Relaciones de Maxwell</a></li>
+      <li><a href="#potenciales">Potenciales termodinámicos</a></li>
+      <li><a href="#transformaciones">Transformaciones reversibles e irreversibles</a></li>
+      <li><a href="#aplicaciones">Aplicaciones prácticas</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- INTRODUCCIÓN -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        Las <strong>relaciones y ecuaciones fundamentales de la termodinámica</strong> proporcionan las herramientas matemáticas
+        para describir cómo las propiedades de un sistema cambian durante los procesos físicos y químicos.
+      </p>
+      <p>
+        Estas relaciones permiten conectar <em>presión, volumen, temperatura, energía interna, entalpía y entropía</em>,
+        y constituyen la base teórica para predecir el comportamiento de gases, líquidos y sólidos en condiciones diversas.
+      </p>
+      <p>
+        Entre los elementos más importantes se encuentran las <strong>ecuaciones de estado</strong>, las <strong>relaciones de Maxwell</strong>,
+        los <strong>potenciales termodinámicos</strong> y el estudio de las <strong>transformaciones reversibles</strong>.
+      </p>
+    </section>
+
+    <!-- ECUACIONES DE ESTADO -->
+    <section id="ecuaciones_estado" class="card">
+      <h2>2. Ecuaciones de estado</h2>
+      <p>
+        Una <strong>ecuación de estado</strong> relaciona las variables de estado de un sistema termodinámico, típicamente
+        presión (\(P\)), volumen (\(V\)) y temperatura (\(T\)).
+      </p>
+      <p>
+        Para un <em>gas ideal</em>, la ecuación fundamental es:
+      </p>
+      <p class="formula">
+        $$ PV = nRT $$
+      </p>
+      <p>
+        donde \(n\) es la cantidad de sustancia (en moles) y \(R\) la constante universal de los gases ideales.
+      </p>
+      <p>
+        Sin embargo, los gases reales requieren ecuaciones más precisas, como la <strong>Ecuación de Van der Waals</strong>:
+      </p>
+      <p class="formula">
+        $$ \left( P + \frac{a}{V_m^2} \right)(V_m - b) = RT $$
+      </p>
+      <p>
+        donde:
+      </p>
+      <ul>
+        <li>\(a\) corrige las fuerzas de atracción intermoleculares,</li>
+        <li>\(b\) corrige el volumen finito de las moléculas.</li>
+      </ul>
+      <p>
+        Estas ecuaciones son esenciales para describir el comportamiento de fluidos y para definir las propiedades termodinámicas
+        que derivan de ellas.
+      </p>
+    </section>
+
+    <!-- RELACIONES DE MAXWELL -->
+    <section id="relaciones_maxwell" class="card">
+      <h2>3. Relaciones de Maxwell</h2>
+      <p>
+        Las <strong>relaciones de Maxwell</strong> surgen de la igualdad de las segundas derivadas de las funciones termodinámicas
+        y permiten conectar propiedades difíciles de medir con otras más accesibles experimentalmente.
+      </p>
+      <p>
+        Se derivan de los <strong>potenciales termodinámicos</strong> fundamentales y se expresan en forma diferencial.
+      </p>
+      <p>
+        A partir de las ecuaciones diferenciales de la energía interna \(U\), entalpía \(H\), energía libre de Helmholtz \(A\)
+        y energía libre de Gibbs \(G\), se obtienen:
+      </p>
+      <p class="formula">
+        $$ \left( \frac{\partial T}{\partial V} \right)_S = -\left( \frac{\partial P}{\partial S} \right)_V $$
+      </p>
+      <p class="formula">
+        $$ \left( \frac{\partial T}{\partial P} \right)_S = \left( \frac{\partial V}{\partial S} \right)_P $$
+      </p>
+      <p class="formula">
+        $$ \left( \frac{\partial S}{\partial V} \right)_T = \left( \frac{\partial P}{\partial T} \right)_V $$
+      </p>
+      <p class="formula">
+        $$ \left( \frac{\partial S}{\partial P} \right)_T = -\left( \frac{\partial V}{\partial T} \right)_P $$
+      </p>
+      <p>
+        Estas relaciones constituyen un conjunto de ecuaciones elegantes que permiten deducir variaciones de entropía,
+        energía o volumen en función de otras variables más simples.
+      </p>
+    </section>
+
+    <!-- POTENCIALES TERMODINÁMICOS -->
+    <section id="potenciales" class="card">
+      <h2>4. Potenciales termodinámicos</h2>
+      <p>
+        Los <strong>potenciales termodinámicos</strong> son funciones que describen el estado de un sistema y facilitan
+        el análisis de procesos a temperatura, presión o volumen constante.
+      </p>
+      <ul>
+        <li><strong>Energía interna:</strong> \( U(S,V) \) — depende de la entropía y el volumen.</li>
+        <li><strong>Entalpía:</strong> \( H(S,P) = U + PV \)</li>
+        <li><strong>Energía libre de Helmholtz:</strong> \( A(T,V) = U - TS \)</li>
+        <li><strong>Energía libre de Gibbs:</strong> \( G(T,P) = U + PV - TS \)</li>
+      </ul>
+      <p>
+        Cada potencial se asocia con una condición natural:
+      </p>
+      <ul>
+        <li>\( U \): procesos a entropía y volumen constantes.</li>
+        <li>\( H \): procesos a entropía y presión constantes.</li>
+        <li>\( A \): procesos a temperatura y volumen constantes.</li>
+        <li>\( G \): procesos a temperatura y presión constantes.</li>
+      </ul>
+      <p>
+        La variación de \( G \) indica la espontaneidad de un proceso:
+      </p>
+      <p class="formula">
+        $$ \Delta G < 0 \quad \text{proceso espontáneo} $$
+      </p>
+      <p class="formula">
+        $$ \Delta G = 0 \quad \text{equilibrio termodinámico} $$
+      </p>
+      <p>
+        Los potenciales termodinámicos son fundamentales para el estudio de <em>equilibrios químicos</em> y <em>fases</em>.
+      </p>
+    </section>
+
+    <!-- TRANSFORMACIONES REVERSIBLES -->
+    <section id="transformaciones" class="card">
+      <h2>5. Transformaciones reversibles e irreversibles</h2>
+      <p>
+        Una <strong>transformación reversible</strong> es aquella que puede revertirse infinitesimalmente sin pérdida de energía o aumento de entropía.
+      </p>
+      <p>
+        En cambio, una <strong>transformación irreversible</strong> genera producción neta de entropía y no puede revertirse sin afectar el entorno.
+      </p>
+      <p>
+        La variación de calor en un proceso reversible está dada por:
+      </p>
+      <p class="formula">
+        $$ \delta Q_{rev} = T dS $$
+      </p>
+      <p>
+        En procesos irreversibles:
+      </p>
+      <p class="formula">
+        $$ \delta Q_{irr} < T dS $$
+      </p>
+      <p>
+        Ejemplos de procesos reversibles incluyen la <em>expansión isotérmica de un gas ideal</em> y los <em>ciclos de Carnot</em>.
+      </p>
+      <p>
+        Estos conceptos son esenciales para el análisis de eficiencia y límites de las máquinas térmicas.
+      </p>
+    </section>
+
+    <!-- APLICACIONES -->
+    <section id="aplicaciones" class="card">
+      <h2>6. Aplicaciones prácticas</h2>
+      <ul>
+        <li><strong>Ingeniería química:</strong> cálculo de propiedades de mezclas y reacciones a distintas condiciones.</li>
+        <li><strong>Termodinámica de materiales:</strong> predicción de equilibrios de fase mediante potenciales de Gibbs.</li>
+        <li><strong>Física de gases:</strong> corrección de ecuaciones de estado para gases reales.</li>
+        <li><strong>Procesos industriales:</strong> análisis de eficiencia en ciclos termodinámicos y transformaciones reversibles.</li>
+      </ul>
+    </section>
+
+    <!-- REFERENCIAS -->
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Cengel, Y. A., & Boles, M. A. <em>Termodinámica</em>. McGraw-Hill Education.</li>
+        <li>Callen, H. B. <em>Thermodynamics and an Introduction to Thermostatistics</em>. Wiley.</li>
+        <li>Atkins, P., & de Paula, J. <em>Físico-Química</em>. Oxford University Press.</li>
+        <li>Reif, F. <em>Fundamentals of Statistical and Thermal Physics</em>. McGraw-Hill.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Física General — Relaciones y Ecuaciones Fundamentales</p>
+  </footer>
+</body>
+</html>

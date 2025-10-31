@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Física Nuclear</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Física Nuclear</h1>
+    <p class="subtitulo">Energía, decaimientos radiactivos y estabilidad nuclear</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#estructura">Estructura del núcleo</a></li>
+      <li><a href="#energia">Energía nuclear y enlace</a></li>
+      <li><a href="#decaimiento">Decaimientos radiactivos</a></li>
+      <li><a href="#estabilidad">Estabilidad nuclear</a></li>
+      <li><a href="#aplicaciones">Aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>física nuclear</strong> estudia las propiedades, interacciones y transformaciones de los núcleos atómicos. 
+        Sus descubrimientos han permitido el desarrollo de energía nuclear, medicina nuclear, y aplicaciones en investigación científica y tecnológica.
+      </p>
+      <p>
+        El núcleo atómico está compuesto por <strong>protones</strong> y <strong>neutrones</strong> (denominados nucleones), unidos mediante la <em>fuerza nuclear fuerte</em>.
+      </p>
+    </section>
+
+    <section id="estructura" class="card">
+      <h2>2. Estructura del núcleo</h2>
+      <p>
+        Los núcleos se caracterizan por su número atómico \( Z \) (cantidad de protones) y número másico \( A \) (protones + neutrones):
+      </p>
+      <p class="formula">
+        $$ N = A - Z $$
+      </p>
+      <p>
+        donde \( N \) es el número de neutrones. La disposición y proporción de nucleones determina la estabilidad del núcleo y sus propiedades nucleares.
+      </p>
+      <p>
+        Existen isótopos de un mismo elemento que difieren en el número de neutrones, lo que afecta su radio, masa y estabilidad.
+      </p>
+    </section>
+
+    <section id="energia" class="card">
+      <h2>3. Energía nuclear y enlace</h2>
+      <p>
+        La <strong>energía nuclear</strong> proviene de la diferencia de masa entre el núcleo y sus nucleones individuales, conocida como <em>defecto de masa</em>.
+      </p>
+      <p class="formula">
+        $$ \Delta E = \Delta m \, c^2 $$
+      </p>
+      <p>
+        donde \( \Delta m \) es el defecto de masa y \( c \) la velocidad de la luz. Esta energía se libera en procesos de <strong>fisión</strong> o <strong>fusión nuclear</strong>.
+      </p>
+      <p>
+        - <strong>Fisión:</strong> el núcleo pesado se divide en núcleos más ligeros liberando energía (ej. Uranio-235).<br>
+        - <strong>Fusión:</strong> núcleos ligeros se combinan formando un núcleo más pesado (ej. reacción en el sol: H → He).
+      </p>
+    </section>
+
+    <section id="decaimiento" class="card">
+      <h2>4. Decaimientos radiactivos</h2>
+      <p>
+        Los núcleos inestables pueden transformarse espontáneamente emitiendo partículas o radiación. Los principales tipos de decaimiento son:
+      </p>
+      <ul>
+        <li><strong>Alfa (α):</strong> emisión de un núcleo de helio \( ^4_2\text{He} \). Ejemplo: \( ^{238}\text{U} \rightarrow ^{234}\text{Th} + \alpha \).</li>
+        <li><strong>Beta (β):</strong> conversión de un neutrón en protón o viceversa con emisión de electrón o positrón y neutrino: \( n \rightarrow p + e^- + \bar{\nu}_e \).</li>
+        <li><strong>Gamma (γ):</strong> emisión de fotones de alta energía sin cambio en número de protones o neutrones.</li>
+      </ul>
+      <p>
+        La ley de decaimiento radiactivo se describe mediante una función exponencial:
+      </p>
+      <p class="formula">
+        $$ N(t) = N_0 e^{-\lambda t} $$
+      </p>
+      <p>
+        donde \( N_0 \) es la cantidad inicial de núcleos, \( \lambda \) la constante de decaimiento, y \( t \) el tiempo transcurrido.
+      </p>
+      <p>
+        El tiempo necesario para que la mitad de los núcleos se desintegre se llama <strong>vida media</strong>:
+      </p>
+      <p class="formula">
+        $$ T_{1/2} = \frac{\ln 2}{\lambda} $$
+      </p>
+    </section>
+
+    <section id="estabilidad" class="card">
+      <h2>5. Estabilidad nuclear</h2>
+      <p>
+        La estabilidad de un núcleo depende de la relación <strong>neutrones/protones</strong> y de las fuerzas que actúan entre nucleones:
+      </p>
+      <ul>
+        <li>Núcleos ligeros (\( Z < 20 \)) son estables cuando \( N \approx Z \).</li>
+        <li>Núcleos pesados requieren más neutrones que protones (\( N > Z \)) para contrarrestar la repulsión electrostática entre protones.</li>
+        <li>Existen <strong>números mágicos</strong> de nucleones que forman núcleos especialmente estables: 2, 8, 20, 28, 50, 82, 126.</li>
+      </ul>
+      <p>
+        Los núcleos fuera de la “zona de estabilidad” son radiactivos y tienden a decaer hasta alcanzar configuraciones más estables.
+      </p>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>6. Aplicaciones</h2>
+      <ul>
+        <li><strong>Energía nuclear:</strong> reactores de fisión y potencial futuro de fusión.</li>
+        <li><strong>Medicina nuclear:</strong> diagnóstico por imagen (PET, gammagrafía) y terapias radiológicas.</li>
+        <li><strong>Datación radiométrica:</strong> determinación de edades geológicas mediante isótopos como C-14.</li>
+        <li><strong>Investigación científica:</strong> aceleradores de partículas, física de neutrinos y estudios de núcleos exóticos.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Krane, K. S. (1987). <em>Introductory Nuclear Physics</em>. Wiley.</li>
+        <li>Segre, E. (1977). <em>Nuclei and Particles</em>. Addison-Wesley.</li>
+        <li>Heyde, K. (1999). <em>The Nuclear Shell Model</em>. Springer.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

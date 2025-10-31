@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ley de Gauss: Flujo Eléctrico y Carga Encerrada</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Ley de Gauss</h1>
+    <p class="subtitulo">Flujo eléctrico y carga encerrada en superficies gaussianas</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#flujo">Flujo eléctrico</a></li>
+      <li><a href="#ley">Enunciado de la Ley de Gauss</a></li>
+      <li><a href="#carga">Carga encerrada y simetrías</a></li>
+      <li><a href="#ejemplo">Ejemplo resuelto</a></li>
+      <li><a href="#aplicaciones">Aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>Ley de Gauss</strong> es una de las cuatro ecuaciones fundamentales de Maxwell y describe cómo las cargas eléctricas producen campos eléctricos. 
+        Su importancia radica en que relaciona la <em>cantidad de flujo eléctrico</em> que atraviesa una superficie cerrada con la <em>carga total encerrada</em> dentro de ella.
+      </p>
+      <p>
+        Esta ley permite determinar el campo eléctrico de distribuciones de carga con simetría esférica, cilíndrica o plana, de forma más directa que usando la Ley de Coulomb.
+      </p>
+    </section>
+
+    <section id="flujo" class="card">
+      <h2>2. Flujo eléctrico</h2>
+      <p>
+        El <strong>flujo eléctrico</strong> (\( \Phi_E \)) cuantifica el número de líneas del campo eléctrico que atraviesan una superficie. 
+        Se define como la integral del producto escalar entre el campo y el vector área diferencial:
+      </p>
+      <p class="formula">
+        $$ \Phi_E = \int_S \mathbf{E} \cdot d\mathbf{A} $$
+      </p>
+      <p>
+        Si el campo eléctrico \( \mathbf{E} \) es uniforme y perpendicular a una superficie plana de área \( A \), el flujo se reduce a:
+      </p>
+      <p class="formula">
+        $$ \Phi_E = E A $$
+      </p>
+      <p>
+        En cambio, si el campo forma un ángulo \( \theta \) con la superficie, el flujo será:
+      </p>
+      <p class="formula">
+        $$ \Phi_E = E A \cos\theta $$
+      </p>
+    </section>
+
+    <section id="ley" class="card">
+      <h2>3. Enunciado de la Ley de Gauss</h2>
+      <p>
+        La Ley de Gauss establece que el flujo total del campo eléctrico a través de una superficie cerrada es proporcional a la carga encerrada dentro de ella:
+      </p>
+      <p class="formula">
+        $$ \oint_S \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0} $$
+      </p>
+      <p>
+        donde \( Q_{\text{enc}} \) es la carga neta dentro de la superficie y \( \varepsilon_0 = 8.85\times10^{-12}\ \mathrm{C^2/(N\cdot m^2)} \) es la permitividad del vacío.
+      </p>
+      <p>
+        Esta expresión indica que <strong>solo las cargas encerradas</strong> por la superficie gaussiana contribuyen al flujo total.
+      </p>
+    </section>
+
+    <section id="carga" class="card">
+      <h2>4. Carga encerrada y simetrías</h2>
+      <p>
+        Para aplicar la Ley de Gauss es esencial escoger una <em>superficie gaussiana</em> que aproveche la simetría del problema. 
+        Las tres simetrías más comunes son:
+      </p>
+      <ul>
+        <li><strong>Simetría esférica:</strong> Carga puntual o esfera cargada.</li>
+        <li><strong>Simetría cilíndrica:</strong> Hilo o cilindro cargado.</li>
+        <li><strong>Simetría plana:</strong> Plano infinito cargado.</li>
+      </ul>
+
+      <h3>a) Carga puntual</h3>
+      <p>
+        Para una carga \( q \) en el centro de una esfera de radio \( r \):
+      </p>
+      <p class="formula">
+        $$ \Phi_E = E(4\pi r^2) = \frac{q}{\varepsilon_0} \Rightarrow E = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2} $$
+      </p>
+
+      <h3>b) Plano infinito cargado</h3>
+      <p>
+        Para un plano con densidad superficial de carga \( \sigma \):
+      </p>
+      <p class="formula">
+        $$ E = \frac{\sigma}{2\varepsilon_0} $$
+      </p>
+
+      <h3>c) Hilo cargado</h3>
+      <p>
+        Para un hilo largo con densidad lineal de carga \( \lambda \), la superficie gaussiana es un cilindro coaxial:
+      </p>
+      <p class="formula">
+        $$ E = \frac{\lambda}{2\pi \varepsilon_0 r} $$
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>5. Ejemplo resuelto</h2>
+      <p>
+        <strong>Problema:</strong> Calcula el campo eléctrico a una distancia \( r = 0.1\ \mathrm{m} \) de un hilo infinito con densidad lineal \( \lambda = 3\times10^{-6}\ \mathrm{C/m} \).
+      </p>
+      <p class="formula">
+        $$ E = \frac{\lambda}{2\pi \varepsilon_0 r} = \frac{3\times10^{-6}}{2\pi (8.85\times10^{-12})(0.1)} = 5.39\times10^6\ \mathrm{N/C} $$
+      </p>
+      <p>
+        El campo es radial y perpendicular al eje del hilo.
+      </p>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>6. Aplicaciones</h2>
+      <ul>
+        <li>Determinación del campo eléctrico en sistemas con simetría.</li>
+        <li>Diseño de aislantes y conductores esféricos o coaxiales.</li>
+        <li>Estudio de blindaje electrostático y superficies equipotenciales.</li>
+        <li>Base conceptual para el desarrollo de las ecuaciones de Maxwell.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Halliday, D., Resnick, R. & Walker, J. <em>Fundamentos de Física</em>. Wiley, 2018.</li>
+        <li>Tipler, P. A., & Mosca, G. <em>Física para la ciencia y la tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Circuitos de Corriente Directa</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Circuitos de Corriente Directa</h1>
+    <p class="subtitulo">Análisis de resistencias, leyes de Kirchhoff y aplicaciones en corriente continua.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#conceptos">Conceptos fundamentales</a></li>
+      <li><a href="#ohm">Ley de Ohm</a></li>
+      <li><a href="#kirchhoff">Leyes de Kirchhoff</a></li>
+      <li><a href="#asociaciones">Asociaciones de resistencias</a></li>
+      <li><a href="#energia">Energía y potencia eléctrica</a></li>
+      <li><a href="#ejemplo">Ejemplo resuelto</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        Un <strong>circuito de corriente directa (DC)</strong> es aquel en el que la corriente eléctrica 
+        circula siempre en el mismo sentido, impulsada por una diferencia de potencial constante.
+      </p>
+      <p>
+        Estos circuitos están compuestos principalmente por fuentes de energía (baterías o generadores), 
+        resistencias y elementos de conexión, y son la base del análisis de redes eléctricas más complejas.
+      </p>
+    </section>
+
+    <section id="conceptos" class="card">
+      <h2>2. Conceptos fundamentales</h2>
+      <p>
+        En un circuito eléctrico intervienen tres magnitudes básicas:
+      </p>
+      <ul>
+        <li><strong>Voltaje (V):</strong> diferencia de potencial entre dos puntos, medida en voltios (V).</li>
+        <li><strong>Corriente (I):</strong> flujo de carga eléctrica por unidad de tiempo, medida en amperios (A).</li>
+        <li><strong>Resistencia (R):</strong> oposición al paso de la corriente, medida en ohmios (Ω).</li>
+      </ul>
+      <p>
+        Estas magnitudes se relacionan entre sí mediante la <em>Ley de Ohm</em>.
+      </p>
+    </section>
+
+    <section id="ohm" class="card">
+      <h2>3. Ley de Ohm</h2>
+      <p>
+        La <strong>Ley de Ohm</strong> establece que la corriente que atraviesa un conductor 
+        es directamente proporcional a la diferencia de potencial aplicada e inversamente proporcional 
+        a su resistencia:
+      </p>
+      <p class="formula">
+        $$ V = I R $$
+      </p>
+      <p>
+        De donde se obtiene:
+      </p>
+      <p class="formula">
+        $$ I = \frac{V}{R} \quad \text{y} \quad R = \frac{V}{I} $$
+      </p>
+      <p>
+        Esta ley constituye la base del análisis de cualquier circuito resistivo.
+      </p>
+    </section>
+
+    <section id="kirchhoff" class="card">
+      <h2>4. Leyes de Kirchhoff</h2>
+      <p>
+        <strong>Gustav Kirchhoff</strong> formuló dos leyes fundamentales que permiten analizar 
+        redes eléctricas con múltiples ramas y mallas:
+      </p>
+      <h3>a) Ley de Corrientes (Nodos)</h3>
+      <p>
+        La suma de las corrientes que entran a un nodo es igual a la suma de las corrientes que salen:
+      </p>
+      <p class="formula">
+        $$ \sum I_{\text{entrante}} = \sum I_{\text{saliente}} $$
+      </p>
+      <p>
+        o de manera algebraica:
+      </p>
+      <p class="formula">
+        $$ \sum I = 0 $$
+      </p>
+
+      <h3>b) Ley de Tensiones (Mallas)</h3>
+      <p>
+        En cualquier lazo cerrado, la suma algebraica de las diferencias de potencial es igual a cero:
+      </p>
+      <p class="formula">
+        $$ \sum V = 0 $$
+      </p>
+      <p>
+        Esta ley refleja la conservación de la energía eléctrica en un circuito cerrado.
+      </p>
+    </section>
+
+    <section id="asociaciones" class="card">
+      <h2>5. Asociaciones de resistencias</h2>
+      <p>
+        Las resistencias pueden combinarse de diferentes maneras en un circuito. 
+        Las dos configuraciones básicas son:
+      </p>
+
+      <h3>a) En serie</h3>
+      <p>
+        Cuando las resistencias están conectadas una tras otra, la corriente es la misma en todas:
+      </p>
+      <p class="formula">
+        $$ R_{\text{eq}} = R_1 + R_2 + R_3 + \cdots $$
+      </p>
+
+      <h3>b) En paralelo</h3>
+      <p>
+        Cuando las resistencias están conectadas a los mismos nodos, la diferencia de potencial es igual, 
+        pero las corrientes se dividen:
+      </p>
+      <p class="formula">
+        $$ \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \cdots $$
+      </p>
+
+      <p>
+        La combinación de ambas configuraciones da lugar a redes mixtas que se resuelven por reducción progresiva.
+      </p>
+    </section>
+
+    <section id="energia" class="card">
+      <h2>6. Energía y potencia eléctrica</h2>
+      <p>
+        La potencia eléctrica representa la rapidez con la que se transforma o transfiere energía en un circuito.
+        Se expresa como:
+      </p>
+      <p class="formula">
+        $$ P = V I $$
+      </p>
+      <p>
+        Sustituyendo según la Ley de Ohm:
+      </p>
+      <p class="formula">
+        $$ P = I^2 R = \frac{V^2}{R} $$
+      </p>
+      <p>
+        La energía total consumida en un tiempo \( t \) se calcula como:
+      </p>
+      <p class="formula">
+        $$ W = P t $$
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>7. Ejemplo resuelto</h2>
+      <p>
+        <strong>Problema:</strong> En un circuito de 12 V se conectan tres resistencias en serie de 
+        \( R_1 = 2\ \Omega \), \( R_2 = 3\ \Omega \) y \( R_3 = 5\ \Omega \). Determinar la corriente y la potencia total disipada.
+      </p>
+      <p class="formula">
+        $$ R_{\text{eq}} = 2 + 3 + 5 = 10\ \Omega $$
+      </p>
+      <p class="formula">
+        $$ I = \frac{V}{R_{\text{eq}}} = \frac{12}{10} = 1.2\ \mathrm{A} $$
+      </p>
+      <p class="formula">
+        $$ P = V I = 12 \times 1.2 = 14.4\ \mathrm{W} $$
+      </p>
+      <p>
+        Por tanto, el circuito disipa una potencia total de 14.4 W en forma de calor.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>8. Referencias recomendadas</h2>
+      <ul>
+        <li>Halliday, D., Resnick, R. & Walker, J. <em>Fundamentos de Física</em>. Wiley, 2018.</li>
+        <li>Tipler, P. A. & Mosca, G. <em>Física para la Ciencia y la Tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

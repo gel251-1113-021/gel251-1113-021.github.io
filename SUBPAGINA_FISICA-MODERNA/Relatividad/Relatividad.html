@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Relatividad</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Relatividad</h1>
+    <p class="subtitulo">Espacio-tiempo, energía y masa según Einstein</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#postulados">Postulados de la relatividad especial</a></li>
+      <li><a href="#transformaciones">Transformaciones de Lorentz</a></li>
+      <li><a href="#efectos">Efectos relativistas</a></li>
+      <li><a href="#energia">Equivalencia masa-energía</a></li>
+      <li><a href="#espaciotiempo">Espacio-tiempo y gravedad</a></li>
+      <li><a href="#ejemplo">Ejemplo ilustrativo</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>teoría de la relatividad</strong> desarrollada por <strong>Albert Einstein</strong> revolucionó nuestra comprensión del espacio, el tiempo y la energía. 
+        Existen dos formulaciones principales: la <em>relatividad especial</em> (1905) y la <em>relatividad general</em> (1915).
+      </p>
+      <p>
+        Mientras la primera se ocupa del movimiento a altas velocidades y la constancia de la luz, la segunda describe la interacción gravitacional como una curvatura del espacio-tiempo.
+      </p>
+    </section>
+
+    <section id="postulados" class="card">
+      <h2>2. Postulados de la relatividad especial</h2>
+      <ul>
+        <li><strong>1. Principio de relatividad:</strong> Las leyes de la física son las mismas en todos los sistemas inerciales.</li>
+        <li><strong>2. Constancia de la velocidad de la luz:</strong> La velocidad de la luz en el vacío ($c = 3 \times 10^8$ m/s) es la misma para todos los observadores, sin importar su movimiento relativo.</li>
+      </ul>
+      <p>
+        De estos postulados se derivan consecuencias profundas en la percepción del tiempo, la longitud y la simultaneidad.
+      </p>
+    </section>
+
+    <section id="transformaciones" class="card">
+      <h2>3. Transformaciones de Lorentz</h2>
+      <p>
+        Para relacionar las coordenadas espacio-temporales entre dos sistemas inerciales en movimiento relativo se emplean las <strong>transformaciones de Lorentz</strong>:
+      </p>
+      <p class="formula">
+        $$
+        \begin{aligned}
+        x' &= \gamma (x - vt) \\
+        t' &= \gamma \left(t - \frac{vx}{c^2}\right)
+        \end{aligned}
+        $$
+      </p>
+      <p>
+        donde $\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}$ es el <em>factor relativista</em>.  
+        Estas ecuaciones garantizan que la velocidad de la luz sea la misma en todos los sistemas inerciales.
+      </p>
+    </section>
+
+    <section id="efectos" class="card">
+      <h2>4. Efectos relativistas</h2>
+      <ul>
+        <li><strong>Dilatación del tiempo:</strong> el tiempo transcurre más lentamente para un observador en movimiento:
+          $$ \Delta t = \gamma \Delta t_0 $$
+        </li>
+        <li><strong>Contracción de la longitud:</strong> los objetos en movimiento se acortan en la dirección del desplazamiento:
+          $$ L = \frac{L_0}{\gamma} $$
+        </li>
+        <li><strong>Simultaneidad relativa:</strong> dos eventos simultáneos en un marco pueden no serlo en otro en movimiento relativo.</li>
+      </ul>
+    </section>
+
+    <section id="energia" class="card">
+      <h2>5. Equivalencia masa-energía</h2>
+      <p>
+        Einstein estableció que la energía y la masa son manifestaciones de una misma magnitud física, relacionadas por su famosa ecuación:
+      </p>
+      <p class="formula">
+        $$ E = mc^2 $$
+      </p>
+      <p>
+        Esto significa que una pequeña cantidad de masa puede convertirse en una enorme cantidad de energía, principio fundamental en la física nuclear y astrofísica.
+      </p>
+    </section>
+
+    <section id="espaciotiempo" class="card">
+      <h2>6. Espacio-tiempo y gravedad</h2>
+      <p>
+        En la <strong>relatividad general</strong>, la gravedad no se considera una fuerza, sino una curvatura del espacio-tiempo causada por la presencia de masa y energía.
+      </p>
+      <p>
+        Los cuerpos masivos deforman el espacio-tiempo, haciendo que otros objetos sigan trayectorias curvas llamadas <em>geodésicas</em>.  
+        Esta teoría ha sido confirmada experimentalmente por fenómenos como la desviación de la luz por la gravedad y el corrimiento gravitacional al rojo.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>7. Ejemplo ilustrativo</h2>
+      <p>
+        <strong>Ejemplo:</strong> Un astronauta viaja a $v = 0.8c$. Si en la Tierra transcurren 10 años, ¿cuánto tiempo mide el astronauta?
+      </p>
+      <p class="formula">
+        $$ \gamma = \frac{1}{\sqrt{1 - (0.8)^2}} = 1.6667 $$
+      </p>
+      <p class="formula">
+        $$ \Delta t' = \frac{10\ \text{años}}{\gamma} = 6.0\ \text{años} $$
+      </p>
+      <p>
+        El astronauta experimenta solo 6 años de viaje, mientras que en la Tierra han pasado 10 años.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>8. Referencias recomendadas</h2>
+      <ul>
+        <li>Einstein, A. (1916). <em>Relativity: The Special and General Theory</em>.</li>
+        <li>Tipler, P. A. & Mosca, G. <em>Física para la Ciencia y la Tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

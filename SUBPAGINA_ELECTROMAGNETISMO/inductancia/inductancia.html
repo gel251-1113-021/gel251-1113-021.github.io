@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Inductancia y Almacenamiento de Energía Magnética</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Inductancia</h1>
+    <p class="subtitulo">Almacenamiento de energía magnética y su relación con el flujo magnético.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#concepto">Concepto de inductancia</a></li>
+      <li><a href="#autoymutua">Autoinductancia y mutua inductancia</a></li>
+      <li><a href="#energia">Energía almacenada en un inductor</a></li>
+      <li><a href="#ejemplo">Ejemplo resuelto</a></li>
+      <li><a href="#aplicaciones">Aplicaciones prácticas</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>inductancia</strong> es una propiedad fundamental de los circuitos eléctricos en los cuales una corriente variable genera un <em>campo magnético</em> que, a su vez, induce una fuerza electromotriz (fem).
+      </p>
+      <p>
+        Esta propiedad fue estudiada por <strong>Michael Faraday</strong> y <strong>Joseph Henry</strong>, quienes observaron que los cambios en la corriente eléctrica producen campos magnéticos variables que inducen voltajes tanto en el mismo circuito como en otros cercanos.
+      </p>
+    </section>
+
+    <section id="concepto" class="card">
+      <h2>2. Concepto de inductancia</h2>
+      <p>
+        Cuando una corriente eléctrica \( I \) circula por un conductor, se establece un flujo magnético \( \Phi \) proporcional a dicha corriente:
+      </p>
+      <p class="formula">
+        $$ \Phi = L I $$
+      </p>
+      <p>
+        donde \( L \) es la <strong>inductancia</strong> del circuito y se mide en <em>henrios (H)</em>. 
+        Este parámetro depende de la geometría del conductor, el número de espiras y la permeabilidad del medio.
+      </p>
+    </section>
+
+    <section id="autoymutua" class="card">
+      <h2>3. Autoinductancia y mutua inductancia</h2>
+
+      <h3>a) Autoinductancia</h3>
+      <p>
+        Ocurre cuando una corriente cambiante en un circuito induce una fem en <em>sí mismo</em>:
+      </p>
+      <p class="formula">
+        $$ \mathcal{E} = -L \frac{dI}{dt} $$
+      </p>
+      <p>
+        El signo negativo expresa la <strong>Ley de Lenz</strong>: la fem inducida se opone al cambio que la produce.
+      </p>
+
+      <h3>b) Mutua inductancia</h3>
+      <p>
+        Si una corriente variable en una bobina induce una fem en otra bobina cercana, decimos que existe <strong>mutua inductancia</strong>:
+      </p>
+      <p class="formula">
+        $$ \mathcal{E}_2 = -M \frac{dI_1}{dt} $$
+      </p>
+      <p>
+        donde \( M \) es el coeficiente de mutua inductancia entre ambas bobinas.
+      </p>
+    </section>
+
+    <section id="energia" class="card">
+      <h2>4. Energía almacenada en un inductor</h2>
+      <p>
+        Cuando una corriente circula por una bobina, el campo magnético asociado almacena energía. 
+        La energía instantánea almacenada en el inductor se expresa como:
+      </p>
+      <p class="formula">
+        $$ U = \frac{1}{2} L I^2 $$
+      </p>
+      <p>
+        En términos de densidad de energía magnética en un campo \( B \), se tiene:
+      </p>
+      <p class="formula">
+        $$ u_B = \frac{B^2}{2\mu_0} $$
+      </p>
+      <p>
+        donde \( \mu_0 = 4\pi \times 10^{-7}\ \mathrm{H/m} \) es la permeabilidad magnética del vacío.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>5. Ejemplo resuelto</h2>
+      <p>
+        <strong>Problema:</strong> Una bobina de inductancia \( L = 0.5\ \mathrm{H} \) conduce una corriente de \( I = 2\ \mathrm{A} \). 
+        Calcular la energía magnética almacenada.
+      </p>
+      <p class="formula">
+        $$ U = \frac{1}{2} L I^2 = \frac{1}{2}(0.5)(2)^2 = 1\ \mathrm{J} $$
+      </p>
+      <p>
+        Por tanto, el inductor almacena <strong>1 joule</strong> de energía en su campo magnético.
+      </p>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>6. Aplicaciones prácticas</h2>
+      <ul>
+        <li>Transformadores y acoplamiento magnético.</li>
+        <li>Filtros y circuitos resonantes en radiofrecuencia.</li>
+        <li>Almacenamiento temporal de energía en fuentes conmutadas.</li>
+        <li>Protección frente a sobretensiones mediante inductores en serie.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Halliday, D., Resnick, R. & Walker, J. <em>Fundamentos de Física</em>. Wiley, 2018.</li>
+        <li>Tipler, P. A., & Mosca, G. <em>Física para la ciencia y la tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

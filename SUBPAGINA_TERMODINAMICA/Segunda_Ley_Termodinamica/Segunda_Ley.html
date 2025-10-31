@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Segunda Ley y Entropía</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Segunda Ley de la Termodinámica y Entropía</h1>
+    <p class="subtitulo">Direccionalidad de los procesos, máquinas térmicas y concepto de entropía</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#segunda_ley">Segunda Ley de la Termodinámica</a></li>
+      <li><a href="#maquinas_termicas">Máquinas térmicas y refrigeradores</a></li>
+      <li><a href="#entropia">Concepto de Entropía</a></li>
+      <li><a href="#procesos">Procesos reversibles e irreversibles</a></li>
+      <li><a href="#ejemplos">Ejemplos y aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>Segunda Ley de la Termodinámica</strong> establece la direccionalidad natural de los procesos energéticos.
+        Mientras que la Primera Ley trata sobre la <em>cantidad</em> de energía, la Segunda Ley trata sobre su <em>calidad</em> o capacidad de producir trabajo útil.
+      </p>
+      <p>
+        Esta ley introduce el concepto de <strong>entropía</strong>, una magnitud que mide el grado de desorden o dispersión de la energía.
+      </p>
+      <p>
+        En resumen, la Segunda Ley nos indica que ciertos procesos ocurren espontáneamente en una dirección determinada,
+        y que la energía útil tiende a degradarse con el tiempo.
+      </p>
+    </section>
+
+    <section id="segunda_ley" class="card">
+      <h2>2. Segunda Ley de la Termodinámica</h2>
+      <p>
+        Existen diversas formulaciones equivalentes de la Segunda Ley:
+      </p>
+      <ul>
+        <li><strong>Enunciado de Kelvin-Planck:</strong> Es imposible construir una máquina que, operando en un ciclo, convierta completamente el calor absorbido en trabajo.</li>
+        <li><strong>Enunciado de Clausius:</strong> Es imposible que el calor fluya de un cuerpo frío a uno caliente sin realizar trabajo externo.</li>
+      </ul>
+      <p>
+        Ambos enunciados reflejan que no toda la energía térmica puede transformarse en trabajo mecánico útil.
+      </p>
+      <p>
+        Matemáticamente, para un ciclo termodinámico reversible:
+      </p>
+      <p class="formula">
+        $$ \oint \frac{\delta Q_{rev}}{T} = 0 $$
+      </p>
+      <p>
+        En un proceso irreversible:
+      </p>
+      <p class="formula">
+        $$ \oint \frac{\delta Q}{T} < 0 $$
+      </p>
+      <p>
+        Estas expresiones muestran que el calor y la temperatura están relacionados con un nuevo estado termodinámico: la <strong>entropía</strong>.
+      </p>
+    </section>
+
+    <section id="maquinas_termicas" class="card">
+      <h2>3. Máquinas térmicas y refrigeradores</h2>
+      <p>
+        Una <strong>máquina térmica</strong> es un dispositivo que convierte parte del calor absorbido de una fuente caliente en trabajo mecánico,
+        liberando el resto a una fuente fría.
+      </p>
+      <p class="formula">
+        $$ \eta = \frac{W}{Q_H} = 1 - \frac{Q_C}{Q_H} $$
+      </p>
+      <p>
+        donde:
+      </p>
+      <ul>
+        <li>\( \eta \): eficiencia térmica</li>
+        <li>\( Q_H \): calor absorbido de la fuente caliente</li>
+        <li>\( Q_C \): calor rechazado a la fuente fría</li>
+      </ul>
+      <p>
+        El ciclo ideal de una máquina térmica reversible se denomina <strong>Ciclo de Carnot</strong>,
+        cuya eficiencia máxima está dada por:
+      </p>
+      <p class="formula">
+        $$ \eta_{Carnot} = 1 - \frac{T_C}{T_H} $$
+      </p>
+      <p>
+        donde \( T_C \) y \( T_H \) son las temperaturas absolutas de las fuentes fría y caliente respectivamente.
+      </p>
+
+      <h3>Refrigeradores y bombas de calor</h3>
+      <p>
+        Un <strong>refrigerador</strong> realiza el proceso inverso: extrae calor de una región fría y lo expulsa a una más caliente,
+        consumiendo trabajo. Su desempeño se mide con el <strong>Coeficiente de Eficiencia (COP)</strong>:
+      </p>
+      <p class="formula">
+        $$ COP_R = \frac{Q_C}{W} = \frac{T_C}{T_H - T_C} $$
+      </p>
+      <p>
+        Para una <strong>bomba de calor</strong>:
+      </p>
+      <p class="formula">
+        $$ COP_{HP} = \frac{Q_H}{W} = \frac{T_H}{T_H - T_C} $$
+      </p>
+    </section>
+
+    <section id="entropia" class="card">
+      <h2>4. Concepto de Entropía</h2>
+      <p>
+        La <strong>entropía</strong> (\( S \)) es una función de estado que mide el grado de desorden de un sistema o la dispersión de su energía.
+      </p>
+      <p>
+        Para un proceso reversible:
+      </p>
+      <p class="formula">
+        $$ dS = \frac{\delta Q_{rev}}{T} $$
+      </p>
+      <p>
+        En procesos irreversibles, la entropía del universo siempre aumenta:
+      </p>
+      <p class="formula">
+        $$ \Delta S_{universo} = \Delta S_{sistema} + \Delta S_{entorno} > 0 $$
+      </p>
+      <p>
+        Este aumento inevitable de entropía explica la <em>irreversibilidad</em> de los procesos naturales y el flujo unidireccional del tiempo.
+      </p>
+      <p>
+        En forma integral, entre dos estados 1 y 2:
+      </p>
+      <p class="formula">
+        $$ \Delta S = \int_{1}^{2} \frac{\delta Q_{rev}}{T} $$
+      </p>
+    </section>
+
+    <section id="procesos" class="card">
+      <h2>5. Procesos reversibles e irreversibles</h2>
+      <ul>
+        <li><strong>Procesos reversibles:</strong> ocurren infinitamente despacio, sin fricción ni pérdidas de energía. Permiten volver al estado inicial sin cambios en el entorno.</li>
+        <li><strong>Procesos irreversibles:</strong> ocurren en la naturaleza, con disipación de energía (fricción, mezclas, expansión libre, etc.). Aumentan la entropía total.</li>
+      </ul>
+      <p>
+        Ejemplo de proceso irreversible:
+      </p>
+      <p>
+        Cuando dos cuerpos a distintas temperaturas se ponen en contacto, el calor fluye espontáneamente del más caliente al más frío,
+        y la entropía total del sistema aumenta.
+      </p>
+    </section>
+
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos y aplicaciones</h2>
+      <p><strong>Ejemplo 1:</strong> Un cuerpo de \( 2\,kg \) de agua a \( 100^\circ C \) se enfría hasta \( 25^\circ C \) a presión constante.  
+      Si \( c_p = 4.18 \, kJ/kg \cdot K \), el cambio de entropía del agua es:</p>
+      <p class="formula">
+        $$ \Delta S = m c_p \ln \frac{T_2}{T_1} $$
+      </p>
+      <p>
+        Sustituyendo:
+      </p>
+      <p class="formula">
+        $$ \Delta S = (2)(4.18) \ln \frac{298}{373} = -1.89 \, kJ/K $$
+      </p>
+      <p>
+        La entropía del entorno aumenta en la misma magnitud positiva, garantizando que la entropía total sea mayor que cero.
+      </p>
+
+      <p><strong>Ejemplo 2:</strong> En un ciclo de Carnot con \( T_H = 600\,K \) y \( T_C = 300\,K \):</p>
+      <p class="formula">
+        $$ \eta_{Carnot} = 1 - \frac{T_C}{T_H} = 0.5 $$
+      </p>
+      <p>
+        La eficiencia máxima es del 50%. Ninguna máquina real puede superar este valor.
+      </p>
+
+      <p><strong>Aplicaciones:</strong> centrales térmicas, motores de combustión, refrigeradores, bombas de calor y análisis de eficiencia energética en procesos industriales.</p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Cengel, Y. A., & Boles, M. A. <em>Termodinámica</em>. McGraw-Hill Education.</li>
+        <li>Van Wylen, G. J., & Sonntag, R. E. <em>Fundamentos de Termodinámica Clásica</em>.</li>
+        <li>Serway, R. A., & Jewett, J. W. <em>Física para Ciencias e Ingeniería</em>.</li>
+        <li>Callen, H. B. <em>Thermodynamics and an Introduction to Thermostatistics</em>. Wiley.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Física General — Segunda Ley de la Termodinámica y Entropía</p>
+  </footer>
+</body>
+</html>

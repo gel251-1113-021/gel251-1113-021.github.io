@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Moléculas y Materia Condensada</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Moléculas y Materia Condensada</h1>
+    <p class="subtitulo">Bandas de energía y propiedades del estado sólido</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#moleculas">Enlace químico y formación molecular</a></li>
+      <li><a href="#materia_condensada">Concepto de materia condensada</a></li>
+      <li><a href="#bandas">Bandas de energía en sólidos</a></li>
+      <li><a href="#propiedades">Propiedades eléctricas y térmicas</a></li>
+      <li><a href="#aplicaciones">Aplicaciones tecnológicas</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>materia condensada</strong> abarca los estados sólido y líquido, en los cuales las partículas están estrechamente empaquetadas e interactúan fuertemente entre sí.
+        Comprender su estructura y comportamiento es esencial para la física moderna, la química del estado sólido y la ciencia de materiales.
+      </p>
+      <p>
+        En el caso de los <strong>sólidos</strong>, la disposición periódica de los átomos da origen a una estructura cristalina donde los electrones se mueven colectivamente, 
+        lo que da lugar a la formación de <em>bandas de energía</em> que determinan sus propiedades eléctricas, ópticas y térmicas.
+      </p>
+    </section>
+
+    <section id="moleculas" class="card">
+      <h2>2. Enlace químico y formación molecular</h2>
+      <p>
+        Las <strong>moléculas</strong> se forman mediante enlaces entre átomos que comparten o transfieren electrones para alcanzar configuraciones más estables. 
+        Los principales tipos de enlace son:
+      </p>
+      <ul>
+        <li><strong>Enlace iónico:</strong> transferencia de electrones entre átomos (por ejemplo, NaCl).</li>
+        <li><strong>Enlace covalente:</strong> compartición de electrones (como en H<sub>2</sub>O o CO<sub>2</sub>).</li>
+        <li><strong>Enlace metálico:</strong> los electrones se deslocalizan, formando un “mar electrónico” común.</li>
+      </ul>
+      <p>
+        A nivel cuántico, los orbitales atómicos se combinan para formar <strong>orbitales moleculares</strong>, los cuales pueden ser enlazantes o antienlazantes. 
+        Esto se describe mediante la teoría del enlace de valencia y la teoría de orbitales moleculares (TOM).
+      </p>
+      <p class="formula">
+        $$ \psi_\text{mol} = c_1 \psi_A + c_2 \psi_B $$
+      </p>
+      <p>
+        donde \( \psi_A \) y \( \psi_B \) son los orbitales atómicos de los átomos A y B, y \( c_1, c_2 \) son coeficientes de combinación lineal.
+      </p>
+    </section>
+
+    <section id="materia_condensada" class="card">
+      <h2>3. Concepto de materia condensada</h2>
+      <p>
+        La <strong>física de la materia condensada</strong> estudia sistemas con un gran número de partículas interactuando fuertemente, 
+        como sólidos, líquidos, cristales líquidos, semiconductores, superconductores y materiales magnéticos.
+      </p>
+      <p>
+        En estos sistemas emergen fenómenos colectivos que no pueden explicarse considerando solo las partículas individuales, 
+        como la <em>conductividad eléctrica</em>, el <em>magnetismo</em>, la <em>superconductividad</em> o la <em>transición de fases</em>.
+      </p>
+    </section>
+
+    <section id="bandas" class="card">
+      <h2>4. Bandas de energía en sólidos</h2>
+      <p>
+        Cuando un gran número de átomos se agrupan para formar un sólido, sus niveles de energía electrónicos se superponen y originan 
+        un conjunto continuo de estados llamado <strong>banda de energía</strong>.
+      </p>
+      <p>
+        Existen tres regiones energéticas principales:
+      </p>
+      <ul>
+        <li><strong>Banda de valencia (BV):</strong> contiene los electrones más externos que participan en los enlaces.</li>
+        <li><strong>Banda de conducción (BC):</strong> niveles energéticos donde los electrones son libres de moverse.</li>
+        <li><strong>Banda prohibida o “gap”:</strong> región entre la BV y BC donde no existen estados permitidos.</li>
+      </ul>
+
+      <p>
+        La magnitud de esta banda prohibida determina el tipo de material:
+      </p>
+      <ul>
+        <li><strong>Conductor:</strong> BV y BC se superponen → flujo libre de electrones (p.ej. metales).</li>
+        <li><strong>Semiconductor:</strong> pequeña separación de energía (\(E_g \approx 1 \, \text{eV}\)).</li>
+        <li><strong>Aislante:</strong> gran separación (\(E_g > 5 \, \text{eV}\)).</li>
+      </ul>
+
+      <p class="formula">
+        $$ E_g = E_c - E_v $$
+      </p>
+      <p>
+        donde \( E_c \) es la energía mínima de la banda de conducción y \( E_v \) la máxima de la banda de valencia.
+      </p>
+    </section>
+
+    <section id="propiedades" class="card">
+      <h2>5. Propiedades eléctricas y térmicas</h2>
+      <p>
+        Las <strong>propiedades eléctricas</strong> de un sólido dependen del número de electrones disponibles en la banda de conducción y de la movilidad de estos:
+      </p>
+      <p class="formula">
+        $$ \sigma = n e \mu $$
+      </p>
+      <p>
+        donde \( \sigma \) es la conductividad, \( n \) el número de electrones libres, \( e \) la carga del electrón y \( \mu \) la movilidad electrónica.
+      </p>
+
+      <h3>a) Conductores</h3>
+      <p>Poseen muchos electrones libres; ejemplos: cobre, aluminio, oro.</p>
+
+      <h3>b) Semiconductores</h3>
+      <p>
+        Su conductividad aumenta con la temperatura o al doparse con impurezas (p.ej. silicio y germanio).
+      </p>
+
+      <h3>c) Aislantes</h3>
+      <p>No permiten el flujo de electrones debido a un amplio gap energético (vidrio, cerámica).</p>
+
+      <h3>d) Propiedades térmicas</h3>
+      <p>
+        El transporte de calor se realiza principalmente por fonones (vibraciones de la red cristalina). 
+        En metales, los electrones también contribuyen a la conductividad térmica.
+      </p>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>6. Aplicaciones tecnológicas</h2>
+      <p>
+        El estudio de las bandas de energía permitió el desarrollo de la <strong>microelectrónica</strong> y los <strong>semiconductores</strong>, 
+        fundamentales en transistores, diodos y circuitos integrados.
+      </p>
+      <p>
+        Además, las propiedades de los materiales condensados son la base de:
+      </p>
+      <ul>
+        <li><strong>Superconductores:</strong> materiales con resistencia eléctrica nula a bajas temperaturas.</li>
+        <li><strong>Nanomateriales:</strong> estructuras cuyas propiedades cambian al reducir su tamaño (efecto cuántico de confinamiento).</li>
+        <li><strong>Materiales magnéticos:</strong> empleados en almacenamiento digital y motores eléctricos.</li>
+        <li><strong>Física del estado sólido:</strong> campo esencial para el diseño de dispositivos fotónicos y electrónicos.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Kittel, C. (2005). <em>Introducción a la física del estado sólido</em>. Reverté.</li>
+        <li>Ashcroft, N. W., & Mermin, N. D. (2011). <em>Solid State Physics</em>. Holt, Rinehart & Winston.</li>
+        <li>Charles, K. & Poole, J. (2008). <em>Nanomaterials and Nanotechnology</em>. Academic Press.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

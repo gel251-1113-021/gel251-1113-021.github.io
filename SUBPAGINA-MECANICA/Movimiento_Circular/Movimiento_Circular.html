@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Movimiento Circular - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Movimiento Circular</h1>
+    <p class="subtitulo">Relación entre fuerza centrípeta, aceleración y velocidad angular</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#definicion">Definición y tipos</a></li>
+      <li><a href="#velocidad">Velocidad angular y lineal</a></li>
+      <li><a href="#aceleracion">Aceleración centrípeta</a></li>
+      <li><a href="#fuerza_centripeta">Fuerza centrípeta</a></li>
+      <li><a href="#energia">Energía en el movimiento circular</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- ===== INTRODUCCIÓN ===== -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        El <strong>movimiento circular</strong> es aquel en el que una partícula se desplaza de manera que su trayectoria es una circunferencia.
+        Es un caso especial del movimiento curvilíneo donde la distancia al centro de giro se mantiene constante.
+      </p>
+      <p>
+        Este tipo de movimiento se presenta en numerosos sistemas naturales y tecnológicos: desde el giro de un satélite alrededor de la Tierra, hasta las ruedas de un automóvil o el rotor de un motor eléctrico.
+      </p>
+    </section>
+
+    <!-- ===== DEFINICIÓN Y TIPOS ===== -->
+    <section id="definicion" class="card">
+      <h2>2. Definición y tipos de movimiento circular</h2>
+      <p>
+        En el movimiento circular, el vector posición del cuerpo tiene una magnitud constante $r$, pero cambia continuamente su dirección.
+      </p>
+      <p class="formula">
+        $$ \mathbf{r}(t) = r(\cos \theta(t)\,\hat{i} + \sin \theta(t)\,\hat{j}) $$
+      </p>
+      <p>Según la constancia de la velocidad angular, el movimiento puede ser:</p>
+      <ul>
+        <li><strong>Movimiento Circular Uniforme (MCU):</strong> la rapidez angular permanece constante.</li>
+        <li><strong>Movimiento Circular Uniformemente Acelerado (MCUA):</strong> la rapidez angular varía con aceleración angular constante.</li>
+      </ul>
+    </section>
+
+    <!-- ===== VELOCIDAD ===== -->
+    <section id="velocidad" class="card">
+      <h2>3. Velocidad angular y velocidad lineal</h2>
+      <p>
+        La <strong>velocidad angular</strong> describe la rapidez con que varía el ángulo barrido por el radio vector:
+      </p>
+      <p class="formula">
+        $$ \omega = \frac{d\theta}{dt} $$
+      </p>
+      <p>
+        La <strong>velocidad lineal</strong> o tangencial está relacionada con la angular por:
+      </p>
+      <p class="formula">
+        $$ v = r\omega $$
+      </p>
+      <p>
+        Ambas magnitudes son proporcionales: a mayor radio o velocidad angular, mayor velocidad tangencial.
+      </p>
+      <div class="nota">
+        <p>La dirección de $\mathbf{v}$ es tangente a la circunferencia en todo momento.</p>
+      </div>
+    </section>
+
+    <!-- ===== ACELERACIÓN CENTRÍPETA ===== -->
+    <section id="aceleracion" class="card">
+      <h2>4. Aceleración centrípeta</h2>
+      <p>
+        Aunque el módulo de la velocidad pueda mantenerse constante, su dirección cambia continuamente.  
+        Esto implica la existencia de una <strong>aceleración centrípeta</strong> dirigida hacia el centro del círculo:
+      </p>
+      <p class="formula">
+        $$ a_c = \frac{v^2}{r} = r\omega^2 $$
+      </p>
+      <p>
+        En el caso de movimiento circular uniformemente acelerado, aparece además una <strong>aceleración tangencial</strong>:
+      </p>
+      <p class="formula">
+        $$ a_t = \frac{dv}{dt} = r\alpha $$
+      </p>
+      <p>
+        Donde $\alpha$ es la <strong>aceleración angular</strong>.  
+        El vector aceleración total es la suma vectorial de las componentes tangencial y centrípeta:
+      </p>
+      <p class="formula">
+        $$ \mathbf{a} = \mathbf{a}_t + \mathbf{a}_c $$
+      </p>
+    </section>
+
+    <!-- ===== FUERZA CENTRÍPETA ===== -->
+    <section id="fuerza_centripeta" class="card">
+      <h2>5. Fuerza centrípeta</h2>
+      <p>
+        De acuerdo con la <strong>Segunda Ley de Newton</strong>, la fuerza neta sobre un cuerpo que se mueve en una trayectoria circular es:
+      </p>
+      <p class="formula">
+        $$ \mathbf{F}_c = m\mathbf{a}_c $$
+      </p>
+      <p>
+        Sustituyendo la aceleración centrípeta:
+      </p>
+      <p class="formula">
+        $$ F_c = m\frac{v^2}{r} = mr\omega^2 $$
+      </p>
+      <p>
+        Esta fuerza no cambia el módulo de la velocidad, sino su dirección, manteniendo al objeto en la trayectoria circular.
+      </p>
+      <div class="nota">
+        <p>Ejemplo: la tensión del hilo en una piedra que gira, o la fuerza de fricción en una curva de carretera.</p>
+      </div>
+    </section>
+
+    <!-- ===== ENERGÍA ===== -->
+    <section id="energia" class="card">
+      <h2>6. Energía en el movimiento circular</h2>
+      <p>
+        La <strong>energía cinética</strong> en el movimiento circular depende de la velocidad tangencial:
+      </p>
+      <p class="formula">
+        $$ E_c = \frac{1}{2}mv^2 = \frac{1}{2}mr^2\omega^2 $$
+      </p>
+      <p>
+        En sistemas rotacionales, esta energía se asocia a la <strong>energía cinética rotacional</strong>:
+      </p>
+      <p class="formula">
+        $$ E_{\text{rot}} = \frac{1}{2}I\omega^2 $$
+      </p>
+      <p>
+        donde $I$ es el <strong>momento de inercia</strong> del cuerpo respecto al eje de rotación.
+      </p>
+    </section>
+
+    <!-- ===== EJEMPLOS RESUELTOS ===== -->
+    <section id="ejemplos" class="card">
+      <h2>7. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Aceleración centrípeta</h3>
+      <p>
+        Un automóvil toma una curva circular de radio $50\,\text{m}$ a una velocidad constante de $20\,\text{m/s}$.  
+        Calcular la aceleración centrípeta.
+      </p>
+      <p class="formula">
+        $$ a_c = \frac{v^2}{r} = \frac{(20)^2}{50} = 8\,\text{m/s}^2 $$
+      </p>
+      <p>La aceleración centrípeta es de <strong>8 m/s²</strong> dirigida hacia el centro de la curva.</p>
+
+      <h3>Ejemplo 2: Fuerza centrípeta</h3>
+      <p>
+        Una masa de $2\,\text{kg}$ gira en un círculo de radio $1.5\,\text{m}$ con velocidad de $4\,\text{m/s}$.  
+        Determinar la fuerza centrípeta.
+      </p>
+      <p class="formula">
+        $$ F_c = m\frac{v^2}{r} = 2\frac{(4)^2}{1.5} = 21.3\,\text{N} $$
+      </p>
+      <p>
+        La fuerza centrípeta que mantiene la masa girando es de <strong>21.3 N</strong>.
+      </p>
+
+      <h3>Ejemplo 3: Relación entre $\omega$ y $v$</h3>
+      <p>
+        Si una partícula gira con velocidad angular de $10\,\text{rad/s}$ en una trayectoria de $r = 0.2\,\text{m}$, hallar su velocidad lineal.
+      </p>
+      <p class="formula">
+        $$ v = r\omega = 0.2(10) = 2\,\text{m/s} $$
+      </p>
+      <p>
+        La velocidad tangencial es de <strong>2 m/s</strong>.
+      </p>
+    </section>
+
+    <!-- ===== REFERENCIAS ===== -->
+    <section id="referencias" class="card">
+      <h2>8. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Tipler, P. A., & Mosca, G. (2008). <em>Física para la ciencia y la tecnología</em> (6ª ed.). Reverté.</li>
+        <li>Young, H. D., & Freedman, R. A. (2021). <em>Física Universitaria</em> (15ª ed.). Pearson.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mecánica Cuántica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Mecánica Cuántica</h1>
+    <p class="subtitulo">Ecuación de Schrödinger y principio de incertidumbre</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#postulados">Postulados fundamentales</a></li>
+      <li><a href="#ecuacion">Ecuación de Schrödinger</a></li>
+      <li><a href="#incertidumbre">Principio de incertidumbre</a></li>
+      <li><a href="#funcion_onda">Función de onda y probabilidad</a></li>
+      <li><a href="#ejemplo">Ejemplo: pozo de potencial</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>Mecánica Cuántica</strong> es la rama de la física que describe el comportamiento de sistemas microscópicos como átomos, electrones y fotones. 
+        Reemplaza las leyes deterministas de la mecánica clásica por una descripción probabilística basada en <em>funciones de onda</em>.
+      </p>
+      <p>
+        Fue desarrollada entre 1900 y 1930 por científicos como Planck, Einstein, Bohr, Heisenberg, Schrödinger y Dirac, quienes sentaron las bases de la física moderna.
+      </p>
+    </section>
+
+    <section id="postulados" class="card">
+      <h2>2. Postulados fundamentales</h2>
+      <ul>
+        <li>El estado de una partícula se describe mediante una <strong>función de onda</strong> \( \Psi(x,t) \).</li>
+        <li>Las magnitudes observables se representan por <strong>operadores</strong> matemáticos que actúan sobre \( \Psi \).</li>
+        <li>El resultado de una medición es uno de los valores propios del operador asociado.</li>
+        <li>La probabilidad de encontrar la partícula en una región es proporcional a \( |\Psi|^2 \).</li>
+      </ul>
+    </section>
+
+    <section id="ecuacion" class="card">
+      <h2>3. Ecuación de Schrödinger</h2>
+      <p>
+        La <strong>ecuación de Schrödinger</strong> es el eje central de la mecánica cuántica. Describe cómo evoluciona la función de onda de una partícula en el tiempo.
+      </p>
+
+      <h3>a) Ecuación dependiente del tiempo</h3>
+      <p class="formula">
+        $$ i\hbar \frac{\partial \Psi(x,t)}{\partial t} = \hat{H}\Psi(x,t) $$
+      </p>
+      <p>
+        donde \( \hat{H} \) es el operador hamiltoniano que representa la energía total del sistema.
+      </p>
+
+      <h3>b) Ecuación independiente del tiempo</h3>
+      <p>
+        Para sistemas estacionarios:
+      </p>
+      <p class="formula">
+        $$ \hat{H}\Psi = E\Psi $$
+      </p>
+      <p>
+        donde \( E \) es la energía de un estado cuántico particular.
+      </p>
+    </section>
+
+    <section id="incertidumbre" class="card">
+      <h2>4. Principio de incertidumbre</h2>
+      <p>
+        Propuesto por <strong>Werner Heisenberg</strong> en 1927, este principio establece que no es posible conocer con precisión simultánea ciertas parejas de variables, 
+        como la posición y el momento lineal de una partícula.
+      </p>
+      <p class="formula">
+        $$ \Delta x \, \Delta p \geq \frac{\hbar}{2} $$
+      </p>
+      <p>
+        Esta relación expresa una limitación fundamental de la naturaleza, no una deficiencia de los instrumentos de medición. 
+        Cuanto más se conoce la posición de una partícula, menos se conoce su momento, y viceversa.
+      </p>
+    </section>
+
+    <section id="funcion_onda" class="card">
+      <h2>5. Función de onda y probabilidad</h2>
+      <p>
+        La <strong>función de onda</strong> \( \Psi(x,t) \) contiene toda la información física sobre el sistema. 
+        Su módulo al cuadrado representa la densidad de probabilidad de encontrar la partícula en una posición dada:
+      </p>
+      <p class="formula">
+        $$ P(x,t) = |\Psi(x,t)|^2 $$
+      </p>
+      <p>
+        La probabilidad total de encontrar la partícula en todo el espacio debe ser 1:
+      </p>
+      <p class="formula">
+        $$ \int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1 $$
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>6. Ejemplo: Partícula en un pozo de potencial infinito</h2>
+      <p>
+        Consideremos una partícula confinada en una caja unidimensional de longitud \( L \). 
+        Las soluciones de la ecuación de Schrödinger son funciones de onda estacionarias:
+      </p>
+      <p class="formula">
+        $$ \Psi_n(x) = \sqrt{\frac{2}{L}} \sin\left(\frac{n\pi x}{L}\right), \quad n = 1, 2, 3, ... $$
+      </p>
+      <p>
+        Los niveles de energía permitidos están cuantizados:
+      </p>
+      <p class="formula">
+        $$ E_n = \frac{n^2 h^2}{8mL^2} $$
+      </p>
+      <p>
+        Cada valor de \( n \) representa un estado cuántico diferente, con energías discretas. 
+        La partícula nunca puede tener una energía intermedia entre estos valores.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Schrödinger, E. (1926). <em>Quantisierung als Eigenwertproblem</em>.</li>
+        <li>Griffiths, D. J. <em>Introduction to Quantum Mechanics</em>. Pearson, 2018.</li>
+        <li>Tipler, P. & Mosca, G. <em>Física Moderna</em>. Reverté, 2018.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

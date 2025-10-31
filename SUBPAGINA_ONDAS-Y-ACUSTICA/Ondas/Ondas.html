@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ondas / Acústica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Ondas / Acústica</h1>
+    <p class="subtitulo">Conceptos generales de ondas y tipos de propagación</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#conceptos">Conceptos generales</a></li>
+      <li><a href="#tipos_ondas">Tipos de ondas</a></li>
+      <li><a href="#propagacion">Tipos de propagación</a></li>
+      <li><a href="#propiedades">Propiedades acústicas</a></li>
+      <li><a href="#aplicaciones">Aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>acústica</strong> y la física de <strong>ondas</strong> estudian la propagación de perturbaciones en medios materiales o en el vacío. 
+        Las ondas transportan <strong>energía</strong> sin transporte neto de materia y se presentan en múltiples formas: mecánicas, electromagnéticas, sonoras, entre otras.
+      </p>
+    </section>
+
+    <section id="conceptos" class="card">
+      <h2>2. Conceptos generales</h2>
+      <ul>
+        <li><strong>Onda:</strong> perturbación que se propaga en el espacio y tiempo.</li>
+        <li><strong>Frecuencia (f):</strong> número de oscilaciones por segundo.</li>
+        <li><strong>Periodo (T):</strong> tiempo de una oscilación completa, \( T = \frac{1}{f} \).</li>
+        <li><strong>Longitud de onda (λ):</strong> distancia entre puntos equivalentes de la onda.</li>
+        <li><strong>Velocidad de propagación (v):</strong> depende del medio y del tipo de onda, \( v = f \lambda \).</li>
+        <li><strong>Amplitud (A):</strong> desplazamiento máximo de la perturbación.</li>
+      </ul>
+    </section>
+
+    <section id="tipos_ondas" class="card">
+      <h2>3. Tipos de ondas</h2>
+      <p>Se pueden clasificar según el movimiento de las partículas del medio:</p>
+      <ul>
+        <li><strong>Onda longitudinal:</strong> las partículas del medio oscilan en la misma dirección de propagación. Ejemplo: ondas sonoras en aire.</li>
+        <li><strong>Onda transversal:</strong> las partículas oscilan perpendicularmente a la dirección de propagación. Ejemplo: ondas en cuerdas o electromagnéticas.</li>
+        <li><strong>Onda mixta:</strong> combina movimientos longitudinales y transversales. Ejemplo: ondas en superficies líquidas.</li>
+      </ul>
+      <p>En general, la ecuación de onda en una dimensión se expresa como:</p>
+      <p class="formula">
+        $$ \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2} $$
+      </p>
+    </section>
+
+    <section id="propagacion" class="card">
+      <h2>4. Tipos de propagación</h2>
+      <p>
+        Dependiendo del medio y condiciones, las ondas acústicas pueden propagarse de diferentes formas:
+      </p>
+      <ul>
+        <li><strong>Directa:</strong> línea recta desde la fuente hasta el receptor.</li>
+        <li><strong>Reflejada:</strong> rebote de la onda sobre superficies rígidas, dando lugar a ecos.</li>
+        <li><strong>Difractada:</strong> rodeando obstáculos o penetrando en aberturas pequeñas.</li>
+        <li><strong>Refractada:</strong> cambio de velocidad al entrar en un medio distinto, afectando la dirección.</li>
+        <li><strong>Absorbida:</strong> parte de la energía se transforma en calor en el medio.</li>
+      </ul>
+    </section>
+
+    <section id="propiedades" class="card">
+      <h2>5. Propiedades acústicas</h2>
+      <p>
+        Algunas propiedades importantes de las ondas sonoras:
+      </p>
+      <ul>
+        <li><strong>Intensidad (I):</strong> energía transmitida por unidad de área, \( I = \frac{P}{A} \).</li>
+        <li><strong>Nivel de presión sonora (SPL):</strong> medido en decibelios (dB), \( L_p = 20 \log_{10} \frac{p}{p_0} \).</li>
+        <li><strong>Velocidad del sonido:</strong> depende del medio y temperatura, por ejemplo en aire a 20°C: \( v \approx 343\,\mathrm{m/s} \).</li>
+        <li><strong>Resonancia:</strong> amplitud máxima cuando la frecuencia de excitación coincide con la frecuencia natural del sistema.</li>
+      </ul>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>6. Aplicaciones</h2>
+      <ul>
+        <li><strong>Acústica arquitectónica:</strong> diseño de auditorios y salas para control de ecos y reverberación.</li>
+        <li><strong>Ultrasonido:</strong> diagnóstico médico, limpieza industrial y detección de fallas.</li>
+        <li><strong>Instrumentos musicales:</strong> análisis de frecuencias y resonancias.</li>
+        <li><strong>Telecomunicaciones:</strong> propagación de ondas sonoras en telefonía y sonar.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Rossing, T. D. (2014). <em>The Science of Sound</em>. Springer.</li>
+        <li>Kinsler, L. et al. (2000). <em>Fundamentals of Acoustics</em>. Wiley.</li>
+        <li>Tipler, P. A., & Mosca, G. (2014). <em>Física para la ciencia y la tecnología</em>. Reverté.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

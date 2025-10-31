@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cinemática del Punto - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Cinemática del Punto</h1>
+    <p class="subtitulo">Descripción del movimiento sin considerar sus causas</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#posicion">Posición y trayectoria</a></li>
+      <li><a href="#velocidad">Velocidad</a></li>
+      <li><a href="#aceleracion">Aceleración</a></li>
+      <li><a href="#tipos_movimiento">Tipos de movimiento</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- ===== INTRODUCCIÓN ===== -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>cinemática del punto</strong> es una rama de la mecánica que se ocupa del estudio del <em>movimiento de los cuerpos</em> sin tener en cuenta las causas que lo originan (como las fuerzas). 
+        Analiza cómo cambia la posición de una partícula a lo largo del tiempo y permite describir su movimiento mediante magnitudes vectoriales como <strong>posición</strong>, <strong>velocidad</strong> y <strong>aceleración</strong>.
+      </p>
+      <p>
+        Comprender la cinemática es esencial para el estudio posterior de la <em>dinámica</em>, donde se analizan las causas del movimiento, y de otras áreas como la física moderna o la ingeniería.
+      </p>
+      <div class="nota">
+        <p><strong>Ejemplo de aplicación:</strong> El análisis del movimiento de un automóvil, una pelota lanzada al aire o un satélite en órbita se fundamenta en los principios cinemáticos.</p>
+      </div>
+    </section>
+
+    <!-- ===== POSICIÓN Y TRAYECTORIA ===== -->
+    <section id="posicion" class="card">
+      <h2>2. Posición y trayectoria</h2>
+      <p>
+        La <strong>posición</strong> de un punto material en el espacio se describe mediante un vector de posición que indica su ubicación respecto a un origen de coordenadas:
+      </p>
+      <p class="formula">
+        $$ \mathbf{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k} $$
+      </p>
+      <p>
+        La <strong>trayectoria</strong> es la curva que une las posiciones sucesivas de la partícula durante su movimiento. Si $x(t)$, $y(t)$ y $z(t)$ son funciones conocidas, la trayectoria se puede obtener eliminando el parámetro tiempo $t$.
+      </p>
+      <p>
+        En un plano, el módulo del vector de posición es:
+      </p>
+      <p class="formula">
+        $$ r = \sqrt{x^2 + y^2} $$
+      </p>
+      <p>
+        La dirección del movimiento puede representarse mediante un ángulo $\theta$ respecto al eje $x$, donde:
+      </p>
+      <p class="formula">
+        $$ \tan(\theta) = \frac{y}{x} $$
+      </p>
+    </section>
+
+    <!-- ===== VELOCIDAD ===== -->
+    <section id="velocidad" class="card">
+      <h2>3. Velocidad</h2>
+      <p>
+        La <strong>velocidad</strong> es la razón de cambio de la posición con respecto al tiempo. Es un vector que indica la rapidez y la dirección del movimiento.
+      </p>
+      <p class="formula">
+        $$ \mathbf{v}(t) = \frac{d\mathbf{r}}{dt} $$
+      </p>
+      <p>
+        Su módulo corresponde a la <strong>rapidez</strong> del movimiento:
+      </p>
+      <p class="formula">
+        $$ v = |\mathbf{v}(t)| = \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} $$
+      </p>
+      <p>
+        La <strong>velocidad media</strong> en un intervalo $\Delta t$ es:
+      </p>
+      <p class="formula">
+        $$ \mathbf{v}_m = \frac{\Delta \mathbf{r}}{\Delta t} $$
+      </p>
+      <p>
+        En gráficos posición-tiempo, la pendiente de la curva representa la velocidad instantánea.
+      </p>
+    </section>
+
+    <!-- ===== ACELERACIÓN ===== -->
+    <section id="aceleracion" class="card">
+      <h2>4. Aceleración</h2>
+      <p>
+        La <strong>aceleración</strong> mide cómo cambia la velocidad con el tiempo. Es un vector que puede modificar tanto la magnitud como la dirección del movimiento.
+      </p>
+      <p class="formula">
+        $$ \mathbf{a}(t) = \frac{d\mathbf{v}}{dt} = \frac{d^2\mathbf{r}}{dt^2} $$
+      </p>
+      <p>
+        Cuando la aceleración es constante (como en el MRUA), se cumple:
+      </p>
+      <p class="formula">
+        $$ v = v_0 + a t $$
+        $$ x = x_0 + v_0 t + \frac{1}{2} a t^2 $$
+      </p>
+      <p>
+        En movimientos curvilíneos, la aceleración puede descomponerse en:
+      </p>
+      <ul>
+        <li><strong>Aceleración tangencial</strong> $(a_t)$: cambia la magnitud de la velocidad.</li>
+        <li><strong>Aceleración normal</strong> o <em>centrípeta</em> $(a_n)$: cambia la dirección de la velocidad.</li>
+      </ul>
+      <p class="formula">
+        $$ a_n = \frac{v^2}{R} $$
+      </p>
+    </section>
+
+    <!-- ===== TIPOS DE MOVIMIENTO ===== -->
+    <section id="tipos_movimiento" class="card">
+      <h2>5. Tipos de movimiento</h2>
+      <ul>
+        <li><strong>Movimiento Rectilíneo Uniforme (MRU):</strong> trayectoria recta, velocidad constante y aceleración nula.  
+          $$ x = x_0 + v t $$
+        </li>
+        <li><strong>Movimiento Rectilíneo Uniformemente Acelerado (MRUA):</strong> trayectoria recta, aceleración constante.  
+          $$ x = x_0 + v_0 t + \frac{1}{2} a t^2 $$
+        </li>
+        <li><strong>Movimiento Circular Uniforme (MCU):</strong> trayectoria circular, rapidez constante, aceleración centrípeta dirigida al centro.  
+          $$ a_c = \frac{v^2}{R} $$
+        </li>
+        <li><strong>Movimiento Curvilíneo:</strong> trayectoria curva general, velocidad y aceleración variables tanto en módulo como en dirección.</li>
+      </ul>
+    </section>
+
+    <!-- ===== EJEMPLOS RESUELTOS ===== -->
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos Resueltos</h2>
+
+      <h3>Ejemplo 1: Movimiento Rectilíneo Uniforme</h3>
+      <p>
+        Un objeto se mueve con velocidad constante de 5 m/s durante 10 segundos. Determinar su desplazamiento.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p>
+        $$ x = v t = (5\,\text{m/s})(10\,\text{s}) = 50\,\text{m} $$
+      </p>
+      <p>El objeto se desplaza <strong>50 metros</strong> en dirección de su movimiento.</p>
+
+      <h3>Ejemplo 2: Movimiento Uniformemente Acelerado</h3>
+      <p>
+        Una partícula parte del reposo y se mueve con aceleración constante de $2\,\text{m/s}^2$. Hallar su velocidad y desplazamiento al cabo de 4 segundos.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p>
+        $$ v = v_0 + a t = 0 + (2)(4) = 8\,\text{m/s} $$
+        $$ x = x_0 + v_0 t + \frac{1}{2} a t^2 = 0 + 0 + \frac{1}{2}(2)(4^2) = 16\,\text{m} $$
+      </p>
+      <p>La velocidad es <strong>8 m/s</strong> y el desplazamiento total <strong>16 m</strong>.</p>
+
+      <h3>Ejemplo 3: Movimiento Circular</h3>
+      <p>
+        Un objeto gira en un círculo de radio $2\,\text{m}$ con una rapidez de $3\,\text{m/s}$. Determinar su aceleración centrípeta.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p>
+        $$ a_c = \frac{v^2}{R} = \frac{3^2}{2} = 4.5\,\text{m/s}^2 $$
+      </p>
+      <p>La aceleración centrípeta tiene un valor de <strong>4.5 m/s²</strong> dirigida hacia el centro de la trayectoria.</p>
+    </section>
+
+    <!-- ===== REFERENCIAS ===== -->
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Tipler, P. A., & Mosca, G. (2008). <em>Física para la ciencia y la tecnología</em> (6ª ed.). Reverté.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Young, H. D., & Freedman, R. A. (2021). <em>Física Universitaria</em> (15ª ed.). Pearson.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

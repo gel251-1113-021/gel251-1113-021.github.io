@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gravitación Universal - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Gravitación Universal</h1>
+    <p class="subtitulo">Ley de Newton de la gravitación y órbitas planetarias</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#ley_gravitacion">Ley de la Gravitación Universal</a></li>
+      <li><a href="#campo_gravitatorio">Campo gravitatorio</a></li>
+      <li><a href="#energia_potencial">Energía potencial gravitatoria</a></li>
+      <li><a href="#leyes_kepler">Leyes de Kepler</a></li>
+      <li><a href="#orbita_circular">Órbitas circulares y velocidad orbital</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- 1. INTRODUCCIÓN -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>gravitación universal</strong> estudia la interacción entre los cuerpos con masa, una fuerza de atracción mutua que actúa a distancia. 
+        Fue formulada por <em>Isaac Newton</em> en el siglo XVII y permitió explicar tanto la caída de los cuerpos en la Tierra como el movimiento de los planetas en el espacio.
+      </p>
+      <p>
+        Esta teoría unifica los fenómenos terrestres y celestes bajo una misma ley, y constituye la base de la <strong>mecánica celeste</strong> y de los sistemas de órbitas.
+      </p>
+    </section>
+
+    <!-- 2. LEY DE LA GRAVITACIÓN UNIVERSAL -->
+    <section id="ley_gravitacion" class="card">
+      <h2>2. Ley de la Gravitación Universal</h2>
+      <p>
+        Newton estableció que <strong>toda partícula del universo atrae a otra con una fuerza directamente proporcional al producto de sus masas e inversamente proporcional al cuadrado de la distancia que las separa</strong>.
+      </p>
+      <p class="formula">
+        $$ F = G \frac{m_1 m_2}{r^2} $$
+      </p>
+      <ul>
+        <li>$F$: magnitud de la fuerza gravitatoria (N)</li>
+        <li>$m_1, m_2$: masas de los cuerpos (kg)</li>
+        <li>$r$: distancia entre los centros de las masas (m)</li>
+        <li>$G$: constante de gravitación universal = $6.67 \times 10^{-11}\, \text{N·m}^2/\text{kg}^2$</li>
+      </ul>
+      <p>
+        La dirección de la fuerza es la línea que une los centros de masa de ambos cuerpos, y su sentido es siempre atractivo.
+      </p>
+    </section>
+
+    <!-- 3. CAMPO GRAVITATORIO -->
+    <section id="campo_gravitatorio" class="card">
+      <h2>3. Campo gravitatorio</h2>
+      <p>
+        Se define el <strong>campo gravitatorio</strong> $\mathbf{g}$ en un punto del espacio como la fuerza gravitatoria por unidad de masa que experimenta una masa de prueba $m$ colocada en ese punto:
+      </p>
+      <p class="formula">
+        $$ \mathbf{g} = \frac{\mathbf{F}}{m} = -G \frac{M}{r^2} \hat{r} $$
+      </p>
+      <p>
+        El campo es un vector dirigido hacia el centro de la masa que lo genera. Su unidad es N/kg o m/s².
+      </p>
+      <div class="nota">
+        <p>En la superficie terrestre, $g \approx 9.8\,\text{m/s}^2$, aunque varía ligeramente según la latitud y la altitud.</p>
+      </div>
+    </section>
+
+    <!-- 4. ENERGÍA POTENCIAL GRAVITATORIA -->
+    <section id="energia_potencial" class="card">
+      <h2>4. Energía potencial gravitatoria</h2>
+      <p>
+        La <strong>energía potencial gravitatoria</strong> de un sistema de dos masas separadas por una distancia $r$ se define como:
+      </p>
+      <p class="formula">
+        $$ U = -G \frac{m_1 m_2}{r} $$
+      </p>
+      <p>
+        El signo negativo indica que el potencial es menor cuanto más cerca están las masas; es decir, la energía potencial disminuye al acercarse los cuerpos.
+      </p>
+      <p>
+        En el campo terrestre, cerca de la superficie, puede aproximarse como:
+      </p>
+      <p class="formula">
+        $$ U = m g h $$
+      </p>
+      <p>
+        Esta es una aproximación válida cuando $h \ll R_T$ (radio terrestre).
+      </p>
+    </section>
+
+    <!-- 5. LEYES DE KEPLER -->
+    <section id="leyes_kepler" class="card">
+      <h2>5. Leyes de Kepler</h2>
+      <p>
+        Antes de Newton, <strong>Johannes Kepler</strong> describió empíricamente el movimiento de los planetas en tres leyes fundamentales:
+      </p>
+      <ol>
+        <li><strong>Primera Ley (Ley de las órbitas):</strong> Los planetas se mueven en órbitas elípticas con el Sol en uno de los focos.</li>
+        <li><strong>Segunda Ley (Ley de las áreas):</strong> El radio vector que une el planeta y el Sol barre áreas iguales en tiempos iguales.</li>
+        <li><strong>Tercera Ley (Ley de los periodos):</strong> El cuadrado del periodo orbital $T$ es proporcional al cubo del semieje mayor $a$ de la órbita:
+          $$ T^2 \propto a^3 $$
+          o bien,
+          $$ \frac{T^2}{a^3} = \text{constante} $$
+        </li>
+      </ol>
+      <p>
+        Newton demostró que estas leyes se derivan directamente de la ley de gravitación universal.
+      </p>
+    </section>
+
+    <!-- 6. ÓRBITAS CIRCULARES -->
+    <section id="orbita_circular" class="card">
+      <h2>6. Órbitas circulares y velocidad orbital</h2>
+      <p>
+        En una órbita circular, la fuerza gravitatoria actúa como la fuerza centrípeta que mantiene al cuerpo en movimiento circular uniforme.
+      </p>
+      <p class="formula">
+        $$ G\frac{M m}{r^2} = \frac{m v^2}{r} $$
+      </p>
+      <p>
+        Despejando la <strong>velocidad orbital</strong>:
+      </p>
+      <p class="formula">
+        $$ v = \sqrt{\frac{G M}{r}} $$
+      </p>
+      <p>
+        Y el <strong>periodo orbital</strong>:
+      </p>
+      <p class="formula">
+        $$ T = 2\pi \sqrt{\frac{r^3}{G M}} $$
+      </p>
+      <div class="nota">
+        <p>Estas ecuaciones son esenciales para satélites artificiales, órbitas planetarias y cálculo de alturas geoestacionarias.</p>
+      </div>
+    </section>
+
+    <!-- 7. EJEMPLOS RESUELTOS -->
+    <section id="ejemplos" class="card">
+      <h2>7. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Fuerza gravitatoria entre dos masas</h3>
+      <p>
+        Calcular la fuerza entre dos masas de $m_1 = 5\,\text{kg}$ y $m_2 = 10\,\text{kg}$ separadas por $r = 2\,\text{m}$.
+      </p>
+      <p class="formula">
+        $$ F = G\frac{m_1 m_2}{r^2} = 6.67\times10^{-11}\frac{(5)(10)}{2^2} = 8.34\times10^{-10}\,\text{N} $$
+      </p>
+      <p>Resultado: $F = 8.34\times10^{-10}\,\text{N}$ (atractiva).</p>
+
+      <h3>Ejemplo 2: Campo gravitatorio terrestre</h3>
+      <p>
+        Calcular $g$ en la superficie de la Tierra si $M_T = 5.97\times10^{24}\,\text{kg}$ y $R_T = 6.37\times10^6\,\text{m}$.
+      </p>
+      <p class="formula">
+        $$ g = G\frac{M_T}{R_T^2} = 6.67\times10^{-11}\frac{5.97\times10^{24}}{(6.37\times10^6)^2} = 9.8\,\text{m/s}^2 $$
+      </p>
+      <p>Resultado: $g \approx 9.8\,\text{m/s}^2$.</p>
+
+      <h3>Ejemplo 3: Velocidad orbital de un satélite</h3>
+      <p>
+        Determinar la velocidad orbital de un satélite que orbita la Tierra a $r = 7.0\times10^6\,\text{m}$ del centro de la Tierra.
+      </p>
+      <p class="formula">
+        $$ v = \sqrt{\frac{G M_T}{r}} = \sqrt{\frac{6.67\times10^{-11}(5.97\times10^{24})}{7.0\times10^6}} = 7.5\times10^3\,\text{m/s} $$
+      </p>
+      <p>Resultado: $v = 7.5\,\text{km/s}$.</p>
+
+      <h3>Ejemplo 4: Energía potencial de un sistema Tierra-Luna</h3>
+      <p>
+        La masa de la Tierra es $M_T = 5.97\times10^{24}\,\text{kg}$, la de la Luna $M_L = 7.35\times10^{22}\,\text{kg}$ y su distancia media $r = 3.84\times10^8\,\text{m}$.  
+        Calcular la energía potencial gravitatoria del sistema.
+      </p>
+      <p class="formula">
+        $$ U = -G\frac{M_T M_L}{r} = -6.67\times10^{-11}\frac{(5.97\times10^{24})(7.35\times10^{22})}{3.84\times10^8} = -7.6\times10^{28}\,\text{J} $$
+      </p>
+      <p>Resultado: $U = -7.6\times10^{28}\,\text{J}$.</p>
+    </section>
+
+    <!-- 8. REFERENCIAS -->
+    <section id="referencias" class="card">
+      <h2>8. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Tipler, P. A., & Mosca, G. (2008). <em>Física para la ciencia y la tecnología</em> (6ª ed.). Reverté.</li>
+        <li>Young, H. D., & Freedman, R. A. (2016). <em>Sears y Zemansky: Física Universitaria</em> (14ª ed.). Pearson.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Inducción Electromagnética - Ley de Faraday y Ley de Lenz</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Inducción Electromagnética</h1>
+    <p class="subtitulo">Ley de Faraday y Ley de Lenz: el vínculo entre campos magnéticos variables y corriente eléctrica.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#historia">Contexto histórico</a></li>
+      <li><a href="#principio">Principio de la inducción</a></li>
+      <li><a href="#ley-faraday">Ley de Faraday</a></li>
+      <li><a href="#ley-lenz">Ley de Lenz</a></li>
+      <li><a href="#aplicaciones">Aplicaciones</a></li>
+      <li><a href="#ejemplo">Ejemplo resuelto</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>inducción electromagnética</strong> describe el fenómeno mediante el cual una corriente eléctrica es generada en un circuito debido a un <em>campo magnético variable</em> en el tiempo. 
+        Es uno de los principios fundamentales del electromagnetismo, base del funcionamiento de transformadores, generadores y motores eléctricos.
+      </p>
+      <p>
+        En términos generales, un campo magnético que cambia en el tiempo induce una <strong>fuerza electromotriz (fem)</strong> en un conductor cerrado, generando corriente eléctrica.
+      </p>
+    </section>
+
+    <section id="historia" class="card">
+      <h2>2. Contexto histórico</h2>
+      <p>
+        En 1831, <strong>Michael Faraday</strong> realizó una serie de experimentos que demostraron que un campo magnético variable puede producir corriente eléctrica. 
+        Independientemente, <strong>Joseph Henry</strong> llegó a los mismos resultados en Estados Unidos. 
+        La formulación matemática del fenómeno, conocida como <strong>Ley de Faraday</strong>, fue complementada por la <strong>Ley de Lenz</strong>, que establece la dirección de la corriente inducida.
+      </p>
+      <blockquote>
+        “Nada es más hermoso que descubrir la conexión entre electricidad y magnetismo.” — <em>Michael Faraday</em>
+      </blockquote>
+    </section>
+
+    <section id="principio" class="card">
+      <h2>3. Principio de la inducción electromagnética</h2>
+      <p>
+        Cuando el <em>flujo magnético</em> a través de una superficie cerrada cambia con el tiempo, se genera una fuerza electromotriz. 
+        El flujo magnético se define como:
+      </p>
+      <p class="formula">
+        $$ \Phi_B = \int_S \mathbf{B} \cdot d\mathbf{A} $$
+      </p>
+      <p>
+        donde \( \mathbf{B} \) es el campo magnético y \( d\mathbf{A} \) es el vector diferencial de área. 
+        Si el campo es uniforme y perpendicular a la superficie, el flujo se simplifica a:
+      </p>
+      <p class="formula">
+        $$ \Phi_B = B \, A $$
+      </p>
+    </section>
+
+    <section id="ley-faraday" class="card">
+      <h2>4. Ley de Faraday</h2>
+      <p>
+        La <strong>Ley de Faraday</strong> establece que la <em>fuerza electromotriz inducida</em> en un circuito es proporcional a la rapidez de cambio del flujo magnético a través de él:
+      </p>
+      <p class="formula">
+        $$ \mathcal{E} = -\frac{d\Phi_B}{dt} $$
+      </p>
+      <p>
+        El signo negativo expresa que la fem inducida se opone al cambio en el flujo magnético, principio formulado posteriormente por <strong>Heinrich Lenz</strong>.
+      </p>
+      <p>
+        En un circuito con \( N \) espiras, la ley generalizada es:
+      </p>
+      <p class="formula">
+        $$ \mathcal{E} = -N\frac{d\Phi_B}{dt} $$
+      </p>
+    </section>
+
+    <section id="ley-lenz" class="card">
+      <h2>5. Ley de Lenz</h2>
+      <p>
+        La <strong>Ley de Lenz</strong> determina la dirección de la corriente inducida. 
+        Establece que la corriente generada produce un campo magnético que se <em>opone al cambio</em> que la originó:
+      </p>
+      <p class="formula">
+        $$ \mathcal{E} = -N\frac{d\Phi_B}{dt} $$
+      </p>
+      <p>
+        El signo negativo indica esta oposición, en concordancia con el principio de conservación de la energía. 
+        Así, el sistema siempre actúa resistiendo los cambios en su flujo magnético.
+      </p>
+      <p>
+        Por ejemplo, si el flujo magnético aumenta hacia adentro de una espira, la corriente inducida creará un campo en sentido contrario, intentando disminuir ese incremento.
+      </p>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>6. Aplicaciones</h2>
+      <ul>
+        <li><strong>Generadores eléctricos:</strong> convierten energía mecánica en eléctrica por rotación en un campo magnético variable.</li>
+        <li><strong>Transformadores:</strong> utilizan la variación del flujo para transferir energía entre bobinas.</li>
+        <li><strong>Frenos magnéticos:</strong> aplican corrientes inducidas para crear fuerzas opuestas al movimiento.</li>
+        <li><strong>Placas de inducción:</strong> generan calor por corrientes inducidas en metales.</li>
+      </ul>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>7. Ejemplo resuelto</h2>
+      <p>
+        <strong>Problema:</strong> Una espira circular de radio \( r = 0.05\,\text{m} \) está en un campo magnético que aumenta uniformemente desde \( 0.1\,\text{T} \) hasta \( 0.5\,\text{T} \) en \( 0.2\,\text{s} \). 
+        Determine la fem inducida.
+      </p>
+      <p class="formula">
+        $$ \mathcal{E} = -\frac{d\Phi_B}{dt} = -\frac{\Delta B \, A}{\Delta t} $$
+      </p>
+      <p>
+        Sustituyendo:
+      </p>
+      <p class="formula">
+        $$ A = \pi r^2 = \pi (0.05)^2 = 7.85\times10^{-3}\,\text{m}^2 $$
+        $$ \Delta B = 0.5 - 0.1 = 0.4\,\text{T} $$
+        $$ \mathcal{E} = -\frac{(0.4)(7.85\times10^{-3})}{0.2} = -0.0157\,\text{V} $$
+      </p>
+      <p>
+        La fem inducida tiene una magnitud de \( 0.0157\,\text{V} \) y el signo negativo indica que la dirección se opone al aumento del flujo magnético.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>8. Referencias recomendadas</h2>
+      <ul>
+        <li>Halliday, D., Resnick, R. & Walker, J. <em>Fundamentos de Física</em>. Wiley, 2018.</li>
+        <li>Tipler, P. A., & Mosca, G. <em>Física para la ciencia y la tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

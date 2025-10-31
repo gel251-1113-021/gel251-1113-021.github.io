@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Campo Magnético</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Campo Magnético</h1>
+    <p class="subtitulo">Interacción entre cargas en movimiento y campos magnéticos.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#definicion">Definición del campo magnético</a></li>
+      <li><a href="#fuerza">Fuerza magnética sobre una carga</a></li>
+      <li><a href="#corrientes">Fuerza sobre corrientes eléctricas</a></li>
+      <li><a href="#campo_corriente">Campo creado por corrientes</a></li>
+      <li><a href="#ejemplo">Ejemplo resuelto</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        El <strong>campo magnético</strong> es una región del espacio en la que se manifiestan fuerzas sobre cargas eléctricas en movimiento.
+        Fue descubierto a partir de la observación de fenómenos relacionados con la brújula y la interacción entre corrientes eléctricas y materiales magnéticos.
+      </p>
+      <p>
+        Históricamente, <strong>Hans Christian Ørsted</strong> (1820) descubrió que una corriente eléctrica podía desviar la aguja de una brújula, 
+        demostrando la relación entre la electricidad y el magnetismo. Este hallazgo dio origen al desarrollo del <em>electromagnetismo</em>.
+      </p>
+    </section>
+
+    <section id="definicion" class="card">
+      <h2>2. Definición del campo magnético</h2>
+      <p>
+        El campo magnético se representa mediante el vector \( \vec{B} \), medido en teslas (T).
+        La dirección de \( \vec{B} \) indica el sentido de la fuerza que actuaría sobre el polo norte de una brújula colocada en el campo.
+      </p>
+      <p>
+        Matemáticamente, el campo magnético se define a partir de la fuerza que ejerce sobre una carga en movimiento:
+      </p>
+      <p class="formula">
+        $$ \vec{F}_B = q \, \vec{v} \times \vec{B} $$
+      </p>
+      <p>
+        donde:
+      </p>
+      <ul>
+        <li>\( \vec{F}_B \): fuerza magnética (N)</li>
+        <li>\( q \): carga eléctrica (C)</li>
+        <li>\( \vec{v} \): velocidad de la carga (m/s)</li>
+        <li>\( \vec{B} \): campo magnético (T)</li>
+      </ul>
+      <p>
+        La dirección de la fuerza se determina mediante la <strong>regla de la mano derecha</strong>: el pulgar indica el sentido de la velocidad, 
+        los dedos el sentido del campo, y la palma muestra la dirección de la fuerza sobre una carga positiva.
+      </p>
+    </section>
+
+    <section id="fuerza" class="card">
+      <h2>3. Fuerza magnética sobre una carga en movimiento</h2>
+      <p>
+        La magnitud de la fuerza magnética depende del ángulo entre la velocidad de la carga y el campo magnético:
+      </p>
+      <p class="formula">
+        $$ F_B = q v B \sin \theta $$
+      </p>
+      <p>
+        donde \( \theta \) es el ángulo entre \( \vec{v} \) y \( \vec{B} \). 
+        Si el movimiento es paralelo al campo (\( \theta = 0° \)), la fuerza es nula; 
+        si es perpendicular (\( \theta = 90° \)), la fuerza es máxima.
+      </p>
+      <p>
+        Dado que la fuerza es siempre perpendicular a la dirección del movimiento, esta no realiza trabajo sobre la carga,
+        produciendo un movimiento circular uniforme cuando \( \vec{B} \) es constante.
+      </p>
+      <p class="formula">
+        $$ r = \frac{m v}{q B} $$
+      </p>
+      <p>
+        donde \( r \) es el radio de la trayectoria circular, \( m \) la masa de la partícula y \( v \) su velocidad.
+      </p>
+    </section>
+
+    <section id="corrientes" class="card">
+      <h2>4. Fuerza sobre corrientes eléctricas</h2>
+      <p>
+        Un conductor por el que circula corriente también experimenta una fuerza magnética en presencia de un campo magnético.
+        La expresión general es:
+      </p>
+      <p class="formula">
+        $$ \vec{F} = I \, \vec{L} \times \vec{B} $$
+      </p>
+      <p>
+        donde \( I \) es la corriente, \( \vec{L} \) el vector longitud del conductor, y \( \vec{B} \) el campo magnético.
+      </p>
+      <p>
+        Este principio se utiliza en motores eléctricos, donde la interacción entre el campo magnético y la corriente 
+        genera un torque que produce rotación.
+      </p>
+    </section>
+
+    <section id="campo_corriente" class="card">
+      <h2>5. Campo magnético creado por corrientes</h2>
+      <p>
+        Las corrientes eléctricas generan campos magnéticos. 
+        La expresión que describe el campo magnético producido por un conductor recto largo es:
+      </p>
+      <p class="formula">
+        $$ B = \frac{\mu_0 I}{2 \pi r} $$
+      </p>
+      <p>
+        donde:
+      </p>
+      <ul>
+        <li>\( \mu_0 = 4\pi \times 10^{-7}\ \mathrm{T·m/A} \): permeabilidad del vacío</li>
+        <li>\( I \): corriente (A)</li>
+        <li>\( r \): distancia al conductor (m)</li>
+      </ul>
+      <p>
+        La dirección de \( \vec{B} \) se determina mediante la <strong>regla de la mano derecha</strong>: 
+        si el pulgar apunta en la dirección de la corriente, los dedos envuelven el conductor indicando el sentido del campo magnético.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>6. Ejemplo resuelto</h2>
+      <p>
+        <strong>Problema:</strong> Una partícula con carga \( q = 2 \times 10^{-6}\ \mathrm{C} \) se mueve con velocidad 
+        \( v = 3 \times 10^4\ \mathrm{m/s} \) perpendicularmente a un campo magnético uniforme de \( B = 0.5\ \mathrm{T} \). 
+        Determinar la magnitud de la fuerza magnética.
+      </p>
+      <p class="formula">
+        $$ F_B = q v B \sin 90° = (2 \times 10^{-6})(3 \times 10^4)(0.5) = 0.03\ \mathrm{N} $$
+      </p>
+      <p>
+        La fuerza magnética tiene una magnitud de 0.03 N y actúa perpendicularmente al movimiento y al campo.
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Halliday, D., Resnick, R. & Walker, J. <em>Fundamentos de Física</em>. Wiley, 2018.</li>
+        <li>Tipler, P. A. & Mosca, G. <em>Física para la Ciencia y la Tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

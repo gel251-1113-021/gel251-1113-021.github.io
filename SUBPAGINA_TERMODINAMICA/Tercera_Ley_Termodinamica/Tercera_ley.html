@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tercera Ley y Equilibrio Termodinámico</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Tercera Ley y Equilibrio Termodinámico</h1>
+    <p class="subtitulo">Temperaturas absolutas, comportamiento a bajas temperaturas y condiciones de equilibrio</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#tercera_ley">Tercera Ley de la Termodinámica</a></li>
+      <li><a href="#temperatura_absoluta">Temperatura absoluta y cero absoluto</a></li>
+      <li><a href="#bajas_temperaturas">Comportamiento de los sistemas a bajas temperaturas</a></li>
+      <li><a href="#equilibrio">Condiciones de equilibrio termodinámico</a></li>
+      <li><a href="#ejemplos">Ejemplos y aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>Tercera Ley de la Termodinámica</strong> complementa el marco teórico de las dos primeras leyes,
+        estableciendo un límite fundamental en el comportamiento de los sistemas físicos cuando la temperatura se aproxima al <em>cero absoluto</em>.
+      </p>
+      <p>
+        Esta ley permite definir de manera precisa la <strong>escala de temperatura absoluta</strong> y proporciona
+        una base para calcular entropías absolutas, lo cual es esencial en el análisis de equilibrios y procesos químicos a bajas temperaturas.
+      </p>
+      <p>
+        Además, introduce el concepto de <strong>equilibrio termodinámico</strong>, en el que un sistema alcanza un estado estable en sus propiedades macroscópicas.
+      </p>
+    </section>
+
+    <section id="tercera_ley" class="card">
+      <h2>2. Tercera Ley de la Termodinámica</h2>
+      <p>
+        La Tercera Ley fue enunciada por <strong>Walther Nernst</strong> en 1906 y puede expresarse de las siguientes formas:
+      </p>
+      <ul>
+        <li><strong>Enunciado de Nernst:</strong> La entropía de un cristal puro tiende a cero cuando su temperatura se aproxima al cero absoluto.</li>
+        <li><strong>Enunciado de Planck:</strong> Es imposible alcanzar el cero absoluto mediante un número finito de procesos físicos.</li>
+      </ul>
+      <p>
+        Matemáticamente:
+      </p>
+      <p class="formula">
+        $$ \lim_{T \to 0} S = 0 $$
+      </p>
+      <p>
+        Esto significa que en el límite del cero absoluto, la energía térmica y el desorden molecular son mínimos.
+      </p>
+      <p>
+        La Tercera Ley tiene importantes consecuencias en la <em>termodinámica de los procesos químicos</em> y en la <em>física de materiales</em>.
+      </p>
+    </section>
+
+    <section id="temperatura_absoluta" class="card">
+      <h2>3. Temperatura absoluta y el cero absoluto</h2>
+      <p>
+        La <strong>temperatura absoluta</strong> se mide en la escala Kelvin (\(K\)) y tiene su punto de referencia en el <em>cero absoluto</em>,
+        la temperatura teórica más baja posible.
+      </p>
+      <p class="formula">
+        $$ 0 \, K = -273.15^\circ C $$
+      </p>
+      <p>
+        En este estado, las partículas poseen la mínima energía cinética posible, y no puede extraerse más energía térmica del sistema.
+      </p>
+      <p>
+        La energía interna \( U \) también tiende a un valor mínimo:
+      </p>
+      <p class="formula">
+        $$ \lim_{T \to 0} U = U_0 $$
+      </p>
+      <p>
+        donde \( U_0 \) es la energía de punto cero, asociada a las oscilaciones cuánticas del sistema.
+      </p>
+      <p>
+        Ningún proceso físico conocido puede llevar a un sistema a \( 0\,K \) en un número finito de pasos, lo cual está relacionado con la <strong>imposibilidad práctica del cero absoluto</strong>.
+      </p>
+    </section>
+
+    <section id="bajas_temperaturas" class="card">
+      <h2>4. Comportamiento de los sistemas a bajas temperaturas</h2>
+      <p>
+        A medida que la temperatura disminuye, las propiedades termodinámicas cambian notablemente:
+      </p>
+      <ul>
+        <li>La <strong>capacidad calorífica</strong> de las sustancias tiende a cero.</li>
+        <li>Los <strong>movimientos moleculares</strong> se reducen al mínimo permitido por la mecánica cuántica.</li>
+        <li>El <strong>desorden molecular</strong> disminuye y el sistema tiende a un estado más ordenado.</li>
+      </ul>
+      <p>
+        Según el modelo de <strong>Debye</strong> para sólidos, la capacidad calorífica varía con el cubo de la temperatura:
+      </p>
+      <p class="formula">
+        $$ C_V \propto T^3 $$
+      </p>
+      <p>
+        Esta dependencia explica cómo el calor específico de los materiales decrece drásticamente a temperaturas cercanas a \( 0\,K \).
+      </p>
+      <p>
+        A nivel cuántico, incluso al cero absoluto persisten <strong>fluctuaciones del vacío</strong> o energía de punto cero, lo que impide que el movimiento molecular se anule completamente.
+      </p>
+    </section>
+
+    <section id="equilibrio" class="card">
+      <h2>5. Condiciones de equilibrio termodinámico</h2>
+      <p>
+        Un sistema se encuentra en <strong>equilibrio termodinámico</strong> cuando sus propiedades macroscópicas permanecen constantes en el tiempo,
+        y no existen gradientes de temperatura, presión o composición dentro de él.
+      </p>
+      <p>
+        Para que un sistema esté completamente en equilibrio, deben cumplirse simultáneamente tres condiciones:
+      </p>
+      <ul>
+        <li><strong>Equilibrio térmico:</strong> temperatura uniforme (\( T_1 = T_2 \)).</li>
+        <li><strong>Equilibrio mecánico:</strong> presión uniforme (\( P_1 = P_2 \)).</li>
+        <li><strong>Equilibrio químico:</strong> potenciales químicos iguales (\( \mu_1 = \mu_2 \)).</li>
+      </ul>
+      <p>
+        El equilibrio termodinámico implica la <strong>ausencia de flujos netos de energía o materia</strong> dentro del sistema y entre éste y su entorno.
+      </p>
+      <p>
+        En un sistema aislado, cualquier proceso espontáneo cesa cuando se alcanza el equilibrio, punto en el cual la entropía total es máxima:
+      </p>
+      <p class="formula">
+        $$ dS_{total} = 0 $$
+      </p>
+      <p>
+        Esto se relaciona directamente con la Segunda Ley, pues en equilibrio ya no hay posibilidad de cambio espontáneo.
+      </p>
+    </section>
+
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos y aplicaciones</h2>
+      <p><strong>Ejemplo 1:</strong> <em>Entropía del helio a bajas temperaturas</em></p>
+      <p>
+        Al enfriar helio líquido hacia el cero absoluto, su entropía no tiende exactamente a cero debido a efectos cuánticos;
+        esto demuestra la validez del límite de la Tercera Ley y la presencia de una entropía residual.
+      </p>
+
+      <p><strong>Ejemplo 2:</strong> <em>Calor específico del cobre</em></p>
+      <p>
+        Experimentalmente se observa que:
+      </p>
+      <p class="formula">
+        $$ C_V = aT^3 $$
+      </p>
+      <p>
+        donde \( a \) es una constante que depende del material.  
+        Este comportamiento confirma el modelo de Debye y la tendencia al orden total en el cero absoluto.
+      </p>
+
+      <p><strong>Ejemplo 3:</strong> <em>Equilibrio entre fases</em></p>
+      <p>
+        Cuando dos fases de una sustancia (por ejemplo, sólido y líquido) están en equilibrio, se cumple:
+      </p>
+      <p class="formula">
+        $$ T_{sólido} = T_{líquido}, \quad P_{sólido} = P_{líquido}, \quad \mu_{sólido} = \mu_{líquido} $$
+      </p>
+      <p>
+        Estas igualdades garantizan el equilibrio termodinámico total entre las fases coexistentes.
+      </p>
+
+      <p><strong>Aplicaciones:</strong></p>
+      <ul>
+        <li>Diseño de <em>criogenia</em> y refrigeración extrema.</li>
+        <li>Estudio de <em>superconductividad</em> y <em>superfluidez</em>.</li>
+        <li>Definición de <em>entropías absolutas</em> en reacciones químicas.</li>
+        <li>Modelado de <em>equilibrios de fase</em> en sistemas multicomponente.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Cengel, Y. A., & Boles, M. A. <em>Termodinámica</em>. McGraw-Hill Education.</li>
+        <li>Callen, H. B. <em>Thermodynamics and an Introduction to Thermostatistics</em>. Wiley.</li>
+        <li>Atkins, P., & de Paula, J. <em>Físico-Química</em>. Oxford University Press.</li>
+        <li>Reif, F. <em>Fundamentals of Statistical and Thermal Physics</em>. McGraw-Hill.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Física General — Tercera Ley y Equilibrio Termodinámico</p>
+  </footer>
+</body>
+</html>

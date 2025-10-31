@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sonido y el Oído</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Sonido y el Oído</h1>
+    <p class="subtitulo">Propagación del sonido y percepción auditiva</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#propagacion">Propagación del sonido</a></li>
+      <li><a href="#percepcion">Percepción auditiva</a></li>
+      <li><a href="#propiedades">Propiedades del sonido</a></li>
+      <li><a href="#aplicaciones">Aplicaciones</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        El <strong>sonido</strong> es una onda mecánica longitudinal que se propaga a través de medios materiales (aire, líquidos, sólidos), transportando energía sin desplazamiento neto de materia. 
+        La <strong>percepción auditiva</strong> permite a los seres humanos interpretar estas ondas como tonos, intensidad y timbre.
+      </p>
+    </section>
+
+    <section id="propagacion" class="card">
+      <h2>2. Propagación del sonido</h2>
+      <p>
+        La velocidad de propagación del sonido depende del medio y sus propiedades físicas:
+      </p>
+      <ul>
+        <li><strong>Aire (20°C):</strong> $v \approx 343\ \mathrm{m/s}$</li>
+        <li><strong>Agua (20°C):</strong> $v \approx 1482\ \mathrm{m/s}$</li>
+        <li><strong>Acero:</strong> $v \approx 5000\ \mathrm{m/s}$</li>
+      </ul>
+      <p>
+        La ecuación general para una onda sonora en un medio uniforme es:
+      </p>
+      <p class="formula">
+        $$ \frac{\partial^2 p}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 p}{\partial t^2} $$
+      </p>
+      <p>
+        donde \( p(x,t) \) representa la presión sonora, y \( v \) la velocidad del sonido.
+      </p>
+    </section>
+
+    <section id="percepcion" class="card">
+      <h2>3. Percepción auditiva</h2>
+      <p>
+        El oído humano detecta y procesa las ondas sonoras mediante tres partes principales:
+      </p>
+      <ul>
+        <li><strong>Oído externo:</strong> pabellón y conducto auditivo, concentran el sonido hacia el tímpano.</li>
+        <li><strong>Oído medio:</strong> cadena de huesecillos (martillo, yunque, estribo) que amplifica y transmite la vibración al oído interno.</li>
+        <li><strong>Oído interno:</strong> cóclea y células ciliadas que convierten la vibración en señales eléctricas enviadas al cerebro.</li>
+      </ul>
+      <p>
+        El oído percibe sonidos en el rango aproximado de 20 Hz a 20 kHz, con sensibilidad máxima entre 2 kHz y 5 kHz.
+      </p>
+    </section>
+
+    <section id="propiedades" class="card">
+      <h2>4. Propiedades del sonido</h2>
+      <ul>
+        <li><strong>Frecuencia (f):</strong> determina el tono del sonido, $f = 1/T$.</li>
+        <li><strong>Longitud de onda (λ):</strong> distancia entre crestas consecutivas, $v = f \lambda$.</li>
+        <li><strong>Amplitud:</strong> determina la intensidad o volumen.</li>
+        <li><strong>Timbre:</strong> cualidad que distingue sonidos de igual frecuencia e intensidad.</li>
+        <li><strong>Velocidad de propagación:</strong> depende de densidad y elasticidad del medio.</li>
+        <li><strong>Reflexión:</strong> eco al rebotar el sonido en superficies.</li>
+        <li><strong>Difracción:</strong> desviación del sonido alrededor de obstáculos.</li>
+        <li><strong>Absorción:</strong> transformación de energía sonora en calor.</li>
+      </ul>
+    </section>
+
+    <section id="aplicaciones" class="card">
+      <h2>5. Aplicaciones</h2>
+      <ul>
+        <li><strong>Acústica arquitectónica:</strong> diseño de auditorios y salas para optimizar la percepción del sonido.</li>
+        <li><strong>Ultrasonido médico:</strong> diagnóstico, terapia y limpieza.</li>
+        <li><strong>Sonar y navegación submarina:</strong> medición de distancias y detección de objetos bajo el agua.</li>
+        <li><strong>Instrumentos musicales:</strong> estudio del timbre, tono y resonancia.</li>
+        <li><strong>Protección auditiva:</strong> control de niveles de ruido industrial y ambiental.</li>
+      </ul>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>6. Referencias recomendadas</h2>
+      <ul>
+        <li>Kinsler, L. et al. (2000). <em>Fundamentals of Acoustics</em>. Wiley.</li>
+        <li>Rossing, T. D. (2014). <em>The Science of Sound</em>. Springer.</li>
+        <li>Tipler, P. A., & Mosca, G. (2014). <em>Física para la ciencia y la tecnología</em>. Reverté.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

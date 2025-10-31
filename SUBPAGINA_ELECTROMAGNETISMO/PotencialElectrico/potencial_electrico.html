@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Potencial Eléctrico</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Potencial Eléctrico</h1>
+    <p class="subtitulo">Energía, diferencia de potencial y superficies equipotenciales</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#historia">Contexto histórico</a></li>
+      <li><a href="#concepto">Concepto de potencial eléctrico</a></li>
+      <li><a href="#relacion">Relación con el campo eléctrico</a></li>
+      <li><a href="#superficies">Superficies equipotenciales</a></li>
+      <li><a href="#ejemplo">Ejemplo resuelto</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        El <strong>potencial eléctrico</strong> es una magnitud escalar que permite describir el campo eléctrico desde una perspectiva energética.
+        Se define como la cantidad de energía potencial eléctrica por unidad de carga en un punto del espacio.
+      </p>
+      <p>
+        Su importancia radica en que simplifica el cálculo de campos eléctricos, especialmente cuando se trabaja con sistemas de cargas distribuidas.
+      </p>
+    </section>
+
+    <section id="historia" class="card">
+      <h2>2. Contexto histórico</h2>
+      <p>
+        El concepto de potencial fue introducido por <strong>Joseph-Louis Lagrange</strong> y <strong>Pierre-Simon Laplace</strong> en el siglo XVIII,
+        quienes desarrollaron la idea de una función escalar capaz de describir campos de fuerza conservativos.
+      </p>
+      <p>
+        Posteriormente, <strong>Michael Faraday</strong> y <strong>James Clerk Maxwell</strong> refinaron su interpretación dentro del marco del electromagnetismo clásico.
+      </p>
+      <blockquote>
+        “El potencial eléctrico es la medida de la capacidad de una carga para realizar trabajo a distancia.” — <em>P.S. Laplace</em>
+      </blockquote>
+    </section>
+
+    <section id="concepto" class="card">
+      <h2>3. Concepto de Potencial Eléctrico</h2>
+      <p>
+        Si se traslada una carga de prueba \( q_0 \) desde un punto A hasta un punto B en un campo eléctrico \( \mathbf{E} \),
+        el trabajo realizado por el campo es:
+      </p>
+      <p class="formula">
+        $$ W_{AB} = -q_0 \int_A^B \mathbf{E} \cdot d\mathbf{l} $$
+      </p>
+      <p>
+        Se define la <strong>diferencia de potencial eléctrico</strong> entre A y B como:
+      </p>
+      <p class="formula">
+        $$ V_B - V_A = -\int_A^B \mathbf{E} \cdot d\mathbf{l} $$
+      </p>
+      <p>
+        El potencial absoluto en un punto se define tomando el infinito como referencia (donde \( V = 0 \)):
+      </p>
+      <p class="formula">
+        $$ V = \frac{1}{4\pi \varepsilon_0} \frac{q}{r} $$
+      </p>
+      <p>
+        donde \( q \) es la carga que genera el campo y \( r \) la distancia desde dicha carga al punto de interés.
+      </p>
+    </section>
+
+    <section id="relacion" class="card">
+      <h2>4. Relación con el Campo Eléctrico</h2>
+      <p>
+        El campo eléctrico es el <strong>gradiente negativo</strong> del potencial eléctrico:
+      </p>
+      <p class="formula">
+        $$ \mathbf{E} = -\nabla V $$
+      </p>
+      <p>
+        Esto implica que el campo apunta en la dirección de mayor disminución del potencial. 
+        Por tanto, las líneas de campo son siempre perpendiculares a las superficies equipotenciales.
+      </p>
+      <p>
+        Si el campo es uniforme:
+      </p>
+      <p class="formula">
+        $$ V_B - V_A = -E \, d $$
+      </p>
+      <p>
+        donde \( d \) es la distancia entre los puntos A y B en la dirección del campo.
+      </p>
+    </section>
+
+    <section id="superficies" class="card">
+      <h2>5. Superficies Equipotenciales</h2>
+      <p>
+        Una <strong>superficie equipotencial</strong> es aquella en la que el potencial eléctrico es constante.
+        Mover una carga sobre dicha superficie no requiere trabajo, ya que:
+      </p>
+      <p class="formula">
+        $$ dW = q\,dV = 0 $$
+      </p>
+      <p>
+        En el caso de una carga puntual, las superficies equipotenciales son esferas concéntricas;
+        en un campo uniforme, son planos perpendiculares a las líneas de campo.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>6. Ejemplo resuelto</h2>
+      <p>
+        <strong>Problema:</strong> Calcular el potencial eléctrico en un punto situado a \( r = 0.2\ \mathrm{m} \) 
+        de una carga puntual \( q = 3\times10^{-6}\ \mathrm{C} \).
+      </p>
+      <p class="formula">
+        $$ V = \frac{1}{4\pi \varepsilon_0} \frac{q}{r} = \frac{9\times10^9 (3\times10^{-6})}{0.2} = 1.35\times10^5\ \mathrm{V} $$
+      </p>
+      <p>
+        Por tanto, el potencial en ese punto es de \( 135\,\mathrm{kV} \).
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Halliday, D., Resnick, R. & Walker, J. <em>Fundamentos de Física</em>. Wiley, 2018.</li>
+        <li>Tipler, P. A., & Mosca, G. <em>Física para la ciencia y la tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

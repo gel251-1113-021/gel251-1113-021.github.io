@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Leyes de Conservación - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Leyes de Conservación</h1>
+    <p class="subtitulo">Energía, momento lineal y momento angular en sistemas mecánicos</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#energia">Conservación de la energía mecánica</a></li>
+      <li><a href="#momento_lineal">Conservación del momento lineal</a></li>
+      <li><a href="#momento_angular">Conservación del momento angular</a></li>
+      <li><a href="#trabajo_y_energia">Trabajo y energía</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- 1. INTRODUCCIÓN -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        Las <strong>leyes de conservación</strong> son principios fundamentales de la física que describen cantidades que permanecen constantes en un sistema aislado, sin importar los procesos internos que ocurran en él.
+      </p>
+      <p>
+        En la <strong>mecánica clásica</strong>, las tres magnitudes conservadas más importantes son:
+      </p>
+      <ul>
+        <li>La <strong>energía mecánica</strong></li>
+        <li>El <strong>momento lineal</strong> (o cantidad de movimiento)</li>
+        <li>El <strong>momento angular</strong></li>
+      </ul>
+      <p>
+        Estas leyes son consecuencia directa de las <em>simetrías del espacio y del tiempo</em>:
+      </p>
+      <ul>
+        <li>Homogeneidad del tiempo → conservación de la energía</li>
+        <li>Homogeneidad del espacio → conservación del momento lineal</li>
+        <li>Isotropía del espacio → conservación del momento angular</li>
+      </ul>
+    </section>
+
+    <!-- 2. CONSERVACIÓN DE LA ENERGÍA -->
+    <section id="energia" class="card">
+      <h2>2. Conservación de la energía mecánica</h2>
+      <p>
+        La <strong>energía mecánica total</strong> de un sistema es la suma de su energía cinética y potencial:
+      </p>
+      <p class="formula">
+        $$ E_m = K + U $$
+      </p>
+      <p>
+        Si solo actúan <strong>fuerzas conservativas</strong>, como la gravedad o la elástica, entonces:
+      </p>
+      <p class="formula">
+        $$ E_m = \text{constante} $$
+      </p>
+      <p>
+        Es decir, la energía mecánica no se crea ni se destruye, solo se transforma entre sus distintas formas.
+      </p>
+
+      <h3>Energía cinética</h3>
+      <p class="formula">
+        $$ K = \frac{1}{2} m v^2 $$
+      </p>
+
+      <h3>Energía potencial gravitatoria</h3>
+      <p class="formula">
+        $$ U_g = m g h $$
+      </p>
+
+      <h3>Energía potencial elástica</h3>
+      <p class="formula">
+        $$ U_e = \frac{1}{2} k x^2 $$
+      </p>
+
+      <div class="nota">
+        <p>En sistemas reales, donde hay fricción o resistencia del aire, parte de la energía mecánica se disipa en forma de calor.</p>
+      </div>
+    </section>
+
+    <!-- 3. CONSERVACIÓN DEL MOMENTO LINEAL -->
+    <section id="momento_lineal" class="card">
+      <h2>3. Conservación del momento lineal</h2>
+      <p>
+        El <strong>momento lineal</strong> o cantidad de movimiento de una partícula se define como:
+      </p>
+      <p class="formula">
+        $$ \mathbf{p} = m \mathbf{v} $$
+      </p>
+      <p>
+        La <strong>segunda ley de Newton</strong> puede escribirse como:
+      </p>
+      <p class="formula">
+        $$ \sum \mathbf{F} = \frac{d\mathbf{p}}{dt} $$
+      </p>
+      <p>
+        Si la fuerza neta externa sobre un sistema es cero, el momento lineal total se conserva:
+      </p>
+      <p class="formula">
+        $$ \sum \mathbf{F}_{\text{ext}} = 0 \Rightarrow \mathbf{p}_{\text{total}} = \text{constante} $$
+      </p>
+
+      <h3>Aplicación: colisiones</h3>
+      <p>
+        En colisiones (choques) entre cuerpos:
+      </p>
+      <p class="formula">
+        $$ m_1 \mathbf{v}_{1i} + m_2 \mathbf{v}_{2i} = m_1 \mathbf{v}_{1f} + m_2 \mathbf{v}_{2f} $$
+      </p>
+      <ul>
+        <li><strong>Elásticas:</strong> se conserva la energía cinética.</li>
+        <li><strong>Inelásticas:</strong> parte de la energía se disipa, pero el momento se conserva.</li>
+      </ul>
+    </section>
+
+    <!-- 4. CONSERVACIÓN DEL MOMENTO ANGULAR -->
+    <section id="momento_angular" class="card">
+      <h2>4. Conservación del momento angular</h2>
+      <p>
+        El <strong>momento angular</strong> de una partícula respecto a un punto se define como:
+      </p>
+      <p class="formula">
+        $$ \mathbf{L} = \mathbf{r} \times \mathbf{p} $$
+      </p>
+      <p>
+        La ecuación rotacional de la segunda ley de Newton es:
+      </p>
+      <p class="formula">
+        $$ \sum \boldsymbol{\tau} = \frac{d\mathbf{L}}{dt} $$
+      </p>
+      <p>
+        Si el momento de torsión externo (torque) es cero:
+      </p>
+      <p class="formula">
+        $$ \sum \boldsymbol{\tau}_{\text{ext}} = 0 \Rightarrow \mathbf{L} = \text{constante} $$
+      </p>
+
+      <div class="nota">
+        <p>Ejemplo clásico: una patinadora gira más rápido cuando junta los brazos, reduciendo su momento de inercia y conservando $L = I \omega$.</p>
+      </div>
+
+      <h3>Momento angular de un cuerpo rígido</h3>
+      <p class="formula">
+        $$ L = I \omega $$
+      </p>
+      <ul>
+        <li>$I$: momento de inercia</li>
+        <li>$\omega$: velocidad angular</li>
+      </ul>
+    </section>
+
+    <!-- 5. TRABAJO Y ENERGÍA -->
+    <section id="trabajo_y_energia" class="card">
+      <h2>5. Trabajo y energía</h2>
+      <p>
+        La relación entre trabajo y energía se expresa mediante el <strong>teorema trabajo-energía</strong>:
+      </p>
+      <p class="formula">
+        $$ W_{\text{neto}} = \Delta K $$
+      </p>
+      <p>
+        Si actúan fuerzas conservativas, el trabajo se puede expresar como cambio de energía potencial:
+      </p>
+      <p class="formula">
+        $$ W_{\text{cons}} = -\Delta U $$
+      </p>
+      <p>
+        En consecuencia:
+      </p>
+      <p class="formula">
+        $$ K_i + U_i = K_f + U_f $$
+      </p>
+      <p>
+        Esta ecuación representa la <strong>conservación de la energía mecánica</strong>.
+      </p>
+    </section>
+
+    <!-- 6. EJEMPLOS RESUELTOS -->
+    <section id="ejemplos" class="card">
+      <h2>6. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Conservación de energía</h3>
+      <p>
+        Una bola se deja caer desde una altura de $h = 5\,\text{m}$. ¿Cuál es su velocidad justo antes de tocar el suelo?
+      </p>
+      <p class="formula">
+        $$ mgh = \frac{1}{2}mv^2 $$
+        $$ v = \sqrt{2gh} = \sqrt{2(9.8)(5)} = 9.9\,\text{m/s} $$
+      </p>
+
+      <h3>Ejemplo 2: Conservación del momento lineal</h3>
+      <p>
+        Un cuerpo de $2\,\text{kg}$ se mueve a $3\,\text{m/s}$ y choca con otro de $4\,\text{kg}$ en reposo. 
+        Si tras el choque ambos se mueven juntos, determina su velocidad final.
+      </p>
+      <p class="formula">
+        $$ m_1 v_{1i} + m_2 v_{2i} = (m_1 + m_2)v_f $$
+        $$ 2(3) + 4(0) = 6v_f \Rightarrow v_f = 1\,\text{m/s} $$
+      </p>
+
+      <h3>Ejemplo 3: Conservación del momento angular</h3>
+      <p>
+        Una bailarina gira con $I_1 = 3\,\text{kg·m}^2$ y $\omega_1 = 2\,\text{rad/s}$. 
+        Al juntar los brazos, su momento de inercia disminuye a $I_2 = 1\,\text{kg·m}^2$. 
+        ¿Cuál será su nueva velocidad angular?
+      </p>
+      <p class="formula">
+        $$ L_i = L_f \Rightarrow I_1 \omega_1 = I_2 \omega_2 $$
+        $$ (3)(2) = (1)\omega_2 \Rightarrow \omega_2 = 6\,\text{rad/s} $$
+      </p>
+    </section>
+
+    <!-- 7. REFERENCIAS -->
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de Física</em> (10ª ed.). Wiley.</li>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em>. Cengage Learning.</li>
+        <li>Tipler, P. A., & Mosca, G. (2016). <em>Física para la ciencia y la tecnología</em>. Reverté.</li>
+        <li>Young, H. D., & Freedman, R. A. (2016). <em>Física Universitaria</em>. Pearson.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

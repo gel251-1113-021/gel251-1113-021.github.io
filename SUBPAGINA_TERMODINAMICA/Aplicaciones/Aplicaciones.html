@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aplicaciones Energéticas</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Aplicaciones Energéticas</h1>
+    <p class="subtitulo">Motores térmicos, ciclos de Carnot, refrigeración y sistemas termodinámicos industriales</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#motores">Motores térmicos</a></li>
+      <li><a href="#carnot">Ciclo de Carnot</a></li>
+      <li><a href="#refrigeracion">Sistemas de refrigeración</a></li>
+      <li><a href="#industriales">Sistemas termodinámicos industriales</a></li>
+      <li><a href="#eficiencia">Eficiencia energética</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- INTRODUCCIÓN -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        Las <strong>aplicaciones energéticas</strong> de la termodinámica constituyen uno de los pilares del desarrollo tecnológico moderno.
+        Los principios de conservación y conversión de energía se aplican en <em>motores térmicos, ciclos de refrigeración</em> y
+        sistemas industriales que transforman el calor en trabajo útil o viceversa.
+      </p>
+      <p>
+        Estos sistemas se analizan mediante los conceptos de <strong>eficiencia</strong>, <strong>rendimiento</strong> y <strong>ciclo termodinámico</strong>,
+        con el objetivo de optimizar el aprovechamiento energético y minimizar las pérdidas.
+      </p>
+    </section>
+
+    <!-- MOTORES TÉRMICOS -->
+    <section id="motores" class="card">
+      <h2>2. Motores térmicos</h2>
+      <p>
+        Un <strong>motor térmico</strong> es un dispositivo que convierte energía térmica en trabajo mecánico mediante un ciclo termodinámico.
+      </p>
+      <p>
+        Su funcionamiento básico se basa en el intercambio de calor entre dos fuentes de diferente temperatura:
+      </p>
+      <ul>
+        <li>Una <strong>fuente caliente</strong> (a temperatura \( T_H \)) que suministra calor \( Q_H \).</li>
+        <li>Una <strong>fuente fría</strong> (a temperatura \( T_C \)) que absorbe el calor rechazado \( Q_C \).</li>
+      </ul>
+      <p>
+        El trabajo neto realizado en el ciclo es:
+      </p>
+      <p class="formula">
+        $$ W = Q_H - Q_C $$
+      </p>
+      <p>
+        Y la eficiencia térmica del motor se define como:
+      </p>
+      <p class="formula">
+        $$ \eta = \frac{W}{Q_H} = 1 - \frac{Q_C}{Q_H} $$
+      </p>
+      <p>
+        Ejemplos comunes de motores térmicos incluyen los <em>motores de combustión interna</em>, <em>turbinas de vapor</em>
+        y <em>motores de reacción</em>.
+      </p>
+    </section>
+
+    <!-- CICLO DE CARNOT -->
+    <section id="carnot" class="card">
+      <h2>3. Ciclo de Carnot</h2>
+      <p>
+        El <strong>Ciclo de Carnot</strong>, propuesto por Sadi Carnot en 1824, es un ciclo teórico reversible que establece el
+        límite máximo de eficiencia que puede alcanzar un motor térmico que opera entre dos temperaturas.
+      </p>
+      <p>
+        Consta de cuatro procesos reversibles:
+      </p>
+      <ol>
+        <li><strong>Expansión isotérmica:</strong> el gas absorbe calor \( Q_H \) a temperatura constante \( T_H \).</li>
+        <li><strong>Expansión adiabática:</strong> el gas se enfría sin intercambio de calor, bajando hasta \( T_C \).</li>
+        <li><strong>Compresión isotérmica:</strong> el gas libera calor \( Q_C \) a \( T_C \).</li>
+        <li><strong>Compresión adiabática:</strong> se devuelve el gas a su estado inicial.</li>
+      </ol>
+      <p>
+        La eficiencia del ciclo de Carnot está dada por:
+      </p>
+      <p class="formula">
+        $$ \eta_{Carnot} = 1 - \frac{T_C}{T_H} $$
+      </p>
+      <p>
+        donde \(T_H\) y \(T_C\) se expresan en kelvin (K).  
+        Esta ecuación muestra que <em>ningún motor real puede superar la eficiencia de Carnot</em>.
+      </p>
+    </section>
+
+    <!-- SISTEMAS DE REFRIGERACIÓN -->
+    <section id="refrigeracion" class="card">
+      <h2>4. Sistemas de refrigeración</h2>
+      <p>
+        Los <strong>refrigeradores</strong> y <strong>bombas de calor</strong> son sistemas termodinámicos que operan en ciclos inversos
+        a los motores térmicos: su objetivo es <em>extraer calor de una región fría y transferirlo a otra más caliente</em>.
+      </p>
+      <p>
+        Su desempeño se mide mediante el <strong>Coeficiente de Rendimiento (COP)</strong>:
+      </p>
+      <p class="formula">
+        $$ COP_{refrigerador} = \frac{Q_C}{W} $$
+      </p>
+      <p class="formula">
+        $$ COP_{bomba\ de\ calor} = \frac{Q_H}{W} = COP_{refrigerador} + 1 $$
+      </p>
+      <p>
+        En el caso ideal (reversible), los COP dependen de las temperaturas de operación:
+      </p>
+      <p class="formula">
+        $$ COP_{rev} = \frac{T_C}{T_H - T_C} \quad \text{(refrigerador)} $$
+      </p>
+      <p class="formula">
+        $$ COP_{rev} = \frac{T_H}{T_H - T_C} \quad \text{(bomba de calor)} $$
+      </p>
+      <p>
+        Estos principios son la base de sistemas de <em>refrigeración doméstica, acondicionamiento de aire</em> y <em>refrigeración industrial</em>.
+      </p>
+    </section>
+
+    <!-- SISTEMAS INDUSTRIALES -->
+    <section id="industriales" class="card">
+      <h2>5. Sistemas termodinámicos industriales</h2>
+      <p>
+        En la industria, los principios termodinámicos se aplican para diseñar y optimizar sistemas de generación y uso de energía.
+      </p>
+      <ul>
+        <li><strong>Ciclos Rankine:</strong> empleados en plantas termoeléctricas, basados en la vaporización y condensación del agua.</li>
+        <li><strong>Ciclos Brayton:</strong> utilizados en turbinas de gas y reactores aeronáuticos.</li>
+        <li><strong>Ciclos Otto y Diesel:</strong> motores de combustión interna de automóviles y maquinaria pesada.</li>
+        <li><strong>Refrigeración por compresión de vapor:</strong> base de refrigeradores y sistemas de climatización.</li>
+      </ul>
+      <p>
+        El análisis de estos sistemas permite calcular la <em>eficiencia energética, las pérdidas por fricción</em> y la
+        <em>producción de entropía</em>, parámetros cruciales para la sostenibilidad energética moderna.
+      </p>
+    </section>
+
+    <!-- EFICIENCIA -->
+    <section id="eficiencia" class="card">
+      <h2>6. Eficiencia energética y sostenibilidad</h2>
+      <p>
+        La <strong>eficiencia energética</strong> es la relación entre la energía útil producida y la energía total consumida.
+        Su mejora implica reducir el desperdicio y las emisiones contaminantes.
+      </p>
+      <p>
+        En términos termodinámicos:
+      </p>
+      <p class="formula">
+        $$ \eta = \frac{E_{útil}}{E_{total}} \times 100\% $$
+      </p>
+      <p>
+        La tendencia actual busca sistemas <em>híbridos</em> y <em>renovables</em>, como:
+      </p>
+      <ul>
+        <li>Cogeneración (producción simultánea de electricidad y calor útil).</li>
+        <li>Recuperación de calor residual en procesos industriales.</li>
+        <li>Integración de ciclos combinados y energía solar térmica.</li>
+      </ul>
+      <p>
+        Estos enfoques contribuyen a una <strong>ingeniería energética sostenible</strong> y a la mitigación del impacto ambiental.
+      </p>
+    </section>
+
+    <!-- REFERENCIAS -->
+    <section id="referencias" class="card">
+      <h2>7. Referencias</h2>
+      <ul>
+        <li>Cengel, Y. A., & Boles, M. A. <em>Termodinámica</em>. McGraw-Hill Education.</li>
+        <li>Moran, M. J., & Shapiro, H. N. <em>Principios de Termodinámica para Ingeniería</em>. Wiley.</li>
+        <li>Çengel, Y. A. <em>Transferencia de Calor y Masa</em>. McGraw-Hill.</li>
+        <li>Bejan, A. <em>Advanced Engineering Thermodynamics</em>. Wiley.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Física General — Aplicaciones Energéticas</p>
+  </footer>
+</body>
+</html>

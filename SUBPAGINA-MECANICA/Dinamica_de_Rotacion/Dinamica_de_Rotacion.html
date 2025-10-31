@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dinámica de la Rotación - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Dinámica de la Rotación</h1>
+    <p class="subtitulo">Momento de inercia, torque y conservación del momento angular</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#momento_inercia">Momento de inercia</a></li>
+      <li><a href="#teorema_paralelo">Teorema de ejes paralelos</a></li>
+      <li><a href="#torque">Torque (momento de fuerza)</a></li>
+      <li><a href="#ecuaciones_rotacionales">Ecuaciones rotacionales</a></li>
+      <li><a href="#conservacion">Conservación del momento angular</a></li>
+      <li><a href="#energia_rotacional">Energía rotacional</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- 1. INTRODUCCIÓN -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        La <strong>dinámica de la rotación</strong> estudia el movimiento de cuerpos que giran alrededor de un eje. 
+        Es el análogo rotacional de la dinámica lineal (masa ↔ momento de inercia, fuerza ↔ torque, velocidad ↔ velocidad angular).
+      </p>
+      <p>
+        Comprender estos conceptos es imprescindible para analizar ruedas, ejes, volantes de inercia, rotores y sistemas mecánicos rotacionales en ingeniería y física.
+      </p>
+    </section>
+
+    <!-- 2. MOMENTO DE INERCIA -->
+    <section id="momento_inercia" class="card">
+      <h2>2. Momento de inercia</h2>
+      <p>
+        El <strong>momento de inercia</strong> $I$ mide la resistencia que ofrece un cuerpo a cambiar su estado rotacional. Depende de cómo está distribuida la masa respecto al eje de rotación.
+      </p>
+      <p class="formula">
+        $$ I = \int r^2 \, dm $$
+      </p>
+      <p>
+        Donde $r$ es la distancia de cada elemento de masa al eje de rotación. El momento de inercia es análogo a la masa en la dinámica traslacional.
+      </p>
+
+      <h3>Momentos de inercia comunes</h3>
+      <ul>
+        <li><strong>Aro delgado (radio $R$):</strong> $$ I = M R^2 $$</li>
+        <li><strong>Disco sólido (radio $R$):</strong> $$ I = \tfrac{1}{2} M R^2 $$</li>
+        <li><strong>Esfera sólida (radio $R$):</strong> $$ I = \tfrac{2}{5} M R^2 $$</li>
+        <li><strong>Varilla delgada, eje por el centro (longitud $L$):</strong> $$ I = \tfrac{1}{12} M L^2 $$</li>
+        <li><strong>Varilla delgada, eje por un extremo:</strong> $$ I = \tfrac{1}{3} M L^2 $$</li>
+      </ul>
+
+      <div class="nota">
+        <p>Estos valores son útiles para aproximar cuerpos reales y construir momentos de inercia compuestos sumando los términos de sus partes.</p>
+      </div>
+    </section>
+
+    <!-- 3. TEOREMA DE EJES PARALELOS -->
+    <section id="teorema_paralelo" class="card">
+      <h2>3. Teorema de ejes paralelos</h2>
+      <p>
+        Si se conoce el momento de inercia $I_{CM}$ respecto a un eje que pasa por el centro de masa, el momento respecto a otro eje paralelo y separado una distancia $d$ se obtiene por:
+      </p>
+      <p class="formula">
+        $$ I = I_{CM} + M d^2 $$
+      </p>
+      <p>
+        Este teorema es esencial para calcular $I$ cuando el eje de rotación no atraviesa el centro de masa.
+      </p>
+    </section>
+
+    <!-- 4. TORQUE -->
+    <section id="torque" class="card">
+      <h2>4. Torque (momento de fuerza)</h2>
+      <p>
+        El <strong>torque</strong> o momento de una fuerza $\boldsymbol{\tau}$ respecto a un punto es el producto vectorial entre el vector posición $\mathbf{r}$ y la fuerza $\mathbf{F}$:
+      </p>
+      <p class="formula">
+        $$ \boldsymbol{\tau} = \mathbf{r} \times \mathbf{F} $$
+      </p>
+      <p>
+        El módulo del torque es:
+      </p>
+      <p class="formula">
+        $$ \tau = r F \sin(\theta) $$
+      </p>
+      <p>
+        donde $\theta$ es el ángulo entre $\mathbf{r}$ y $\mathbf{F}$. El torque tiende a producir rotación; su unidad es N·m.
+      </p>
+      <div class="nota">
+        <p>Pequeñas fuerzas aplicadas lejos del eje (gran $r$) producen grandes torques: por eso usamos llaves largas para aflojar tornillos.</p>
+      </div>
+    </section>
+
+    <!-- 5. ECUACIONES ROTACIONALES -->
+    <section id="ecuaciones_rotacionales" class="card">
+      <h2>5. Ecuaciones rotacionales</h2>
+      <p>
+        Las ecuaciones que gobiernan la rotación son directamente análogas a las de la traslación. La ecuación fundamental es:
+      </p>
+      <p class="formula">
+        $$ \sum \boldsymbol{\tau} = I \boldsymbol{\alpha} $$
+      </p>
+      <p>
+        donde $\boldsymbol{\alpha} = \dfrac{d\boldsymbol{\omega}}{dt}$ es la aceleración angular. Esta es la forma rotacional de la Segunda Ley de Newton.
+      </p>
+      <p>
+        Otras relaciones útiles (para aceleración angular constante):
+      </p>
+      <p class="formula">
+        $$ \omega = \omega_0 + \alpha t $$
+        $$ \theta = \theta_0 + \omega_0 t + \tfrac{1}{2}\alpha t^2 $$
+        $$ \omega^2 = \omega_0^2 + 2\alpha(\theta - \theta_0) $$
+      </p>
+    </section>
+
+    <!-- 6. CONSERVACIÓN DEL MOMENTO ANGULAR -->
+    <section id="conservacion" class="card">
+      <h2>6. Conservación del momento angular</h2>
+      <p>
+        El <strong>momento angular</strong> $\mathbf{L}$ de un cuerpo rígido respecto a un eje es:
+      </p>
+      <p class="formula">
+        $$ \mathbf{L} = I \boldsymbol{\omega} $$
+      </p>
+      <p>
+        La ley de conservación del momento angular dice:
+      </p>
+      <p class="formula">
+        $$ \sum \boldsymbol{\tau}_{\text{ext}} = \dfrac{d\mathbf{L}}{dt} $$
+      </p>
+      <p>
+        Por tanto, si las torques externas netas son cero, $\mathbf{L}$ es constante:
+      </p>
+      <p class="formula">
+        $$ \mathbf{L}_{\text{inicial}} = \mathbf{L}_{\text{final}} $$
+      </p>
+      <div class="nota">
+        <p>Ejemplo clásico: el patinador que acerca los brazos incrementa su velocidad angular para conservar $L$ (disminuye $I$, aumenta $\omega$).</p>
+      </div>
+    </section>
+
+    <!-- 7. ENERGÍA ROTACIONAL -->
+    <section id="energia_rotacional" class="card">
+      <h2>7. Energía rotacional</h2>
+      <p>
+        La energía cinética asociada a la rotación de un cuerpo rígido es:
+      </p>
+      <p class="formula">
+        $$ K_{\text{rot}} = \tfrac{1}{2} I \omega^2 $$
+      </p>
+      <p>
+        En sistemas con traslación y rotación simultáneas, la energía total combina ambos términos (dependiendo de la elección del eje y del movimiento del centro de masa).
+      </p>
+    </section>
+
+    <!-- 8. EJEMPLOS RESUELTOS -->
+    <section id="ejemplos" class="card">
+      <h2>8. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Torque producido por una fuerza</h3>
+      <p>
+        Una fuerza de $F = 10\,\text{N}$ se aplica perpendicularmente a una llave a $r = 0.20\,\text{m}$ del eje del tornillo. Calcular el torque.
+      </p>
+      <p class="formula">
+        $$ \tau = rF\sin(90^\circ) = (0.20)(10)(1) = 2\,\text{N·m} $$
+      </p>
+      <p>Resultado: el torque es <strong>2 N·m</strong>.</p>
+
+      <h3>Ejemplo 2: Momento de inercia de un disco</h3>
+      <p>
+        Calcular el momento de inercia de un disco sólido de masa $M = 2\,\text{kg}$ y radio $R = 0.10\,\text{m}$ respecto a su eje central.
+      </p>
+      <p class="formula">
+        $$ I = \tfrac{1}{2} M R^2 = \tfrac{1}{2}(2)(0.1)^2 = 0.01\,\text{kg·m}^2 $$
+      </p>
+      <p>Resultado: $I = 0.01\,\text{kg·m}^2$.</p>
+
+      <h3>Ejemplo 3: Patinador que reduce su momento de inercia</h3>
+      <p>
+        Un patinador gira con $\omega_0 = 2.0\,\text{rad/s}$ y momento de inercia inicial $I_0 = 4.0\,\text{kg·m}^2$. Al acercar los brazos reduce su $I$ a $I_f = 1.6\,\text{kg·m}^2$.  
+        Encontrar la nueva velocidad angular $\omega_f$ suponiendo ausencia de torques externos.
+      </p>
+      <p class="formula">
+        Conservación de $L$: $$ I_0 \omega_0 = I_f \omega_f \Rightarrow \omega_f = \frac{I_0}{I_f}\omega_0 = \frac{4.0}{1.6}(2.0) = 5.0\,\text{rad/s} $$
+      </p>
+      <p>Resultado: $\omega_f = 5.0\,\text{rad/s}$.</p>
+
+      <h3>Ejemplo 4: Relación torque-aceleración angular</h3>
+      <p>
+        Un volante con momento de inercia $I = 0.5\,\text{kg·m}^2$ recibe un torque neto de $1.0\,\text{N·m}$. Encontrar la aceleración angular.
+      </p>
+      <p class="formula">
+        $$ \alpha = \frac{\sum \tau}{I} = \frac{1.0}{0.5} = 2.0\,\text{rad/s}^2 $$
+      </p>
+      <p>Resultado: $\alpha = 2.0\,\text{rad/s}^2$.</p>
+
+      <h3>Ejemplo 5: Uso del teorema de ejes paralelos</h3>
+      <p>
+        Una varilla delgada de masa $M = 3\,\text{kg}$ y longitud $L = 2\,\text{m}$ tiene $I_{CM} = \tfrac{1}{12}ML^2$ respecto a su centro. Calcular $I$ respecto a un eje paralelo que pasa por uno de sus extremos.
+      </p>
+      <p class="formula">
+        $$ I_{CM} = \tfrac{1}{12} M L^2 = \tfrac{1}{12}(3)(2^2) = 1.0\,\text{kg·m}^2 $$
+        $$ I = I_{CM} + M d^2 = 1.0 + 3(1)^2 = 4.0\,\text{kg·m}^2 $$
+      </p>
+      <p>Resultado: $I = 4.0\,\text{kg·m}^2$ respecto al extremo.</p>
+    </section>
+
+    <!-- 9. REFERENCIAS -->
+    <section id="referencias" class="card">
+      <h2>9. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Goldstein, H., Poole, C., & Safko, J. (2002). <em>Classical Mechanics</em> (3ª ed.). Addison-Wesley.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Tipler, P. A., & Mosca, G. (2008). <em>Física para la ciencia y la tecnología</em> (6ª ed.). Reverté.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

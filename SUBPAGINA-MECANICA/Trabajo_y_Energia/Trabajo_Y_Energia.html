@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trabajo y Energía - Mecánica Clásica</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Trabajo y Energía</h1>
+    <p class="subtitulo">Relación entre fuerza, desplazamiento y energía mecánica</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#trabajo">Concepto de trabajo</a></li>
+      <li><a href="#energia_cinetica">Energía cinética</a></li>
+      <li><a href="#energia_potencial">Energía potencial</a></li>
+      <li><a href="#teorema">Teorema trabajo-energía</a></li>
+      <li><a href="#conservacion">Conservación de la energía</a></li>
+      <li><a href="#ejemplos">Ejemplos resueltos</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <!-- ===== INTRODUCCIÓN ===== -->
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        El estudio del <strong>trabajo y la energía</strong> permite comprender cómo las fuerzas modifican el estado de movimiento de un cuerpo y cómo la energía se transforma entre distintas formas. 
+      </p>
+      <p>
+        En mecánica clásica, las interacciones entre los cuerpos pueden describirse mediante la transferencia de energía a través del <em>trabajo mecánico</em>. 
+        Esta transferencia puede manifestarse como un cambio en la <strong>energía cinética</strong> o la <strong>energía potencial</strong>.
+      </p>
+      <div class="nota">
+        <p><strong>Ejemplo de aplicación:</strong> Al levantar una caja, la energía química de tus músculos se convierte en energía potencial gravitatoria del objeto.</p>
+      </div>
+    </section>
+
+    <!-- ===== CONCEPTO DE TRABAJO ===== -->
+    <section id="trabajo" class="card">
+      <h2>2. Concepto de trabajo</h2>
+      <p>
+        El <strong>trabajo</strong> ($W$) se define como la energía transferida a un objeto cuando una fuerza actúa sobre él a lo largo de un desplazamiento.
+      </p>
+      <p class="formula">
+        $$ W = \mathbf{F} \cdot \mathbf{d} = Fd\cos(\theta) $$
+      </p>
+      <p>
+        Donde:
+      </p>
+      <ul>
+        <li>$F$: magnitud de la fuerza aplicada</li>
+        <li>$d$: desplazamiento del cuerpo</li>
+        <li>$\theta$: ángulo entre la fuerza y el desplazamiento</li>
+      </ul>
+      <p>
+        Si $\theta < 90^\circ$, el trabajo es <strong>positivo</strong> (la fuerza favorece el movimiento).  
+        Si $\theta > 90^\circ$, el trabajo es <strong>negativo</strong> (la fuerza se opone al movimiento).
+      </p>
+      <p>
+        En el caso de una fuerza variable:
+      </p>
+      <p class="formula">
+        $$ W = \int_{x_1}^{x_2} F(x)\,dx $$
+      </p>
+      <p>
+        En el plano tridimensional:
+      </p>
+      <p class="formula">
+        $$ W = \int \mathbf{F} \cdot d\mathbf{r} $$
+      </p>
+      <p>
+        El trabajo se mide en <strong>julios (J)</strong>, donde $1\,\text{J} = 1\,\text{N·m}$.
+      </p>
+    </section>
+
+    <!-- ===== ENERGÍA CINÉTICA ===== -->
+    <section id="energia_cinetica" class="card">
+      <h2>3. Energía cinética</h2>
+      <p>
+        La <strong>energía cinética</strong> ($E_k$) es la energía que posee un cuerpo debido a su movimiento. Se expresa como:
+      </p>
+      <p class="formula">
+        $$ E_k = \frac{1}{2} m v^2 $$
+      </p>
+      <p>
+        Donde $m$ es la masa y $v$ la velocidad del cuerpo.
+      </p>
+      <p>
+        Si una fuerza realiza trabajo sobre un objeto, su energía cinética cambia. Esta relación se expresa mediante el <strong>teorema trabajo-energía</strong>.
+      </p>
+    </section>
+
+    <!-- ===== ENERGÍA POTENCIAL ===== -->
+    <section id="energia_potencial" class="card">
+      <h2>4. Energía potencial</h2>
+      <p>
+        La <strong>energía potencial</strong> ($E_p$) es la energía asociada a la posición o configuración de un sistema físico.  
+        Existen distintos tipos, siendo los más comunes:
+      </p>
+      <ul>
+        <li><strong>Energía potencial gravitatoria:</strong>  
+          $$ E_p = m g h $$
+          donde $h$ es la altura respecto a un nivel de referencia.
+        </li>
+        <li><strong>Energía potencial elástica:</strong>  
+          $$ E_p = \frac{1}{2} k x^2 $$
+          donde $k$ es la constante elástica del resorte y $x$ la deformación.
+        </li>
+      </ul>
+      <p>
+        En ambos casos, la energía potencial puede convertirse en cinética o viceversa, dependiendo del movimiento del cuerpo.
+      </p>
+    </section>
+
+    <!-- ===== TEOREMA TRABAJO-ENERGÍA ===== -->
+    <section id="teorema" class="card">
+      <h2>5. Teorema del trabajo y la energía cinética</h2>
+      <p>
+        El <strong>teorema trabajo-energía</strong> establece que el trabajo neto realizado por todas las fuerzas que actúan sobre un cuerpo es igual al cambio en su energía cinética:
+      </p>
+      <p class="formula">
+        $$ W_{\text{neto}} = \Delta E_k = E_{k2} - E_{k1} $$
+      </p>
+      <p>
+        Este teorema conecta directamente la dinámica (fuerzas) con la energía (estado del movimiento).
+      </p>
+    </section>
+
+    <!-- ===== CONSERVACIÓN DE LA ENERGÍA ===== -->
+    <section id="conservacion" class="card">
+      <h2>6. Conservación de la energía mecánica</h2>
+      <p>
+        Cuando sólo actúan <strong>fuerzas conservativas</strong> (como la gravedad o la fuerza elástica), la <strong>energía mecánica total</strong> del sistema se mantiene constante:
+      </p>
+      <p class="formula">
+        $$ E_m = E_k + E_p = \text{constante} $$
+      </p>
+      <p>
+        Si hay fuerzas no conservativas (como la fricción), parte de la energía se disipa en forma de calor u otras formas de energía:
+      </p>
+      <p class="formula">
+        $$ W_{\text{no conservativa}} = \Delta E_m $$
+      </p>
+      <div class="nota">
+        <p><strong>Principio fundamental:</strong> La energía no se crea ni se destruye, sólo se transforma.</p>
+      </div>
+    </section>
+
+    <!-- ===== EJEMPLOS RESUELTOS ===== -->
+    <section id="ejemplos" class="card">
+      <h2>7. Ejemplos resueltos</h2>
+
+      <h3>Ejemplo 1: Trabajo constante</h3>
+      <p>
+        Una fuerza constante de $20\,\text{N}$ empuja una caja a lo largo de $4\,\text{m}$ en la misma dirección. Calcular el trabajo realizado.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p class="formula">
+        $$ W = F d \cos(\theta) = 20(4)\cos(0) = 80\,\text{J} $$
+      </p>
+      <p>El trabajo efectuado por la fuerza es <strong>80 julios</strong>.</p>
+
+      <h3>Ejemplo 2: Teorema trabajo-energía</h3>
+      <p>
+        Un bloque de $2\,\text{kg}$ parte del reposo y se mueve en línea recta bajo una fuerza constante de $10\,\text{N}$ durante $3\,\text{m}$. Hallar su velocidad final.
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p>
+        Por el teorema:  
+        $$ W = \Delta E_k $$
+        $$ F d = \frac{1}{2} m v^2 - 0 $$
+        $$ v = \sqrt{\frac{2Fd}{m}} = \sqrt{\frac{2(10)(3)}{2}} = \sqrt{30} \approx 5.48\,\text{m/s} $$
+      </p>
+      <p>La velocidad final del bloque es aproximadamente <strong>5.48 m/s</strong>.</p>
+
+      <h3>Ejemplo 3: Conservación de energía</h3>
+      <p>
+        Una bola de $0.5\,\text{kg}$ cae desde una altura de $10\,\text{m}$. Determinar su velocidad justo antes de tocar el suelo (despreciando la resistencia del aire).
+      </p>
+      <p><strong>Solución:</strong></p>
+      <p>
+        $$ E_{p1} = E_{k2} $$
+        $$ mgh = \frac{1}{2}mv^2 $$
+        $$ v = \sqrt{2gh} = \sqrt{2(9.8)(10)} \approx 14\,\text{m/s} $$
+      </p>
+      <p>La bola impacta con una velocidad de <strong>14 m/s</strong>.</p>
+    </section>
+
+    <!-- ===== REFERENCIAS ===== -->
+    <section id="referencias" class="card">
+      <h2>8. Referencias</h2>
+      <ul>
+        <li>Serway, R. A., & Jewett, J. W. (2019). <em>Física para ciencias e ingeniería</em> (10ª ed.). Cengage Learning.</li>
+        <li>Tipler, P. A., & Mosca, G. (2008). <em>Física para la ciencia y la tecnología</em> (6ª ed.). Reverté.</li>
+        <li>Halliday, D., Resnick, R., & Walker, J. (2014). <em>Fundamentos de física</em> (10ª ed.). Wiley.</li>
+        <li>Young, H. D., & Freedman, R. A. (2021). <em>Física Universitaria</em> (15ª ed.). Pearson.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Universidad Nacional de Barranca - Mecánica Clásica</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>

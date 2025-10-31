@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Capacitancia y Dieléctricos</title>
+  <link rel="stylesheet" href="../../GEN/estilos_sub-temas.css">
+
+  <!-- Configuración de MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../../GEN/script_sub-temas.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Capacitancia y Dieléctricos</h1>
+    <p class="subtitulo">Capacitores, almacenamiento de energía y materiales dieléctricos</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#capacitancia">Concepto de Capacitancia</a></li>
+      <li><a href="#tipos">Tipos de Capacitores</a></li>
+      <li><a href="#energia">Energía Almacenada</a></li>
+      <li><a href="#dielelectricos">Dieléctricos</a></li>
+      <li><a href="#ejemplo">Ejemplo Numérico</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenedor">
+
+    <section id="introduccion" class="card">
+      <h2>1. Introducción</h2>
+      <p>
+        Un <strong>capacitor</strong> (o condensador) es un dispositivo que almacena energía eléctrica en forma de campo eléctrico. 
+        Se compone de dos conductores separados por un material aislante o dieléctrico.
+      </p>
+      <p>
+        La <strong>capacitancia</strong> cuantifica la capacidad de un capacitor para almacenar carga cuando se aplica una diferencia de potencial entre sus placas.
+      </p>
+    </section>
+
+    <section id="capacitancia" class="card">
+      <h2>2. Concepto de Capacitancia</h2>
+      <p>
+        La capacitancia \( C \) se define como el cociente entre la magnitud de la carga almacenada \( Q \) en una de las placas y la diferencia de potencial \( V \) entre ellas:
+      </p>
+      <p class="formula">
+        $$ C = \frac{Q}{V} $$
+      </p>
+      <p>
+        La unidad de capacitancia en el Sistema Internacional es el <strong>faradio (F)</strong>, equivalente a un culombio por voltio (\( 1\ \mathrm{F} = 1\ \mathrm{C/V} \)).
+      </p>
+    </section>
+
+    <section id="tipos" class="card">
+      <h2>3. Tipos de Capacitores</h2>
+
+      <h3>a) Capacitor de placas paralelas</h3>
+      <p>
+        El modelo más simple consiste en dos placas planas separadas por una distancia \( d \) y con área \( A \). 
+        Su capacitancia viene dada por:
+      </p>
+      <p class="formula">
+        $$ C = \varepsilon_0 \frac{A}{d} $$
+      </p>
+      <p>
+        donde \( \varepsilon_0 = 8.85\times10^{-12}\ \mathrm{C^2/(N·m^2)} \) es la permitividad del vacío.
+      </p>
+
+      <h3>b) Capacitor cilíndrico</h3>
+      <p>
+        Para un capacitor formado por dos cilindros coaxiales de radios \( a \) y \( b \) y longitud \( L \):
+      </p>
+      <p class="formula">
+        $$ C = \frac{2\pi \varepsilon_0 L}{\ln(b/a)} $$
+      </p>
+
+      <h3>c) Capacitor esférico</h3>
+      <p>
+        Si está formado por dos esferas concéntricas de radios \( a \) (interna) y \( b \) (externa):
+      </p>
+      <p class="formula">
+        $$ C = 4\pi \varepsilon_0 \frac{ab}{b - a} $$
+      </p>
+    </section>
+
+    <section id="energia" class="card">
+      <h2>4. Energía almacenada en un capacitor</h2>
+      <p>
+        La energía \( U \) almacenada en un capacitor cargado es igual al trabajo necesario para cargarlo:
+      </p>
+      <p class="formula">
+        $$ U = \frac{1}{2} QV = \frac{1}{2} C V^2 = \frac{Q^2}{2C} $$
+      </p>
+      <p>
+        La densidad de energía (energía por unidad de volumen) del campo eléctrico es:
+      </p>
+      <p class="formula">
+        $$ u = \frac{1}{2} \varepsilon_0 E^2 $$
+      </p>
+      <p>
+        donde \( E \) es la magnitud del campo eléctrico entre las placas.
+      </p>
+    </section>
+
+    <section id="dielelectricos" class="card">
+      <h2>5. Dieléctricos</h2>
+      <p>
+        Un <strong>dieléctrico</strong> es un material aislante que, al ser colocado entre las placas de un capacitor, 
+        incrementa su capacitancia al reducir el campo eléctrico interno.
+      </p>
+      <p>
+        La presencia de un dieléctrico se caracteriza mediante la <strong>constante dieléctrica</strong> \( \kappa \):
+      </p>
+      <p class="formula">
+        $$ C = \kappa \varepsilon_0 \frac{A}{d} $$
+      </p>
+      <p>
+        donde \( \kappa > 1 \) depende del material (por ejemplo, \( \kappa_{\text{agua}} \approx 80 \), \( \kappa_{\text{vidrio}} \approx 5-10 \)).
+      </p>
+      <p>
+        Físicamente, las moléculas del dieléctrico se polarizan, generando un campo eléctrico opuesto al campo aplicado, lo que reduce el campo neto y aumenta la capacidad de almacenamiento.
+      </p>
+      <p>
+        Sin embargo, si el campo eléctrico es demasiado intenso, el material puede sufrir una <strong>ruptura dieléctrica</strong>, 
+        perdiendo su propiedad aislante y permitiendo el paso de corriente.
+      </p>
+    </section>
+
+    <section id="ejemplo" class="card">
+      <h2>6. Ejemplo numérico</h2>
+      <p>
+        <strong>Problema:</strong> Calcular la capacitancia de un capacitor de placas paralelas con área 
+        \( A = 0.02\ \mathrm{m^2} \), separación \( d = 1.0\times10^{-3}\ \mathrm{m} \) y dieléctrico con \( \kappa = 4 \).
+      </p>
+      <p class="formula">
+        $$ C = \kappa \varepsilon_0 \frac{A}{d} = (4)(8.85\times10^{-12})\frac{0.02}{1\times10^{-3}} = 7.08\times10^{-10}\ \mathrm{F} $$
+      </p>
+      <p>
+        Por tanto, la capacitancia es de \( 0.708\ \mathrm{nF} \).
+      </p>
+    </section>
+
+    <section id="referencias" class="card">
+      <h2>7. Referencias recomendadas</h2>
+      <ul>
+        <li>Halliday, D., Resnick, R. & Walker, J. <em>Fundamentos de Física</em>. Wiley, 2018.</li>
+        <li>Tipler, P. A., & Mosca, G. <em>Física para la ciencia y la tecnología</em>. Reverté, 2014.</li>
+        <li>Serway, R. A. & Jewett, J. W. <em>Principios de Física</em>. Cengage, 2019.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>
