@@ -1,0 +1,148 @@
+/*
+   ESTILO GENERAL DE LA INFORMACION
+   */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+  color: #0a1a33;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+/* ===========================
+   CABECERA (HEADER)
+   =========================== */
+header {
+  background: linear-gradient(90deg, #1565c0, #1976d2);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+/* Subtítulo debajo del título principal */
+.subtitulo {
+  font-style: italic;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ===========================
+   NAVEGACIÓN PRINCIPAL (NAV)
+   =========================== */
+nav {
+  background-color: #0d47a1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Quitar puntos y márgenes a la lista */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0;
+}
+
+/* Enlaces del menú de navegación */
+nav a {
+  color: white;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+/* Efecto hover (pasar el ratón) */
+nav a:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
+  border-radius: 5px;
+}
+
+/* ===========================
+   CONTENEDOR GENERAL
+   =========================== */
+.contenedor {
+  max-width: 950px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ===========================
+   TARJETAS (CARDS)
+   =========================== */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+.card:hover {
+  transform: scale(1.01);
+}
+
+/* ===========================
+   ENCABEZADOS SECUNDARIOS
+   =========================== */
+h2 {
+  color: #1565c0;
+  border-left: 6px solid #1976d2;
+  padding-left: 10px;
+}
+
+h3 {
+  color: #0d47a1;
+  margin-top: 1.5rem;
+}
+
+/* ===========================
+   BLOQUES DE FÓRMULAS
+   =========================== */
+.formula {
+  background: #e3f2fd;
+  border-left: 4px solid #1976d2;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  overflow-x: auto;
+}
+
+/* ===========================
+   CITAS O NOTAS DESTACADAS
+   =========================== */
+blockquote {
+  background: #bbdefb;
+  border-left: 5px solid #1976d2;
+  padding: 1rem;
+  font-style: italic;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+/* ===========================
+   PIE DE PÁGINA (FOOTER)
+   =========================== */
+footer {
+  text-align: center;
+  background-color: #0d47a1;
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

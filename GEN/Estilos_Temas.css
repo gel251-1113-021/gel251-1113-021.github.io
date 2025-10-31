@@ -1,0 +1,181 @@
+/* ==========================================================
+   ESTILOS GENERALES DE LOS TEMAS DE FÍSICA UNIVERSITARIA
+   ========================================================== */
+
+/* ===== CONFIGURACIÓN GLOBAL ===== */
+body {
+  margin: 0; /* Elimina márgenes predeterminados del navegador */
+  font-family: 'Roboto', sans-serif; /* Fuente moderna y legible para todo el sitio */
+  background-color: #f5f7fa; /* Fondo claro y neutro que facilita la lectura */
+  color: #222; /* Color principal del texto en tono gris oscuro */
+}
+
+
+/* ==========================================================
+   ENCABEZADO (HEADER)
+   Contiene el logotipo y el menú de navegación principal.
+   ========================================================== */
+.header {
+  background-color: #003366; /* Azul institucional profundo */
+  color: white; /* Contraste claro para texto y elementos */
+  padding: 1rem 0; /* Espaciado vertical superior e inferior */
+}
+
+.header-container {
+  width: 90%; /* Ancho máximo del contenido centrado */
+  margin: auto; /* Centra el bloque dentro del header */
+  display: flex; /* Usa flexbox para distribución horizontal */
+  justify-content: space-between; /* Espacia el logo y el menú */
+  align-items: center; /* Alinea verticalmente los elementos */
+  flex-wrap: wrap; /* Permite que se adapte en pantallas pequeñas */
+}
+
+.logo-container {
+  display: flex; /* Alinea el logo y el texto en una misma línea */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.logo img {
+  width: 70px; /* Tamaño del logotipo */
+  margin-right: 15px; /* Separación entre el logo y el texto */
+}
+
+.menu {
+  display: flex; /* Organización horizontal de los enlaces */
+  flex-wrap: wrap; /* Permite que los enlaces salten de línea si es necesario */
+}
+
+.nav-item {
+  color: white; /* Color base de los enlaces */
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+  margin: 0.5rem 1rem; /* Espaciado entre enlaces */
+  font-weight: bold; /* Da énfasis a las opciones del menú */
+  transition: color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #ffcc00; /* Resalta el enlace activo o en hover con amarillo dorado */
+}
+
+
+/* ==========================================================
+   SECCIÓN PORTADA (INICIO)
+   Presenta el título principal y la introducción del sitio.
+   ========================================================== */
+.inicioo {
+  background: linear-gradient(135deg, #003366, #0056b3); /* Degradado azul dinámico */
+  color: white; /* Texto en blanco para alto contraste */
+  text-align: center; /* Centra los textos */
+  padding: 4rem 1rem; /* Amplio espaciado para resaltar el título */
+}
+
+.titulo h1 {
+  font-size: 2.5rem; /* Título grande y destacado */
+}
+
+.titulo p {
+  font-size: 1.2rem; /* Subtítulo más discreto */
+  margin-top: 0.5rem; /* Separación respecto al título */
+}
+
+
+/* ==========================================================
+   SECCIÓN DE TARJETAS DE CURSOS
+   Muestra los cursos o temas en formato de cuadrícula visual.
+   ========================================================== */
+.container {
+  width: 90%; /* Contenedor principal centrado */
+  margin: 2rem auto; /* Espaciado vertical entre secciones */
+}
+
+.section-title {
+  text-align: center; /* Centra el título de sección */
+  font-size: 1.8rem; /* Tamaño grande y legible */
+  color: #003366; /* Azul institucional */
+  margin-bottom: 2rem; /* Espaciado inferior */
+}
+
+.courses-grid {
+  display: grid; /* Crea una cuadrícula adaptable */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* Cada tarjeta ocupa mínimo 260px y se ajusta automáticamente */
+  gap: 1.5rem; /* Espacio entre las tarjetas */
+}
+
+.course-card {
+  background-color: #003366; /* Fondo azul uniforme */
+  color: white; /* Texto en blanco para contraste */
+  border-radius: 12px; /* Bordes redondeados suaves */
+  padding: 1.5rem; /* Espaciado interno */
+  text-align: center; /* Centrado del contenido */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra ligera */
+  transition: transform 0.3s, box-shadow 0.3s; /* Efecto suave en hover */
+}
+
+.course-card:hover {
+  transform: translateY(-6px); /* Efecto de elevación al pasar el cursor */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25); /* Sombra más pronunciada */
+}
+
+.course-card h3 {
+  font-size: 1.2rem; /* Tamaño del título del curso */
+  margin-bottom: 0.5rem; /* Espacio inferior */
+  color: #ffcc00; /* Tono dorado para destacar los nombres */
+}
+
+.course-card p {
+  font-size: 0.95rem; /* Tamaño más pequeño para la descripción */
+  margin-bottom: 1rem; /* Separación del botón */
+}
+
+.course-button {
+  background-color: #ffcc00; /* Color amarillo principal */
+  color: #003366; /* Texto en azul oscuro para contraste */
+  border: none; /* Sin bordes */
+  border-radius: 8px; /* Bordes suaves */
+  padding: 0.6rem 1.2rem; /* Tamaño equilibrado del botón */
+  font-size: 1rem; /* Tamaño legible */
+  cursor: pointer; /* Muestra el cursor interactivo */
+  font-weight: bold; /* Resalta el texto */
+  transition: background-color 0.2s, transform 0.2s; /* Efecto de animación */
+}
+
+.course-button:hover {
+  background-color: #ffe066; /* Amarillo más claro al pasar el cursor */
+  transform: scale(1.05); /* Pequeño aumento de tamaño */
+}
+
+
+/* ==========================================================
+   PIE DE PÁGINA (FOOTER)
+   Contiene derechos de autor o información institucional.
+   ========================================================== */
+.footer {
+  background-color: #111; /* Fondo negro */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centrado horizontal */
+  padding: 1rem; /* Espaciado interno */
+  font-size: 0.9rem; /* Tamaño discreto */
+  margin-top: 2rem; /* Separación del contenido principal */
+}
+
+
+/* ==========================================================
+   ANIMACIONES
+   Efectos visuales de aparición para los elementos.
+   ========================================================== */
+.fade-in {
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(20px); /* Desplazamiento hacia abajo */
+  animation: fadeInUp 0.8s forwards; /* Aparece gradualmente con animación */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1; /* Elemento visible */
+    transform: translateY(0); /* Regresa a su posición original */
+  }
+}
+
+
