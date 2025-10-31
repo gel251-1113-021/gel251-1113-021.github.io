@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Óptica - Universidad Nacional de Barranca</title>
+  <link rel="stylesheet" href="../GEN/Estilos_Temas.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../favicon.png">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
+  <script src="../GEN/Script_Temas.js" defer></script>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="../GEN/logo.png" alt="Logo Universidad Nacional de Barranca">
+        </div>
+        <div class="info">
+          <h1>Universidad Nacional de Barranca</h1>
+          <p>Ingeniería de Sistemas e Informática</p>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="../INDEX.html" class="nav-item">Inicio</a>
+        <a href="../SUBPAGINA_MECANICA/index.html" class="nav-item">Mecánica</a>
+        <a href="../SUBPAGINA_ELECTROMAGNETISMO/index.html" class="nav-item">Electromagnetismo</a>
+        <a href="../SUBPAGINA_FISICA_MODERNA/index.html" class="nav-item">Física Moderna</a>
+        <a href="../SUBPAGINA_ONDAS_ACUSTICA/index.html" class="nav-item">Ondas y Acústica</a>
+        <a href="#" class="nav-item active">Óptica</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PORTADA ===== -->
+  <section class="inicioo">
+    <div class="titulo">
+      <h1>Óptica Universitaria</h1>
+      <p>Fundamentos, propagación, reflexión, refracción e interferencia de la luz</p>
+    </div>
+  </section>
+
+  <!-- ===== TEMAS ===== -->
+  <div class="container">
+    <section id="temas">
+      <h2 class="section-title">Temas Principales de Óptica</h2>
+
+      <div class="courses-grid">
+
+        <!-- ===== Ejercicios de Naturaleza de la Luz ===== -->
+        <div class="course-card fade-in">
+          <h3>Naturaleza de la Luz</h3>
+          <p>Dualidad onda-partícula y propagación luminosa.</p>
+          <div class="button-group">
+            <a href="opticaVD/optcia_R.pdf" target="_blank"><button class="course-button">Ver ejercicios resueltos</button></a>
+            <a href="opticaVD/optica_P.pdf" target="_blank"><button class="course-button">Ver ejercicios propuestos</button></a>
+            <a href="opticaVD/optcia_R.pdf" download><button class="course-button">Descargar ejercicios resueltos</button></a>
+            <a href="opticaVD/optica_P.pdf" download><button class="course-button">Descargar ejercicios propuestos</button></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2025 Universidad Nacional de Barranca - Física</p>
+    <p>Desarrollado por estudiantes de Ingeniería de Sistemas e Informática</p>
+  </footer>
+</body>
+</html>
